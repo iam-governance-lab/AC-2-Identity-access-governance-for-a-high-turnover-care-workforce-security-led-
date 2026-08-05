@@ -1,0 +1,5 @@
+.env
+.venv/
+**pycache**/
+evidence/raw/
+*.log
