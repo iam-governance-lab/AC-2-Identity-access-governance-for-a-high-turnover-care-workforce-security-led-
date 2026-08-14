@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }} | Sunhaven Care Portal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f4f7fb;
+      }
+
+      .card {
+        background: white;
+        padding: 28px;
+        border-radius: 10px;
+        border-left: 6px solid #16744a;
+      }
+
+      .allowed {
+        color: #126b43;
+        font-weight: bold;
+      }
+
+      nav a {
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/residents">Residents</a>
+      <a href="/care-notes">Care notes</a>
+      <a href="/clinical">Clinical</a>
+      <a href="/review">Review</a>
+      <a href="/app-audit">App audit</a>
+      <a href="{{ url_for('identity.logout') }}">Sign out</a>
+    </nav>
+
+    <div class="card">
+      <h1>{{ title }}</h1>
+
+      <p class="allowed">Access permitted</p>
+
+      <p>{{ message }}</p>
+
+      <p>
+        <strong>Signed-in user:</strong>
+        {{ identity.display_name }}
+      </p>
+
+      <p>
+        <strong>Trusted Entra roles:</strong>
+        {{ identity.roles | sort | join(", ") }}
+      </p>
+    </div>
+  </body>
+</html>
