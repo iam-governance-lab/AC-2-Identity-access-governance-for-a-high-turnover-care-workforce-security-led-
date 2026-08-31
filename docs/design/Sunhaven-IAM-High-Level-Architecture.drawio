@@ -1,0 +1,173 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="XtVcS1LBL0cleJMfJ7po">
+    <mxGraphModel dx="1212" dy="712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6KJn6flc288KYmH0kKL7-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=light-dark(#4D4D4D,#333333);glass=0;strokeWidth=2;shadow=0;" value="" vertex="1">
+          <mxGeometry height="1470" width="810" x="180" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=22;fontColor=#00331A;" value="Sunhaven Care IAM – High-Level Solution Architecture" vertex="1">
+          <mxGeometry height="40" width="580" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=3;fontColor=light-dark(#4D4D4D,#EDEDED);" value="AC-2 – Identity and Access Governance for a High-Turnover Care Workforce" vertex="1">
+          <mxGeometry height="30" width="450" x="320" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;fontStyle=1" value="SUNHAVEN CARE IAM PROJECT ENVIRONMENT" vertex="1">
+          <mxGeometry height="30" width="290" x="340" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;fillStyle=auto;" value="&lt;b&gt;SUNHAVEN CARE WORKFORCE&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Care Worker • Nurse • Manager • Agency Worker&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="270" x="300" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" value="&lt;div&gt;&lt;b&gt;IAM ADMINISTRATOR / ACCESS REVIEWER&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Identity administration • Access review&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="260" x="630" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=light-dark(#0080ff, #0000FF);strokeWidth=1.5;shadow=0;" value="" vertex="1">
+          <mxGeometry height="140" width="540" x="315" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-8" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontStyle=1;align=left;fontColor=light-dark(#0000a0, #ededed);" value="IDENTITY AND AUTHENTICATION" vertex="1">
+          <mxGeometry height="30" width="210" x="410" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;&lt;b&gt;Microsoft Entra ID&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Identity Directory • Authentication • MFA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="300" x="410" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-10" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-5" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.308;exitY=1.041;exitDx=0;exitDy=0;exitPerimeter=0;" target="6KJn6flc288KYmH0kKL7-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="290" as="sourcePoint" />
+            <mxPoint x="480" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-15" connectable="0" parent="6KJn6flc288KYmH0kKL7-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=light-dark(#000000, #ededed);fontSize=12;" value="Sign-in / Authentication" vertex="1">
+          <mxGeometry relative="1" x="-0.2719" y="1" as="geometry">
+            <mxPoint x="-64" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-16" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-6" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="6KJn6flc288KYmH0kKL7-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="290" as="sourcePoint" />
+            <mxPoint x="800" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-18" connectable="0" parent="6KJn6flc288KYmH0kKL7-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Identity Administration" vertex="1">
+          <mxGeometry relative="1" x="-0.0192" y="1" as="geometry">
+            <mxPoint x="71" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=light-dark(#0080ff, #0000FF);strokeWidth=1.5;shadow=0;" value="" vertex="1">
+          <mxGeometry height="140" width="540" x="315" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-21" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontStyle=1" value="&lt;span style=&quot;color: light-dark(rgb(0, 0, 160), rgb(237, 237, 237));&quot;&gt;ACCESS CONTROL&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="125" x="410" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" value="&lt;div&gt;&lt;b&gt;Security Groups&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Role-based group membership&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="320" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" value="&lt;div&gt;&lt;b&gt;RBAC / Least Privilege&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Only required access&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="680" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" value="&lt;div&gt;&lt;b&gt;Application Roles&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Application permissions&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="500" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-28" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-7" style="endArrow=classic;html=1;rounded=0;entryX=0.411;entryY=0.018;entryDx=0;entryDy=0;exitX=0.409;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" target="6KJn6flc288KYmH0kKL7-19" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="480" as="sourcePoint" />
+            <mxPoint x="630" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-30" connectable="0" parent="6KJn6flc288KYmH0kKL7-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Identity and Role Information" vertex="1">
+          <mxGeometry relative="1" x="-0.1173" y="1" as="geometry">
+            <mxPoint x="-87" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=light-dark(#0080ff, #0000FF);strokeWidth=1.5;shadow=0;" value="" vertex="1">
+          <mxGeometry height="290" width="615" x="292.5" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-32" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontStyle=1" value="&lt;span style=&quot;color: light-dark(rgb(0, 0, 160), rgb(237, 237, 237));&quot;&gt;IAM GOVERNANCE AND APPLICATION SERVICES&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="310" x="350" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;gradientColor=#7ea6e0;" value="&lt;div&gt;&lt;b&gt;JML LIFECYCLE AUTOMATION&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;• Joiner&amp;nbsp;&lt;br&gt;• Mover&lt;br&gt;&amp;nbsp;• Leaver&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="185" x="305" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;gradientColor=#7ea6e0;" value="&lt;div&gt;&lt;b&gt;GOVERNANCE AND AUDIT&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;• Worker State&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp;• Access Review&amp;nbsp;&lt;br&gt;&amp;nbsp;• Audit Evidence&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="185" x="505" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;gradientColor=#7ea6e0;" value="&lt;div&gt;&lt;b&gt;PROTECTED CARE PORTAL&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Role-based application access&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="185" x="705" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-40" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-19" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="6KJn6flc288KYmH0kKL7-31" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="690" as="sourcePoint" />
+            <mxPoint x="620" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-42" connectable="0" parent="6KJn6flc288KYmH0kKL7-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Authorised Access" vertex="1">
+          <mxGeometry relative="1" x="-0.0826" y="3" as="geometry">
+            <mxPoint x="45" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;gradientColor=light-dark(#5eaeff, #436697);strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;b&gt;Microsoft Graph&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Identity &amp;amp; Access Data Interface&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="185" x="500" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;gradientColor=light-dark(#5eaeff, #436697);strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;b&gt;&lt;span&gt;PowerShell Automation&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp;• Worker State Export&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; • Access Review Export&lt;/font&gt; &lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="185" x="500" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-51" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-44" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="6KJn6flc288KYmH0kKL7-43" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="1200" as="sourcePoint" />
+            <mxPoint x="670" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-53" connectable="0" parent="6KJn6flc288KYmH0kKL7-51" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Read-only Graph requests" vertex="1">
+          <mxGeometry relative="1" x="0.1048" as="geometry">
+            <mxPoint x="-72" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-57" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-43" style="endArrow=classic;html=1;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="6KJn6flc288KYmH0kKL7-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="1130" />
+              <mxPoint x="230" y="405" />
+            </Array>
+            <mxPoint x="384.4299999999998" y="1145" as="sourcePoint" />
+            <mxPoint x="294.4299999999998" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-59" connectable="0" parent="6KJn6flc288KYmH0kKL7-57" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="Identity And Access Data" vertex="1">
+          <mxGeometry relative="1" x="0.2187" y="-4" as="geometry">
+            <mxPoint x="71" y="426" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-60" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-38" style="endArrow=classic;html=1;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="6KJn6flc288KYmH0kKL7-44" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="643.86" y="1070" />
+              <mxPoint x="760" y="1070" />
+              <mxPoint x="760" y="1250" />
+            </Array>
+            <mxPoint x="620" y="1010" as="sourcePoint" />
+            <mxPoint x="720" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-63" connectable="0" parent="6KJn6flc288KYmH0kKL7-60" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="Audit Automation" vertex="1">
+          <mxGeometry relative="1" x="0.2984" as="geometry">
+            <mxPoint x="50" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;gradientColor=light-dark(#5eaeff, #436697);strokeColor=#6c8ebf;fontColor=light-dark(#d5f1ff, #ededed);" value="&lt;div&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;AUDIT OUTPUT AND EVIDENCE&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&amp;nbsp; &lt;font&gt;&amp;nbsp;&lt;/font&gt;•&lt;font&gt;&amp;nbsp;&lt;/font&gt;CSV Exports • Summary Logs • Audit Evidence&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="285" x="450" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-66" edge="1" parent="1" source="6KJn6flc288KYmH0kKL7-44" style="endArrow=classic;html=1;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="6KJn6flc288KYmH0kKL7-65" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="1300" as="sourcePoint" />
+            <mxPoint x="680" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6KJn6flc288KYmH0kKL7-68" connectable="0" parent="6KJn6flc288KYmH0kKL7-66" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;" value="Generated Output" vertex="1">
+          <mxGeometry relative="1" x="-0.1492" y="2" as="geometry">
+            <mxPoint x="-54" y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
