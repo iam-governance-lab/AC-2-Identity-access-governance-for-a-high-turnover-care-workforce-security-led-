@@ -1,175 +1,239 @@
-# POL-03 — Authentication and Shared-Device Security Policy
+# POL-03 Authentication and Shared Device Security Policy and Procedure
 
-**Organisation:** Sunhaven Care
-**Policy owner:** Security Owner
-**Technical owners:** IAM Lead and Application Security Lead
-**Version:** 1.0
-**Classification:** Internal – Student Laboratory Project
-**Review frequency:** At every major project milestone and after an authentication or session-control incident
+| Document field | Detail |
+| --- | --- |
+| Organisation | Sunhaven Care |
+| Reference number | POL-03 |
+| Document owner | Security Owner |
+| Administrators | IAM Lead and Application Security Lead |
+| Approval authority | Sunhaven Service Owner |
+| Version | 2.0 Draft |
+| Classification | Internal - Student Laboratory Project |
 
-## 1. Purpose
+A printed copy is uncontrolled. Refer to the version-controlled private project repository for the current version.
 
-The purpose of this policy is to protect Sunhaven accounts and application sessions, particularly when workers access sensitive information from shared workplace devices.
+## 1 Purpose
 
-It establishes requirements for individual authentication, MFA, session protection, sign-out and administrative access.
+1.1 This policy and procedure protects Sunhaven workforce accounts, credentials and application sessions, particularly when workers use shared or reused workplace devices.
 
-## 2. Scope
+1.2 It establishes requirements for individual authentication, multi-factor authentication, credential protection, secure sessions, sign-out, blocked-user checks and privileged authentication.
 
-This policy applies to:
+## 2 Scope
 
-- All Sunhaven workforce identities.
-- Microsoft Entra ID authentication.
-- The Sunhaven Flask care portal.
-- Shared or reused laboratory devices and browsers.
-- Application sessions and cookies.
-- Privileged administrator accounts.
-- Authentication configuration and evidence.
+2.1 This policy and procedure applies to all Sunhaven workforce and administrator identities, Microsoft Entra ID authentication, the Flask care portal, shared or reused browsers and devices, application cookies and sessions, authentication configuration, and related evidence.
 
-## 3. Named identity requirement
+2.2 The current implementation is a student proof of concept. It uses fictional identities, synthetic resident data and local laboratory devices and is not approved for production healthcare use.
 
-Every worker must use an individual account.
+## 3 Policy statement
 
-Workers must not:
+3.1 Every worker and administrator must use an individual identity. Account, password and active-session sharing are prohibited.
 
-- Share accounts.
-- Share passwords.
-- Allow another person to use an active session.
-- Sign in using another worker’s identity.
-- Store credentials in project documents or evidence.
+3.2 Workforce access must use multi-factor authentication where supported by the laboratory tenant and required by the approved configuration.
 
-Administrative actions must be attributable to a named administrator.
+3.3 Passwords, MFA codes, tokens, client secrets and recovery information must be protected from unauthorised access and must not be committed to the source repository or included in evidence.
 
-## 4. Multi-factor authentication
+3.4 Shared-device use must include screen locking, explicit sign-out, browser-state control and a short application session.
 
-MFA must be required for workforce access.
+3.5 The care portal must authenticate through Microsoft Entra ID and must independently check roles, assignments, session age and blocked-user status on the server.
 
-MFA registration and recovery must be protected from unauthorised modification.
+3.6 Privileged accounts must be separate, named, protected by MFA and used only for authorised administration.
 
-Workers must not approve unexpected authentication requests.
+3.7 Suspected credential or session compromise must result in prompt containment, review and documented corrective action.
 
-A suspected MFA compromise must be reported and the affected account reviewed or suspended.
+## 4 Procedure
 
-## 5. Password and credential protection
+### 4.1 Named accounts
 
-Passwords must not be:
+4.1.1 Each worker must sign in with their assigned individual identity.
 
-- Shared with another person.
-- Stored in source code.
-- Committed to GitHub.
-- Included in screenshots or reports.
-- Reused as test evidence.
-- Transmitted through unapproved communication channels.
+4.1.2 Workers and administrators must not share accounts, passwords, MFA methods or active sessions, allow another person to work under their identity, or sign in using another worker's identity.
 
-Client secrets, tokens and recovery information must be treated as sensitive authentication information.
+4.1.3 Administrative actions must be attributable to a separately authorised named administrator.
 
-The laboratory application may use an environment variable for its client secret, but the secret must not be committed to the repository.
+### 4.2 Multi-factor authentication
 
-A production implementation should use managed identity, certificates or an approved secret vault.
+4.2.1 The IAM operator must enable or require MFA using the controls available in the approved Entra laboratory configuration.
 
-## 6. Shared-device requirements
+4.2.2 A new worker must complete the required MFA registration before normal access testing is accepted as complete.
 
-When using a shared device, workers must:
+4.2.3 Workers must not approve an unexpected authentication request. A suspected MFA compromise must be reported and the account reviewed or temporarily suspended.
 
-- Use their individual identity.
-- Prevent the browser from saving credentials.
-- Lock the screen when leaving the device.
-- Explicitly sign out when work is complete.
-- Close the browser session after signing out.
-- Report a device that remains signed in as another user.
+4.2.4 Production Conditional Access controls are outside the current laboratory scope and must not be reported as implemented unless they are separately licensed, configured and tested.
 
-Shared workforce accounts are prohibited.
+### 4.3 Password, token and secret protection
 
-For project demonstrations, different test personas should use separate private-browser sessions, and browser state should be cleared between tests.
+4.3.1 Passwords must not be shared, stored in source code, committed to GitHub, shown in screenshots or reports, reused as evidence, or sent through an unapproved channel.
 
-## 7. Application session requirements
+4.3.2 Access tokens, refresh tokens, MFA codes, client secrets and recovery information must be treated as sensitive authentication information.
 
-The Sunhaven laboratory portal must:
+4.3.3 The laboratory application's client secret must be supplied through an environment variable and excluded from the repository.
 
-- Use a limited local session lifetime.
-- Use secure session-cookie settings appropriate to the environment.
-- Protect cookies using HttpOnly.
-- use SameSite protection.
-- Avoid unnecessary persistent authentication information.
-- Perform authorisation checks on the server.
-- Deny protected requests for locally blocked users.
-- Return an access-denied response when the user is not authorised.
+4.3.4 A suspected secret exposure must result in removal from evidence or source history where possible, rotation of the affected credential, review of relevant logs and documentation of the response.
 
-The current laboratory target is a 15-minute local portal session.
+4.3.5 A production implementation should use an approved managed identity, certificate or secrets vault instead of relying on a locally managed client secret.
 
-## 8. Leaver and blocked-user sessions
+### 4.4 Shared-device use
 
-Disabling an Entra account does not guarantee that an existing application session immediately disappears.
+4.4.1 A worker using a shared device must:
 
-Therefore, the care portal must check the user’s blocked status on every protected request.
+- use their own identity
+- prevent the browser from saving credentials
+- lock the screen when leaving the device
+- explicitly sign out when work is complete
+- close the browser session after signing out, and
+- report a device that remains signed in as another user.
 
-When a signed-in user becomes a Leaver:
+4.4.2 Shared workforce accounts are prohibited.
 
-- The Entra account must be disabled.
-- Available Entra sessions must be revoked.
-- Application access must be removed.
-- The user must be added to the local blocked-user control.
-- The next protected portal request must be denied.
+4.4.3 During a project demonstration, each test persona must use a separate private-browser session. Browser state must be cleared between tests where continued state could affect the result.
 
-This layered control reduces the time in which an already-signed-in Leaver could retain access.
+4.4.4 Managed-device, kiosk and mobile-device-management controls are production recommendations and are not part of the current laboratory implementation.
 
-## 9. Privileged authentication
+### 4.5 Application session protection
 
-Administrative work must use a separately authorised administrator identity.
+4.5.1 The care portal must use a limited local session lifetime. The current laboratory target is 15 minutes.
 
-Privileged accounts must:
+4.5.2 Session cookies must use HttpOnly and SameSite protection. A production deployment must also use HTTPS and the Secure cookie flag.
 
-- Use MFA.
-- Not be shared.
-- Be used only for administration.
-- Receive only the required permissions.
-- Have their activity logged and reviewed.
+4.5.3 The application must avoid unnecessary persistent authentication information, perform authorisation checks on the server and return an access-denied response when the user is not authorised.
 
-Normal CareWorker, Nurse, Manager or AgencyWorker roles must not automatically provide administrative authority.
+4.5.4 The portal must validate the local session timestamp and must not silently extend the fixed session beyond the approved lifetime.
 
-## 10. Monitoring and evidence
+### 4.6 Leaver and blocked-user sessions
 
-Authentication and session evidence should include:
+4.6.1 Disabling an Entra account may not immediately end a session already held by the care portal. The portal must therefore check the local blocked-user status on every protected request.
 
-- Test persona.
-- Sign-in result.
-- MFA result.
-- Application role claim.
-- Permitted or denied route.
-- UTC timestamp.
-- Relevant correlation identifier.
+4.6.2 When a signed-in user becomes a Leaver, the authorised process must disable the Entra account, revoke available Entra sessions, remove application access, add the user to the local blocked-user control and deny the next protected portal request.
 
-Evidence must not include passwords, MFA codes, access tokens, refresh tokens or client secrets.
+4.6.3 The operator must verify the block and retain evidence of the allowed-before and denied-after results.
 
-## 11. Incident response
+### 4.7 Privileged authentication
 
-A suspected account or session compromise must result in:
+4.7.1 Administrative work must use a separately authorised administrator identity protected by MFA.
 
-1. Account review or temporary suspension.
-2. Session revocation where available.
-3. Application-side blocking when necessary.
-4. Credential or secret rotation where appropriate.
-5. Review of sign-in and application logs.
-6. Documentation of findings and corrective actions.
+4.7.2 Privileged accounts must not be shared, must be used only for administration, must receive only the required permissions and must have their activity logged and reviewed.
 
-## 12. Exceptions
+4.7.3 Normal CareWorker, Nurse, Manager or AgencyWorker access must not automatically grant Entra ID, Microsoft Graph or IAM administration authority.
 
-Exceptions must be documented, risk-assessed, approved and time-limited.
+### 4.8 Authentication or session incident
 
-MFA, individual-account and secret-protection requirements must not be bypassed merely for convenience.
+4.8.1 A suspected account, credential or session compromise must result in:
 
-## 13. Compliance
+1. account review or temporary suspension
+2. session revocation where available
+3. application-side blocking when necessary
+4. credential or secret rotation where appropriate
+5. review of sign-in, automation and application logs, and
+6. documentation of findings, decisions and corrective actions.
 
-Compliance is verified using:
+4.8.2 The response must be assigned to an owner and remain open until containment and required verification are complete.
 
-- MFA sign-in tests.
-- Server-side role tests.
-- Direct unauthorised-request tests.
-- Shared-device session tests.
-- Signed-in Leaver denial tests.
-- Secret and repository inspections.
-- Audit-evidence reviews.
+### 4.9 Exceptions
 
-## 14. References
+4.9.1 An exception must be documented, risk-assessed, approved and time-limited.
 
-- SANS Institute, _Password Construction Standard_: https://www.sans.org/information-security-policy/password-construction-standard
-- SANS Institute, _Privileged Account Management Policy_: https://www.sans.org/information-security-policy/privileged-account-management-policy
+4.9.2 MFA, individual-account and secret-protection requirements must not be bypassed for convenience.
+
+4.9.3 An expired exception must be removed or formally reassessed by the Security Owner.
+
+### 4.10 Monitoring and evidence
+
+4.10.1 Authentication and session evidence should include the test identity, sign-in result, MFA result, application-role claim, permitted or denied route, UTC timestamp and relevant correlation identifier.
+
+4.10.2 Evidence must not include passwords, MFA codes, access tokens, refresh tokens or client secrets.
+
+4.10.3 Sign-in failures, unexpected role claims, blocked-user attempts, session expiry and privileged actions must be reviewed during the relevant test or assurance activity.
+
+## 5 Responsibilities
+
+### 5.1 Role responsibilities
+
+| Role | Responsibility |
+| --- | --- |
+| Security Owner | Owns this document, reviews exceptions and incidents and confirms corrective actions. |
+| IAM Lead | Maintains Entra authentication, MFA configuration, administrator access and session-revocation capability within the laboratory scope. |
+| Application Security Lead | Maintains portal session controls, server-side checks, secure configuration and blocked-user enforcement. |
+| Manager or agency sponsor | Confirms that workers use approved identities and reports role, contract or access concerns. |
+| IAM operator | Performs authorised account containment, revocation and verification tasks. |
+| Worker | Protects credentials, uses only their own identity, locks and signs out of shared devices and reports suspicious authentication activity. |
+| Security or audit reviewer | Reviews sign-in, application and automation evidence and reports unresolved non-compliance. |
+
+### 5.2 Compliance monitoring and review
+
+5.2.1 Compliance must be assessed using MFA sign-in tests, server-side role tests, direct unauthorised-request tests, shared-device session tests, signed-in Leaver denial tests, repository safety scans and audit-evidence reviews.
+
+5.2.2 The Security Owner must review material failures, credential exposures and exceptions. Corrective actions must be retested before closure.
+
+5.2.3 This document must be reviewed after a material authentication or session incident or a major change to Entra authentication, the application registration, session handling or privileged administration.
+
+### 5.3 Reporting
+
+5.3.1 Suspected credential exposure, unexpected MFA activity, unauthorised privileged use and failure of the blocked-user control must be reported promptly to the Security Owner.
+
+5.3.2 Reports must state the affected identity or system, time, observed event, containment, owner and follow-up action without repeating the exposed secret.
+
+### 5.4 Records management
+
+5.4.1 Authentication tests, configuration evidence, incident records, exception approvals and corrective-action results must be stored in the approved private project location.
+
+5.4.2 Evidence must follow the project naming, indexing, access and retention rules.
+
+5.4.3 Secrets and unnecessary identity or resident information must be removed before evidence is retained or submitted.
+
+## 6 Definitions
+
+| Term | Definition |
+| --- | --- |
+| Authentication | Verifying the identity of a person or account attempting to sign in. |
+| Blocked user | An identity marked by the application so that protected requests are denied. |
+| Client secret | A confidential value used by an application to prove its identity to an identity provider. |
+| MFA | Multi-factor authentication, which requires more than one type of proof during authentication. |
+| OIDC | OpenID Connect, the protocol used by the care portal to receive authenticated identity information from Entra ID. |
+| Session | The application's temporary record that a user has authenticated. |
+| Shared device | A workstation, browser or endpoint used by more than one person. |
+
+## 7 Related documents and guidance
+
+- Sunhaven Care Workforce IAM Solution Design
+- Sunhaven Access Management Policy and Procedure POL-01
+- Sunhaven Workforce Identity Lifecycle Policy and Procedure POL-02
+- Sunhaven application security configuration, test plan and evidence index
+- CQUniversity Australia, *Privacy Policy and Procedure*, reference 3124, effective 12 March 2024. Structural reference only: https://delivery-cqucontenthub.stylelabs.cloud/api/public/content/privacy-policy-and-procedure.pdf
+- SANS Institute, *Password Construction Standard*: https://www.sans.org/information-security-policy/password-construction-standard
+- SANS Institute, *Privileged Account Management Policy*: https://www.sans.org/information-security-policy/privileged-account-management-policy
+
+## 8 Feedback
+
+8.1 Feedback or proposed amendments must be sent to the document owner through the project's documented change-control process.
+
+8.2 A proposed change must identify any effect on Entra authentication, MFA, application registration, session controls, device requirements, tests and evidence.
+
+## 9 Approval and review details
+
+| Approval and review field | Detail |
+| --- | --- |
+| Approval authority | Sunhaven Service Owner |
+| Required consultation | Security Owner, IAM Lead, Application Security Lead and Security or Audit Reviewer |
+| Administrator | IAM Lead and Application Security Lead |
+| Approval status | Draft for capstone review; not yet approved for operational use |
+| Next review | 12 months after approval, or earlier following an authentication, credential or session-control incident |
+
+### Approval and amendment history
+
+| Version | Date | Details | Authority |
+| --- | --- | --- | --- |
+| 1.0 | September 2026 | Initial student-project policy draft | Project team |
+| 2.0 Draft | 9 September 2026 | Restructured as a policy and procedure; added operating steps, monitoring, reporting, records, definitions and implementation status | Pending Sunhaven Service Owner approval |
+
+## Appendix A Implementation status
+
+| Requirement or control | Current project position | Status |
+| --- | --- | --- |
+| Entra ID sign-in and MFA foundation | Configured and demonstrated in the laboratory | Implemented |
+| Server-side Flask role checks | Present on protected application routes | Implemented |
+| Fixed 15-minute local session and blocked-user check | Present in the care portal | Implemented |
+| HttpOnly and SameSite cookie settings | Present in the current Flask configuration | Implemented |
+| Environment-only client secret and repository safety checking | Present in the laboratory configuration and validation workflow | Implemented |
+| Shared-device sign-out and browser clearing | Performed as an operating and demonstration procedure | Manual process |
+| HTTPS, Secure cookie, managed devices, kiosk controls and enterprise secret storage | Required before production deployment | Future production control |
+
