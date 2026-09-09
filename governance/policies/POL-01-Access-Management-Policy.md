@@ -8,8 +8,6 @@
 | Administrator | IAM and Security Lead |
 | Approval authority | Sunhaven Service Owner |
 | Version | 2.0 Draft |
-| Effective date | On approval |
-| Next review | 12 months after approval, or following a material access-control incident or system change |
 | Classification | Internal - Student Laboratory Project |
 
 A printed copy is uncontrolled. Refer to the version-controlled private project repository for the current version.
