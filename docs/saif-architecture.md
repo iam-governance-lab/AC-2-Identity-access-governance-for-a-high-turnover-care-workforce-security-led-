@@ -26,6 +26,7 @@ SAIF provides a separate path for external agency identities without replacing t
 
 The planned SAIF process is:
 
+```text
 External Care Agency
         |
         v
@@ -45,6 +46,7 @@ External / Guest Identity
         |
         v
 Sunhaven Environment
+```
 
 SAIF first checks whether the external agency is approved.
 
@@ -122,6 +124,7 @@ Use fictional agency workers to test valid and invalid SAIF scenarios and collec
 
 SAIF will connect to the existing project like this:
 
+```text
 External Agency Worker
         |
         v
@@ -135,6 +138,7 @@ Existing Sunhaven Authentication
         |
         v
 Existing RBAC and Application Controls
+```
 
 SAIF does not replace the existing authentication, JML or authorization system.
 
