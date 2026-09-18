@@ -1,0 +1,7 @@
+scenario_id,scenario_name,controls,likelihood,impact,risk_score,severity,baseline_status,protected_status,path_interrupted,comparison_result
+SITAS-S01,Stolen Nurse Credential,CTRL-MFA,4,5,20,Critical,OPEN,BLOCKED,True,CONTROL_EFFECTIVE
+SITAS-S02,Shared Workstation Session Misuse,CTRL-SESSION,3,5,15,High,OPEN,BLOCKED,True,CONTROL_EFFECTIVE
+SITAS-S03,Former Worker Identity Misuse,CTRL-ACCOUNT,3,4,12,High,OPEN,BLOCKED,True,CONTROL_EFFECTIVE
+SITAS-S04,Excessive Privilege Abuse,CTRL-RBAC,3,5,15,High,OPEN,BLOCKED,True,CONTROL_EFFECTIVE
+SITAS-S05,Privileged Administrator Credential Compromise,CTRL-PRIVAUTH,2,5,10,High,OPEN,BLOCKED,True,CONTROL_EFFECTIVE
+SITAS-S06,Unmanaged Device Access,CTRL-DEVICE,3,4,12,High,OPEN,BLOCKED,True,CONTROL_EFFECTIVE

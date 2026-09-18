@@ -1,0 +1,15 @@
+{
+  "scenarioId": "SITAS-S02",
+  "name": "Shared Workstation Session Misuse",
+  "description": "A fictional unauthorised person finds an unattended shared workstation with an active nurse session and attempts to reach fictional resident records.",
+
+  "startNode": "unauthorised_person",
+  "targetNode": "resident_records",
+
+  "likelihood": 3,
+  "impact": 5,
+
+  "relatedControls": [
+    "CTRL-SESSION"
+  ]
+}

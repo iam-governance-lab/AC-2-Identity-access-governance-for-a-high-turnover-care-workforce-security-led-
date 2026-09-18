@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunhaven SITAS Threat Assessment</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.45; }
+h1, h2 { margin-bottom: 0.4rem; }
+table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+th, td { border: 1px solid #999; padding: 0.55rem; text-align: left; vertical-align: top; }
+th { font-weight: 700; }
+.notice { padding: 0.8rem; border: 1px solid #999; }
+section { margin-top: 1.6rem; padding-top: 0.5rem; border-top: 1px solid #bbb; }
+</style>
+</head>
+<body>
+<h1>Sunhaven SITAS Threat Assessment</h1>
+<p class="notice">SITAS is a controlled laboratory threat-analysis tool. A BLOCKED result models the expected effect of a configured control and does not claim production enforcement.</p>
+<table>
+<thead>
+<tr><th>ID</th><th>Scenario</th><th>Control</th><th>Risk</th><th>Baseline</th><th>Protected</th><th>Path interrupted</th></tr>
+</thead>
+<tbody>
+<tr><td>SITAS-S01</td><td>Stolen Nurse Credential</td><td>CTRL-MFA</td><td>20/25 (Critical)</td><td>OPEN</td><td>BLOCKED</td><td>Yes</td></tr><tr><td>SITAS-S02</td><td>Shared Workstation Session Misuse</td><td>CTRL-SESSION</td><td>15/25 (High)</td><td>OPEN</td><td>BLOCKED</td><td>Yes</td></tr><tr><td>SITAS-S03</td><td>Former Worker Identity Misuse</td><td>CTRL-ACCOUNT</td><td>12/25 (High)</td><td>OPEN</td><td>BLOCKED</td><td>Yes</td></tr><tr><td>SITAS-S04</td><td>Excessive Privilege Abuse</td><td>CTRL-RBAC</td><td>15/25 (High)</td><td>OPEN</td><td>BLOCKED</td><td>Yes</td></tr><tr><td>SITAS-S05</td><td>Privileged Administrator Credential Compromise</td><td>CTRL-PRIVAUTH</td><td>10/25 (High)</td><td>OPEN</td><td>BLOCKED</td><td>Yes</td></tr><tr><td>SITAS-S06</td><td>Unmanaged Device Access</td><td>CTRL-DEVICE</td><td>12/25 (High)</td><td>OPEN</td><td>BLOCKED</td><td>Yes</td></tr>
+</tbody>
+</table>
+<section><h2>SITAS-S01 — Stolen Nurse Credential</h2><p><strong>Baseline path:</strong> External Attacker → Stolen Nurse Password → Nurse Identity → Shared Nurse Workstation → Sunhaven Care Portal → Fictional Resident Records</p><p><strong>Baseline status:</strong> OPEN</p><p><strong>Protected status:</strong> BLOCKED</p><p><strong>Comparison result:</strong> CONTROL_EFFECTIVE</p></section><section><h2>SITAS-S02 — Shared Workstation Session Misuse</h2><p><strong>Baseline path:</strong> Unauthorised Person → Unattended Shared Workstation → Active Nurse Session → Sunhaven Care Portal → Fictional Resident Records</p><p><strong>Baseline status:</strong> OPEN</p><p><strong>Protected status:</strong> BLOCKED</p><p><strong>Comparison result:</strong> CONTROL_EFFECTIVE</p></section><section><h2>SITAS-S03 — Former Worker Identity Misuse</h2><p><strong>Baseline path:</strong> Former Worker → Former Worker Identity → Sunhaven Care Portal → Fictional Resident Records</p><p><strong>Baseline status:</strong> OPEN</p><p><strong>Protected status:</strong> BLOCKED</p><p><strong>Comparison result:</strong> CONTROL_EFFECTIVE</p></section><section><h2>SITAS-S04 — Excessive Privilege Abuse</h2><p><strong>Baseline path:</strong> Compromised Care Worker → Care Worker Identity → Over-Privileged Role → Restricted Admin Function → Fictional Resident Records</p><p><strong>Baseline status:</strong> OPEN</p><p><strong>Protected status:</strong> BLOCKED</p><p><strong>Comparison result:</strong> CONTROL_EFFECTIVE</p></section><section><h2>SITAS-S05 — Privileged Administrator Credential Compromise</h2><p><strong>Baseline path:</strong> External Admin Attacker → Stolen Admin Credential → Privileged Admin Identity → Restricted Admin Console → Fictional Resident Records</p><p><strong>Baseline status:</strong> OPEN</p><p><strong>Protected status:</strong> BLOCKED</p><p><strong>Comparison result:</strong> CONTROL_EFFECTIVE</p></section><section><h2>SITAS-S06 — Unmanaged Device Access</h2><p><strong>Baseline path:</strong> External Device Attacker → Stolen Care Worker Credential → Remote Care Worker Identity → Unmanaged Device Session → Sunhaven Care Portal → Fictional Resident Records</p><p><strong>Baseline status:</strong> OPEN</p><p><strong>Protected status:</strong> BLOCKED</p><p><strong>Comparison result:</strong> CONTROL_EFFECTIVE</p></section>
+</body>
+</html>

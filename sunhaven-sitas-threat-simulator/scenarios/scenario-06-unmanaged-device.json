@@ -1,0 +1,15 @@
+{
+  "scenarioId": "SITAS-S06",
+  "name": "Unmanaged Device Access",
+  "description": "A fictional external attacker uses a stolen care worker credential to create a session from an unmanaged device and attempts to reach fictional resident records.",
+
+  "startNode": "device_attacker",
+  "targetNode": "resident_records",
+
+  "likelihood": 3,
+  "impact": 4,
+
+  "relatedControls": [
+    "CTRL-DEVICE"
+  ]
+}

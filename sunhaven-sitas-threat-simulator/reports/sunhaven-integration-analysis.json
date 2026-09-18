@@ -1,0 +1,460 @@
+{
+  "snapshot": {
+    "schemaVersion": "SITAS-SUNHAVEN-1",
+    "mode": "READ_ONLY_PROJECT_SNAPSHOT",
+    "sunhavenRootName": "AC-2-Identity-access-governance-for-a-high-turnover-care-workforce-security-led--main",
+    "sourceInventory": {
+      "workforce": {
+        "path": "data/workforce.csv",
+        "present": true
+      },
+      "routeRoleMap": {
+        "path": "config/route-role-map.csv",
+        "present": true
+      },
+      "appRoleIds": {
+        "path": "config/app-role-ids.json",
+        "present": true
+      },
+      "groupObjectIds": {
+        "path": "config/group-object-ids.json",
+        "present": true
+      },
+      "joinerAutomation": {
+        "path": "automation/Invoke-SunhavenJoiner.ps1",
+        "present": true
+      },
+      "moverAutomation": {
+        "path": "automation/Invoke-SunhavenMover.ps1",
+        "present": true
+      },
+      "leaverAutomation": {
+        "path": "automation/Invoke-SunhavenLeaver.ps1",
+        "present": true
+      },
+      "workerStateExporter": {
+        "path": "automation/Export-SunhavenWorkerState.ps1",
+        "present": true
+      },
+      "flaskApplication": {
+        "path": "app/app.py",
+        "present": true
+      }
+    },
+    "workforce": {
+      "recordCount": 4,
+      "statusCounts": {
+        "Active": 3,
+        "Leaving": 1
+      },
+      "roles": [
+        "AgencyWorker",
+        "CareWorker",
+        "Nurse"
+      ],
+      "facilities": [
+        "Sydney"
+      ],
+      "leavingWorkers": [
+        {
+          "employeeId": "SC1006",
+          "displayName": "Ethan Khan (TEST)",
+          "jobRole": "CareWorker",
+          "facility": "Sydney",
+          "status": "Leaving",
+          "endDate": "2026-08-05"
+        }
+      ]
+    },
+    "authorization": {
+      "appRoles": [
+        "AgencyWorker",
+        "Auditor",
+        "CareWorker",
+        "Manager",
+        "Nurse"
+      ],
+      "governedGroups": [
+        "SG-SC-AgencyWorkers",
+        "SG-SC-Auditors",
+        "SG-SC-CareWorkers",
+        "SG-SC-Managers",
+        "SG-SC-Nurses"
+      ],
+      "routes": [
+        {
+          "route": "/residents",
+          "purpose": "List permitted TEST residents",
+          "allowedRoles": [
+            "CareWorker",
+            "Nurse",
+            "Manager",
+            "AgencyWorker"
+          ],
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "route": "/care-notes",
+          "purpose": "Open fictional care-note area",
+          "allowedRoles": [
+            "CareWorker",
+            "Nurse",
+            "Manager",
+            "AgencyWorker"
+          ],
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "route": "/clinical",
+          "purpose": "Open clinical workspace",
+          "allowedRoles": [
+            "Nurse",
+            "Manager"
+          ],
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "route": "/review",
+          "purpose": "Open manager review workspace",
+          "allowedRoles": [
+            "Manager"
+          ],
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "route": "/app-audit",
+          "purpose": "Read sanitized application audit",
+          "allowedRoles": [
+            "Manager",
+            "Auditor"
+          ],
+          "unauthorizedResult": "HTTP 403"
+        }
+      ],
+      "rbacMatrix": [
+        {
+          "role": "AgencyWorker",
+          "route": "/residents",
+          "purpose": "List permitted TEST residents",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "AgencyWorker",
+          "route": "/care-notes",
+          "purpose": "Open fictional care-note area",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "AgencyWorker",
+          "route": "/clinical",
+          "purpose": "Open clinical workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "AgencyWorker",
+          "route": "/review",
+          "purpose": "Open manager review workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "AgencyWorker",
+          "route": "/app-audit",
+          "purpose": "Read sanitized application audit",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Auditor",
+          "route": "/residents",
+          "purpose": "List permitted TEST residents",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Auditor",
+          "route": "/care-notes",
+          "purpose": "Open fictional care-note area",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Auditor",
+          "route": "/clinical",
+          "purpose": "Open clinical workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Auditor",
+          "route": "/review",
+          "purpose": "Open manager review workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Auditor",
+          "route": "/app-audit",
+          "purpose": "Read sanitized application audit",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "CareWorker",
+          "route": "/residents",
+          "purpose": "List permitted TEST residents",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "CareWorker",
+          "route": "/care-notes",
+          "purpose": "Open fictional care-note area",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "CareWorker",
+          "route": "/clinical",
+          "purpose": "Open clinical workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "CareWorker",
+          "route": "/review",
+          "purpose": "Open manager review workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "CareWorker",
+          "route": "/app-audit",
+          "purpose": "Read sanitized application audit",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Manager",
+          "route": "/residents",
+          "purpose": "List permitted TEST residents",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Manager",
+          "route": "/care-notes",
+          "purpose": "Open fictional care-note area",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Manager",
+          "route": "/clinical",
+          "purpose": "Open clinical workspace",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Manager",
+          "route": "/review",
+          "purpose": "Open manager review workspace",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Manager",
+          "route": "/app-audit",
+          "purpose": "Read sanitized application audit",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Nurse",
+          "route": "/residents",
+          "purpose": "List permitted TEST residents",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Nurse",
+          "route": "/care-notes",
+          "purpose": "Open fictional care-note area",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Nurse",
+          "route": "/clinical",
+          "purpose": "Open clinical workspace",
+          "allowed": true,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Nurse",
+          "route": "/review",
+          "purpose": "Open manager review workspace",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        },
+        {
+          "role": "Nurse",
+          "route": "/app-audit",
+          "purpose": "Read sanitized application audit",
+          "allowed": false,
+          "unauthorizedResult": "HTTP 403"
+        }
+      ]
+    },
+    "controlMappings": [
+      {
+        "controlId": "CTRL-MFA",
+        "sunhavenArea": "Microsoft Entra strong authentication",
+        "integrationStatus": "NOT_INFERRED_BY_ADAPTER",
+        "note": "SITAS continues to simulate MFA. The adapter does not infer live MFA enforcement from static configuration files."
+      },
+      {
+        "controlId": "CTRL-SESSION",
+        "sunhavenArea": "Shared-device/session protection",
+        "integrationStatus": "SIMULATED_CONTROL",
+        "note": "Shared-session misuse remains a controlled SITAS scenario; the adapter does not make a live session-state claim."
+      },
+      {
+        "controlId": "CTRL-ACCOUNT",
+        "sunhavenArea": "JML leaver disablement and access removal",
+        "integrationStatus": "CORE_ARTIFACT_PRESENT",
+        "note": "The adapter reads workforce/leaver evidence only. It never executes the leaver script or changes Entra ID."
+      },
+      {
+        "controlId": "CTRL-RBAC",
+        "sunhavenArea": "Flask route-role authorization and Entra app roles",
+        "integrationStatus": "CORE_CONFIGURATION_PRESENT",
+        "note": "The adapter analyses route-role configuration and app-role mappings without changing authorization decisions."
+      },
+      {
+        "controlId": "CTRL-PRIVAUTH",
+        "sunhavenArea": "Privileged re-authentication",
+        "integrationStatus": "SIMULATED_EXTENSION",
+        "note": "No live privileged re-authentication enforcement is claimed by SITAS."
+      },
+      {
+        "controlId": "CTRL-DEVICE",
+        "sunhavenArea": "Trusted/compliant device restriction",
+        "integrationStatus": "FUTURE_EXTENSION",
+        "note": "This remains a future-production analysis scenario and does not claim that device compliance is implemented in the Sunhaven MVP."
+      }
+    ],
+    "operationalEvidence": {
+      "workerState": null,
+      "leaverResult": null
+    },
+    "findings": []
+  },
+  "integratedLeaverAnalysis": {
+    "scenarioId": "SITAS-INT-LEAVER-SC1006",
+    "scenarioName": "Integrated Former Worker Analysis - SC1006",
+    "relatedControls": [
+      "CTRL-ACCOUNT"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-INT-LEAVER-SC1006",
+      "scenarioName": "Integrated Former Worker Analysis - SC1006",
+      "description": "A read-only SITAS scenario generated from the Sunhaven workforce record for SC1006, which is marked Leaving. The baseline models the exposure if the identity remains usable; the protected run models the expected effect of account disablement.",
+      "startNode": "former_worker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "former_worker",
+        "former_worker_identity",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Former Worker (SC1006)",
+        "Sunhaven Identity (SC1006, CareWorker)",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 4,
+        "impactLabel": "Major",
+        "riskScore": 12,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-ACCOUNT",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "Account disablement does not block this path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-INT-LEAVER-SC1006",
+      "scenarioName": "Integrated Former Worker Analysis - SC1006",
+      "description": "A read-only SITAS scenario generated from the Sunhaven workforce record for SC1006, which is marked Leaving. The baseline models the exposure if the identity remains usable; the protected run models the expected effect of account disablement.",
+      "startNode": "former_worker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "former_worker",
+        "former_worker_identity",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Former Worker (SC1006)",
+        "Sunhaven Identity (SC1006, CareWorker)",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 4,
+        "impactLabel": "Major",
+        "riskScore": 12,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-ACCOUNT",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "Account disablement prevents the former worker identity from authenticating."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    },
+    "integration": {
+      "mode": "SUNHAVEN_WORKFORCE_DERIVED",
+      "sourceFile": "data/workforce.csv",
+      "employeeId": "SC1006",
+      "jobRole": "CareWorker",
+      "facility": "Sydney",
+      "workforceStatus": "Leaving",
+      "endDate": "2026-08-05",
+      "observedEvidence": {
+        "employeeId": "SC1006",
+        "assessment": "NO_OPERATIONAL_EVIDENCE_SUPPLIED",
+        "accountEnabled": null,
+        "leaverControlComplete": null,
+        "sources": []
+      },
+      "interpretation": "The OFF/ON comparison is a controlled SITAS simulation. Any operational evidence supplied is read-only supporting evidence and is not a live Entra query."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scenarioId": "SITAS-S03",
+  "name": "Former Worker Identity Misuse",
+  "description": "A fictional former worker attempts to use a previously active identity to access the Sunhaven Care Portal and reach fictional resident records.",
+
+  "startNode": "former_worker",
+  "targetNode": "resident_records",
+
+  "likelihood": 3,
+  "impact": 4,
+
+  "relatedControls": [
+    "CTRL-ACCOUNT"
+  ]
+}

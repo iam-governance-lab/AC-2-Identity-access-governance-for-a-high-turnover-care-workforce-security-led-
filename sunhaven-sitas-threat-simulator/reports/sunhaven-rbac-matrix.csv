@@ -1,0 +1,26 @@
+role,route,purpose,allowed,unauthorized_result
+AgencyWorker,/residents,List permitted TEST residents,True,HTTP 403
+AgencyWorker,/care-notes,Open fictional care-note area,True,HTTP 403
+AgencyWorker,/clinical,Open clinical workspace,False,HTTP 403
+AgencyWorker,/review,Open manager review workspace,False,HTTP 403
+AgencyWorker,/app-audit,Read sanitized application audit,False,HTTP 403
+Auditor,/residents,List permitted TEST residents,False,HTTP 403
+Auditor,/care-notes,Open fictional care-note area,False,HTTP 403
+Auditor,/clinical,Open clinical workspace,False,HTTP 403
+Auditor,/review,Open manager review workspace,False,HTTP 403
+Auditor,/app-audit,Read sanitized application audit,True,HTTP 403
+CareWorker,/residents,List permitted TEST residents,True,HTTP 403
+CareWorker,/care-notes,Open fictional care-note area,True,HTTP 403
+CareWorker,/clinical,Open clinical workspace,False,HTTP 403
+CareWorker,/review,Open manager review workspace,False,HTTP 403
+CareWorker,/app-audit,Read sanitized application audit,False,HTTP 403
+Manager,/residents,List permitted TEST residents,True,HTTP 403
+Manager,/care-notes,Open fictional care-note area,True,HTTP 403
+Manager,/clinical,Open clinical workspace,True,HTTP 403
+Manager,/review,Open manager review workspace,True,HTTP 403
+Manager,/app-audit,Read sanitized application audit,True,HTTP 403
+Nurse,/residents,List permitted TEST residents,True,HTTP 403
+Nurse,/care-notes,Open fictional care-note area,True,HTTP 403
+Nurse,/clinical,Open clinical workspace,True,HTTP 403
+Nurse,/review,Open manager review workspace,False,HTTP 403
+Nurse,/app-audit,Read sanitized application audit,False,HTTP 403

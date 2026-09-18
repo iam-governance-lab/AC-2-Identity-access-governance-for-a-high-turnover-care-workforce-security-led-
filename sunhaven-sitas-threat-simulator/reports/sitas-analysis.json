@@ -1,0 +1,552 @@
+[
+  {
+    "scenarioId": "SITAS-S01",
+    "scenarioName": "Stolen Nurse Credential",
+    "relatedControls": [
+      "CTRL-MFA"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-S01",
+      "scenarioName": "Stolen Nurse Credential",
+      "description": "A fictional external attacker obtains a nurse password and attempts to reach fictional resident records.",
+      "startNode": "external_attacker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "external_attacker",
+        "nurse_password",
+        "nurse_identity",
+        "shared_workstation",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "External Attacker",
+        "Stolen Nurse Password",
+        "Nurse Identity",
+        "Shared Nurse Workstation",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 4,
+        "likelihoodLabel": "Likely",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 20,
+        "severity": "Critical"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-MFA",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "MFA does not block this path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-S01",
+      "scenarioName": "Stolen Nurse Credential",
+      "description": "A fictional external attacker obtains a nurse password and attempts to reach fictional resident records.",
+      "startNode": "external_attacker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "external_attacker",
+        "nurse_password",
+        "nurse_identity",
+        "shared_workstation",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "External Attacker",
+        "Stolen Nurse Password",
+        "Nurse Identity",
+        "Shared Nurse Workstation",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 4,
+        "likelihoodLabel": "Likely",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 20,
+        "severity": "Critical"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-MFA",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "MFA blocks password-only authentication."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    }
+  },
+  {
+    "scenarioId": "SITAS-S02",
+    "scenarioName": "Shared Workstation Session Misuse",
+    "relatedControls": [
+      "CTRL-SESSION"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-S02",
+      "scenarioName": "Shared Workstation Session Misuse",
+      "description": "A fictional unauthorised person finds an unattended shared workstation with an active nurse session and attempts to reach fictional resident records.",
+      "startNode": "unauthorised_person",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "unauthorised_person",
+        "unattended_workstation",
+        "active_nurse_session",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Unauthorised Person",
+        "Unattended Shared Workstation",
+        "Active Nurse Session",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 15,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-SESSION",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "Session timeout does not block this path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-S02",
+      "scenarioName": "Shared Workstation Session Misuse",
+      "description": "A fictional unauthorised person finds an unattended shared workstation with an active nurse session and attempts to reach fictional resident records.",
+      "startNode": "unauthorised_person",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "unauthorised_person",
+        "unattended_workstation",
+        "active_nurse_session",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Unauthorised Person",
+        "Unattended Shared Workstation",
+        "Active Nurse Session",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 15,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-SESSION",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "Session timeout prevents reuse of the stale active session."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    }
+  },
+  {
+    "scenarioId": "SITAS-S03",
+    "scenarioName": "Former Worker Identity Misuse",
+    "relatedControls": [
+      "CTRL-ACCOUNT"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-S03",
+      "scenarioName": "Former Worker Identity Misuse",
+      "description": "A fictional former worker attempts to use a previously active identity to access the Sunhaven Care Portal and reach fictional resident records.",
+      "startNode": "former_worker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "former_worker",
+        "former_worker_identity",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Former Worker",
+        "Former Worker Identity",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 4,
+        "impactLabel": "Major",
+        "riskScore": 12,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-ACCOUNT",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "Account disablement does not block this path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-S03",
+      "scenarioName": "Former Worker Identity Misuse",
+      "description": "A fictional former worker attempts to use a previously active identity to access the Sunhaven Care Portal and reach fictional resident records.",
+      "startNode": "former_worker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "former_worker",
+        "former_worker_identity",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Former Worker",
+        "Former Worker Identity",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 4,
+        "impactLabel": "Major",
+        "riskScore": 12,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-ACCOUNT",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "Account disablement prevents the former worker identity from authenticating."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    }
+  },
+  {
+    "scenarioId": "SITAS-S04",
+    "scenarioName": "Excessive Privilege Abuse",
+    "relatedControls": [
+      "CTRL-RBAC"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-S04",
+      "scenarioName": "Excessive Privilege Abuse",
+      "description": "A fictional compromised care worker identity has access beyond its intended role and attempts to use restricted administrative functionality to reach fictional resident records.",
+      "startNode": "compromised_care_worker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "compromised_care_worker",
+        "care_worker_identity",
+        "over_privileged_role",
+        "restricted_admin_function",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Compromised Care Worker",
+        "Care Worker Identity",
+        "Over-Privileged Role",
+        "Restricted Admin Function",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 15,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-RBAC",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "RBAC does not block this excessive privilege path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-S04",
+      "scenarioName": "Excessive Privilege Abuse",
+      "description": "A fictional compromised care worker identity has access beyond its intended role and attempts to use restricted administrative functionality to reach fictional resident records.",
+      "startNode": "compromised_care_worker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "compromised_care_worker",
+        "care_worker_identity",
+        "over_privileged_role",
+        "restricted_admin_function",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "Compromised Care Worker",
+        "Care Worker Identity",
+        "Over-Privileged Role",
+        "Restricted Admin Function",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 15,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-RBAC",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "RBAC prevents the care worker identity from using the restricted administrative function."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    }
+  },
+  {
+    "scenarioId": "SITAS-S05",
+    "scenarioName": "Privileged Administrator Credential Compromise",
+    "relatedControls": [
+      "CTRL-PRIVAUTH"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-S05",
+      "scenarioName": "Privileged Administrator Credential Compromise",
+      "description": "A fictional external attacker obtains an administrator credential and attempts to use the privileged identity to reach the restricted admin console and fictional resident records.",
+      "startNode": "admin_attacker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "admin_attacker",
+        "stolen_admin_credential",
+        "privileged_admin_identity",
+        "admin_console",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "External Admin Attacker",
+        "Stolen Admin Credential",
+        "Privileged Admin Identity",
+        "Restricted Admin Console",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 2,
+        "likelihoodLabel": "Unlikely",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 10,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-PRIVAUTH",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "Privileged re-authentication does not block this path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-S05",
+      "scenarioName": "Privileged Administrator Credential Compromise",
+      "description": "A fictional external attacker obtains an administrator credential and attempts to use the privileged identity to reach the restricted admin console and fictional resident records.",
+      "startNode": "admin_attacker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "admin_attacker",
+        "stolen_admin_credential",
+        "privileged_admin_identity",
+        "admin_console",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "External Admin Attacker",
+        "Stolen Admin Credential",
+        "Privileged Admin Identity",
+        "Restricted Admin Console",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 2,
+        "likelihoodLabel": "Unlikely",
+        "impact": 5,
+        "impactLabel": "Severe",
+        "riskScore": 10,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-PRIVAUTH",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "Privileged re-authentication prevents the compromised administrator identity from reaching the restricted admin console."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    }
+  },
+  {
+    "scenarioId": "SITAS-S06",
+    "scenarioName": "Unmanaged Device Access",
+    "relatedControls": [
+      "CTRL-DEVICE"
+    ],
+    "baseline": {
+      "scenarioId": "SITAS-S06",
+      "scenarioName": "Unmanaged Device Access",
+      "description": "A fictional external attacker uses a stolen care worker credential to create a session from an unmanaged device and attempts to reach fictional resident records.",
+      "startNode": "device_attacker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "device_attacker",
+        "stolen_care_worker_credential",
+        "remote_care_worker_identity",
+        "unmanaged_device_session",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "External Device Attacker",
+        "Stolen Care Worker Credential",
+        "Remote Care Worker Identity",
+        "Unmanaged Device Session",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 4,
+        "impactLabel": "Major",
+        "riskScore": 12,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-DEVICE",
+          "blocked": false,
+          "status": "OPEN",
+          "reason": "Trusted device restriction does not block this path."
+        }
+      ],
+      "finalStatus": "OPEN"
+    },
+    "protected": {
+      "scenarioId": "SITAS-S06",
+      "scenarioName": "Unmanaged Device Access",
+      "description": "A fictional external attacker uses a stolen care worker credential to create a session from an unmanaged device and attempts to reach fictional resident records.",
+      "startNode": "device_attacker",
+      "targetNode": "resident_records",
+      "pathFound": true,
+      "pathNodeIds": [
+        "device_attacker",
+        "stolen_care_worker_credential",
+        "remote_care_worker_identity",
+        "unmanaged_device_session",
+        "care_portal",
+        "resident_records"
+      ],
+      "pathNodeNames": [
+        "External Device Attacker",
+        "Stolen Care Worker Credential",
+        "Remote Care Worker Identity",
+        "Unmanaged Device Session",
+        "Sunhaven Care Portal",
+        "Fictional Resident Records"
+      ],
+      "risk": {
+        "likelihood": 3,
+        "likelihoodLabel": "Possible",
+        "impact": 4,
+        "impactLabel": "Major",
+        "riskScore": 12,
+        "severity": "High"
+      },
+      "controls": [
+        {
+          "controlId": "CTRL-DEVICE",
+          "blocked": true,
+          "status": "BLOCKED",
+          "reason": "Trusted device restriction prevents the unmanaged device session from accessing the Sunhaven Care Portal."
+        }
+      ],
+      "finalStatus": "BLOCKED"
+    },
+    "comparison": {
+      "baselineStatus": "OPEN",
+      "protectedStatus": "BLOCKED",
+      "pathInterrupted": true,
+      "result": "CONTROL_EFFECTIVE"
+    }
+  }
+]
