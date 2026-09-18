@@ -23,6 +23,12 @@
             "displayName": "Emma Wilson",
             "email": "emma@random.example",
             "agencyId": "AG001"
+        },
+        {
+            "workerId": "EXT005",
+            "displayName": "James Wilson",
+            "email": "james@sydneycare.example",
+            "agencyId": "AG001"
         }
     ]
 }
