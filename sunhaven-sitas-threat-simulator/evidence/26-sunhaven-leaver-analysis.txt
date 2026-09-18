@@ -1,0 +1,31 @@
+SITAS - Sunhaven Identity Threat and Attack-Path Simulator
+------------------------------------------------------------
+
+Sunhaven-derived input
+----------------------------------------
+Employee ID:      SC1006
+Role:             CareWorker
+Facility:         Sydney
+Workforce status: Leaving
+End date:         2026-08-05
+
+Scenario ID:   SITAS-INT-LEAVER-SC1006
+Scenario Name: Integrated Former Worker Analysis - SC1006
+Controls:      CTRL-ACCOUNT
+
+Risk Assessment
+------------------------------
+Risk Score: 12/25
+Severity:   High
+
+Automatic Before / After Comparison
+----------------------------------------
+Baseline (control OFF): OPEN
+Protected (control ON): BLOCKED
+Path interrupted:       YES
+Result:                 CONTROL_EFFECTIVE
+
+Read-only operational evidence
+----------------------------------------
+Assessment: NO_OPERATIONAL_EVIDENCE_SUPPLIED
+This is not a live Entra query or enforcement action.

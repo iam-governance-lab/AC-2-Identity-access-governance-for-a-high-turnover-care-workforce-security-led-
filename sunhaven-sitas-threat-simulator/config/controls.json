@@ -1,0 +1,40 @@
+{
+  "controls": [
+    {
+      "id": "CTRL-MFA",
+      "name": "Multi-Factor Authentication",
+      "enabled": false,
+      "description": "Requires an additional factor when a password is used."
+    },
+    {
+      "id": "CTRL-RBAC",
+      "name": "Role-Based Access Control",
+      "enabled": false,
+      "description": "Restricts access according to the user's intended role."
+    },
+    {
+      "id": "CTRL-SESSION",
+      "name": "Session Timeout",
+      "enabled": false,
+      "description": "Limits how long an inactive authenticated session remains usable."
+    },
+    {
+      "id": "CTRL-ACCOUNT",
+      "name": "Account Disablement",
+      "enabled": false,
+      "description": "Prevents a former worker from using a disabled identity."
+    },
+    {
+      "id": "CTRL-PRIVAUTH",
+      "name": "Privileged Re-authentication",
+      "enabled": false,
+      "description": "Requires additional authentication before sensitive privileged administrative access is allowed."
+    },
+    {
+      "id": "CTRL-DEVICE",
+      "name": "Trusted Device Restriction",
+      "enabled": false,
+      "description": "Prevents access from an unmanaged or untrusted device session."
+    }
+  ]
+}

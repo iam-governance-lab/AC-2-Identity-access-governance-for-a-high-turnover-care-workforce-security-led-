@@ -1,0 +1,8 @@
+SITAS - Sunhaven Identity Threat and Attack-Path Simulator
+------------------------------------------------------------
+
+Reports generated
+------------------------------
+reports/sitas-analysis.json
+reports/sitas-summary.csv
+reports/sitas-threat-report.html

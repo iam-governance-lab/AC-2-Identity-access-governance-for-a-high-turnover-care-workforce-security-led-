@@ -1,0 +1,33 @@
+SITAS - Sunhaven Identity Threat and Attack-Path Simulator
+------------------------------------------------------------
+
+Sunhaven Integration Status
+------------------------------------------------------------
+Root:              AC-2-Identity-access-governance-for-a-high-turnover-care-workforce-security-led--main (validated)
+Mode:              READ_ONLY_PROJECT_SNAPSHOT
+Workforce records: 4
+Roles:             AgencyWorker, CareWorker, Nurse
+Facilities:        Sydney
+Leaving records:   1
+  - SC1006 | CareWorker | Leaving | endDate=2026-08-05
+
+Core source validation
+------------------------------------------------------------
+OK       workforce            data/workforce.csv
+OK       routeRoleMap         config/route-role-map.csv
+OK       appRoleIds           config/app-role-ids.json
+OK       groupObjectIds       config/group-object-ids.json
+OK       joinerAutomation     automation/Invoke-SunhavenJoiner.ps1
+OK       moverAutomation      automation/Invoke-SunhavenMover.ps1
+OK       leaverAutomation     automation/Invoke-SunhavenLeaver.ps1
+OK       workerStateExporter  automation/Export-SunhavenWorkerState.ps1
+OK       flaskApplication     app/app.py
+
+RBAC configuration
+------------------------------------------------------------
+Configured app roles: AgencyWorker, Auditor, CareWorker, Manager, Nurse
+Configured routes:    5
+
+Integration findings
+------------------------------------------------------------
+No configuration warnings found in the analysed files.
