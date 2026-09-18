@@ -16,6 +16,22 @@ def find_agency(agencies, agency_id):
 
 
 def validate_worker(worker, agencies):
+            
+    if "workerId" not in worker:
+        return "REJECTED - Worker ID is missing"
+
+    if "displayName" not in worker:
+        return "REJECTED - Display name is missing"
+
+    if "email" not in worker:
+        return "REJECTED - Email is missing"
+
+    if "agencyId" not in worker:
+        return "REJECTED - Agency ID is missing"
+
+    if "@" not in worker["email"]:
+        return "REJECTED - Invalid email address"
+
     agency = find_agency(agencies, worker["agencyId"])
 
     if agency is None:
@@ -31,7 +47,6 @@ def validate_worker(worker, agencies):
         return "REJECTED - Email domain does not match agency"
 
     return "APPROVED"
-
 
 def main():
     agency_data = load_json("config/saif-approved-agencies.json")
@@ -52,7 +67,6 @@ def main():
             "-",
             result
         )
-
-
+        
 if __name__ == "__main__":
     main()
