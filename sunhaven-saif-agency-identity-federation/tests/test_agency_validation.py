@@ -1,4 +1,4 @@
-from automation.saif_agency_validation import validate_worker
+from src.saif_agency_validation import validate_worker
 
 
 agencies = [

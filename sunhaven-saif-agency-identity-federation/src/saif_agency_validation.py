@@ -1,6 +1,5 @@
 import json
 
-
 def load_json(file_path):
     with open(file_path, "r") as file:
         data = json.load(file)
@@ -49,9 +48,10 @@ def validate_worker(worker, agencies):
     return "APPROVED"
 
 def main():
-    agency_data = load_json("config/saif-approved-agencies.json")
-    worker_data = load_json("data/saif-agency-workers.json")
+    
+    agency_data = load_json("sunhaven-saif-agency-identity-federation/config/approved-agencies.json")
 
+    worker_data = load_json("sunhaven-saif-agency-identity-federation/data/agency-workers.json")
     agencies = agency_data["agencies"]
     workers = worker_data["workers"]
 
