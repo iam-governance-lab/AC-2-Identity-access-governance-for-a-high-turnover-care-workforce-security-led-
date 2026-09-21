@@ -8,7 +8,7 @@
 
 ## 1. Project Background
 
-Sunhaven Care is a fictional care organisation used in the cybersecurity capstone project.
+Sunhaven Care is a care organisation used in the cybersecurity capstone project.
 
 The environment includes different worker roles, user identities, shared workstations, sessions, applications and fictional resident information. Because access depends heavily on identity, weaknesses such as stolen credentials, unattended sessions, old accounts or excessive permissions can create attack paths to protected information.
 
