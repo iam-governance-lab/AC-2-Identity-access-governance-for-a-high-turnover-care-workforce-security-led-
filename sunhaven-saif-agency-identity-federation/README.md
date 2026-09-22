@@ -280,20 +280,6 @@ Current limitations include:
 
 ---
 
-## Individual Contribution
-
-SAIF is an individual technical contribution to the wider Sunhaven Care IAM project.
-
-The contribution focuses on the external agency identity onboarding path:
-
-**Agency Worker → SAIF Validation → Microsoft Graph B2B → Entra Guest Identity → Identity Mapping → Existing Sunhaven IAM Handover**
-
-The implementation includes validation, Graph/B2B integration, identity mapping, IAM handover, security controls, automated testing, technical evidence and architecture documentation.
-
-SAIF extends the existing group solution without replacing the authentication, MFA, RBAC, JML or care-portal components implemented elsewhere in the project.
-
----
-
 ## Ethical and Privacy Statement
 
 SAIF uses fictional agency and worker information for this student project. Authentication secrets, passwords and access tokens must not be committed to the repository or included in assessment evidence.
