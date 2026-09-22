@@ -157,16 +157,26 @@ https://learn.microsoft.com/en-us/entra/external-id/cross-tenant-access-settings
 
 ## Current Implementation Status
 
-The following SAIF policy controls are currently implemented in the local validation component:
+The SAIF component currently implements the following security and external identity functions:
 
 - required worker information validation;
 - approved agency lookup;
-- blocked agency rejection;
+- blocked and unknown agency rejection;
 - email format validation;
-- agency email-domain consistency check;
-- approve or reject decision;
-- automated validation tests.
+- agency email-domain consistency checking;
+- fail-closed processing when validation fails;
+- Microsoft Entra B2B invitation preparation;
+- Microsoft Graph B2B invitation transport;
+- Microsoft Graph connection checking and error handling;
+- external Entra guest identity creation;
+- external identity mapping using the Entra user object ID;
+- IAM handover information for the existing Sunhaven IAM environment;
+- automated tests for validation, invitation preparation, Graph transport, identity mapping, IAM handover and the complete SAIF workflow.
 
-Microsoft Graph and Entra B2B invitation integration is the next implementation stage.
+A live Microsoft Entra B2B test was also completed in the project tenant. The test demonstrated that an external invitation could be created, delivered to the external user, redeemed, and represented in Microsoft Entra as an accepted Guest identity.
 
-The policy will be reviewed as the SAIF implementation develops.
+SAIF currently hands the external identity to the existing Sunhaven IAM boundary using the Entra user object ID and a requested AgencyWorker role. SAIF does not itself assign the application role or replace the existing Sunhaven authentication, RBAC, resident-access, session or JML controls.
+
+The current automated SAIF test suite contains 13 passing tests.
+
+This implementation is a student project and demonstration environment. Production deployment would require additional operational controls, including dedicated least-privilege administration, production external collaboration configuration, monitoring and formal agency trust processes.
