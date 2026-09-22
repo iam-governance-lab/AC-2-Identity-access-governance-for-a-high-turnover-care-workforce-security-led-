@@ -42,6 +42,15 @@ def test_approved_worker_complete_workflow():
     assert mapping["agencyId"] == "AG001"
     assert mapping["externalEmail"] == "sarah@sydneycare.example"
     assert mapping["entraUserId"] == "test-entra-user-id"
+    
+    handover = result["iamHandover"]
+
+    assert handover["workerId"] == "EXT001"
+    assert handover["agencyId"] == "AG001"
+    assert handover["externalEmail"] == "sarah@sydneycare.example"
+    assert handover["entraUserId"] == "test-entra-user-id"
+    assert handover["handoverTarget"] == "Existing Sunhaven IAM"
+    assert handover["requestedRole"] == "AgencyWorker"
 
 
 def test_blocked_worker_stops_before_invitation():
