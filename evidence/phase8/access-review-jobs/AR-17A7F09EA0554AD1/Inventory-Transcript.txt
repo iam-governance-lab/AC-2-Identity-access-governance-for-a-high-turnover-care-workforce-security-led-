@@ -1,0 +1,10 @@
+Exit code: 1
+STDOUT
+STEP 1 - Connect with read-only Graph permissions
+
+STDERR
+[31;1mConnect-MgGraph: [0m/Users/rifat/Documents/sunhaven-workforce-iam/automation/Export-SunhavenAccessReview.ps1:63[0m
+[31;1m[0m[36;1mLine |[0m
+[31;1m[0m[36;1m[36;1m  63 | [0m [36;1mConnect-MgGraph `[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m ~~~~~~~~~~~~~~~~~[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mInteractiveBrowserCredential authentication failed: [0m

@@ -1,0 +1,32 @@
+Exit code: 2
+STDOUT
+Authenticated tenant: 72a753ee-6910-4a9b-a36e-e8790da83acb
+Authentication mode: Delegated
+
+[32;1mGeneratedUtc            : [0m2026-09-21T15:01:58.1004540Z
+[32;1mMode                    : [0mPLAN
+[32;1mTenantId                : [0m72a753ee-6910-4a9b-a36e-e8790da83acb
+[32;1mJobId                   : [0mAR-4BEA1269376348B5
+[32;1mDecision                : [0mChangeAccess
+[32;1mEmployeeId              : [0mSC1013
+[32;1mUserObjectId            : [0m67583254-adc1-4272-abfe-7fd0d9a2a371
+[32;1mCurrentRole             : [0mCareWorker
+[32;1mTargetRole              : [0mNurse
+[32;1mRequiredApproval        : [0mMOVE SC1013 CareWorker TO Nurse
+[32;1mOutcome                 : [0mBLOCKED
+[32;1mMessage                 : [0mLive Entra state did not match the reviewed baseline.
+[32;1mBaselineVerified        : [0mFalse
+[32;1mFinalStateVerified      : [0mFalse
+[32;1mWriteOperationsExecuted : [0m0
+[32;1mActionsCompleted        : [0m{}
+[32;1mCurrentGroups           : [0m{}
+[32;1mCurrentAppRoles         : [0m{Manager}
+[32;1mAccountEnabled          : [0mFalse
+[32;1mJobTitle                : [0mCareWorker
+[32;1mErrorMessage            : [0m
+[REDACTED SENSITIVE OUTPUT]
+[32;1mTokenRecorded           : [0mFalse
+[32;1mSecretRecorded          : [0mFalse
+
+
+STDERR

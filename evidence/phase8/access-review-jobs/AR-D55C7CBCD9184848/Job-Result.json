@@ -1,0 +1,30 @@
+{
+  "GeneratedUtc": "2026-09-21T15:43:44.8997430Z",
+  "Mode": "APPLY",
+  "TenantId": "72a753ee-6910-4a9b-a36e-e8790da83acb",
+  "JobId": "AR-D55C7CBCD9184848",
+  "Decision": "RemoveAccess",
+  "EmployeeId": "SC-TST-002",
+  "UserObjectId": "d875d2a3-b835-4119-9dca-e64793a7318c",
+  "CurrentRole": "Nurse",
+  "TargetRole": null,
+  "RequiredApproval": "REMOVE ACCESS SC-TST-002 Nurse",
+  "Outcome": "ACCESS_REMOVED",
+  "Message": "Approved access-review remediation was applied and verified.",
+  "BaselineVerified": true,
+  "FinalStateVerified": true,
+  "WriteOperationsExecuted": 3,
+  "ActionsCompleted": [
+    "REMOVE_CURRENT_APP_ROLE",
+    "REMOVE_CURRENT_GROUP",
+    "REVOKE_SIGN_IN_SESSIONS"
+  ],
+  "CurrentGroups": [],
+  "CurrentAppRoles": [],
+  "AccountEnabled": true,
+  "JobTitle": "Nurse",
+  "ErrorMessage": "",
+  "PasswordRecorded": false,
+  "TokenRecorded": false,
+  "SecretRecorded": false
+}

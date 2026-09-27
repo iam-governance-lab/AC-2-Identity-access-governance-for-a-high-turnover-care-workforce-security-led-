@@ -3,10 +3,21 @@ from datetime import datetime, timedelta, timezone
 from functools import wraps
 
 import requests
-from flask import Flask, abort, render_template, request, session
+from flask import (
+    Flask,
+    abort,
+    redirect,
+    render_template,
+    request,
+    session,
+    url_for,
+)
 from identity.flask import Auth
 
 import app_config
+
+from access_review import build_access_review_blueprint
+from access_review_db import initialize_access_review_database
 
 from database import (
     get_connection,
@@ -46,6 +57,7 @@ auth = Auth(
 )
 
 initialize_database()
+initialize_access_review_database()
 
 
 def identity_from_context(context):
@@ -250,6 +262,17 @@ def require_roles(*allowed_roles):
     return decorator
 
 
+app.register_blueprint(
+    build_access_review_blueprint(
+        auth=auth,
+        require_active_session=require_active_session,
+        require_roles=require_roles,
+        identity_from_context=identity_from_context,
+        write_audit_event=write_audit_event,
+    )
+)
+
+
 @app.route("/")
 @auth.login_required
 @require_active_session
@@ -378,23 +401,18 @@ def clinical(*, context):
 @app.route("/review")
 @auth.login_required
 @require_active_session
-@require_roles("Manager")
+@require_roles("Manager", "Auditor")
 def review(*, context):
     identity = identity_from_context(context)
 
     write_audit_event(
         identity,
-        action="OPEN_REVIEW",
-        object_id="review",
+        action="OPEN_REVIEW_REDIRECT",
+        object_id="access-review",
         result="ALLOW",
     )
 
-    return render_template(
-        "protected_page.html",
-        title="Manager review",
-        message="Access permitted for the Manager role.",
-        identity=identity,
-    )
+    return redirect(url_for("access_review.dashboard"))
 
 
 @app.route("/app-audit")

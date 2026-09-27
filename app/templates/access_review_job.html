@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Access-review job {{ job.job_id }} | Sunhaven Care Portal</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='access_review.css') }}"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Background operation</p>
+        <h1>Access-review job</h1>
+      </div>
+      <nav aria-label="Job navigation">
+        <a href="{{ url_for('access_review.dashboard') }}">Access review</a>
+        <a href="/">Home</a>
+        <a href="{{ url_for('identity.logout') }}">Sign out</a>
+      </nav>
+    </header>
+
+    <main>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+          <p class="message {{ category }}" role="status">{{ message }}</p>
+        {% endfor %}
+      {% endwith %}
+
+      <section aria-labelledby="job-summary-heading">
+        <h2 id="job-summary-heading">Job summary</h2>
+        <dl class="summary-grid">
+          <div><dt>Job ID</dt><dd class="mono">{{ job.job_id }}</dd></div>
+          <div><dt>Type</dt><dd>{{ job.job_type }}</dd></div>
+          <div><dt>Status</dt><dd id="job-status">{{ job.status }}</dd></div>
+          <div><dt>Outcome</dt><dd>{{ job.outcome or 'Pending' }}</dd></div>
+          <div><dt>Employee</dt><dd>{{ job.employee_id or '-' }} {{ job.display_name or '' }}</dd></div>
+          <div><dt>Decision</dt><dd>{{ job.decision or '-' }}</dd></div>
+          <div><dt>Current role</dt><dd>{{ job.current_role or '-' }}</dd></div>
+          <div><dt>Target role</dt><dd>{{ job.target_role or '-' }}</dd></div>
+          <div><dt>Directory writes</dt><dd>{{ job.write_operations }}</dd></div>
+          <div><dt>Completed UTC</dt><dd>{{ job.completed_at or 'Pending' }}</dd></div>
+        </dl>
+      </section>
+
+      {% if job.job_type == 'PLAN' and job.status == 'SUCCEEDED' and job.outcome == 'PLANNED' %}
+      <section aria-labelledby="approval-heading">
+        <h2 id="approval-heading">Exact approval</h2>
+        <p>
+          The dry run completed with zero writes. Type the following phrase
+          exactly to queue the background change:
+        </p>
+        <p class="approval-phrase">{{ job.required_approval }}</p>
+        {% if 'Manager' in identity.roles %}
+        <form
+          method="post"
+          action="{{ url_for('access_review.apply_job', job_id=job.job_id) }}"
+        >
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="{{ access_review_csrf_token() }}"
+          />
+          <label>
+            Approval phrase
+            <input
+              name="approval_text"
+              autocomplete="off"
+              required
+              class="mono"
+            />
+          </label>
+          <button type="submit" class="danger">Apply approved change</button>
+        </form>
+        {% else %}
+          <p>Only a Manager can submit the final approval.</p>
+        {% endif %}
+      </section>
+      {% endif %}
+
+      {% if job.result %}
+      <section aria-labelledby="result-heading">
+        <h2 id="result-heading">Sanitised result</h2>
+        <pre>{{ job.result | tojson(indent=2) }}</pre>
+      </section>
+      {% endif %}
+
+      <section aria-labelledby="events-heading">
+        <h2 id="events-heading">Job events</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>UTC time</th><th>Status</th><th>Message</th></tr>
+            </thead>
+            <tbody>
+              {% for event in events %}
+              <tr>
+                <td>{{ event.event_time }}</td>
+                <td>{{ event.status }}</td>
+                <td>{{ event.message }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    {% if job.status in ['QUEUED', 'RUNNING'] %}
+    <script>
+      window.setTimeout(function () {
+        window.location.reload();
+      }, 2500);
+    </script>
+    {% endif %}
+  </body>
+</html>

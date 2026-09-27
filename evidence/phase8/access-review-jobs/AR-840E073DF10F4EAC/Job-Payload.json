@@ -1,0 +1,12 @@
+{
+  "ApprovalText": "MOVE SC-TST-001 CareWorker TO Nurse",
+  "CurrentRole": "CareWorker",
+  "Decision": "ChangeAccess",
+  "EmployeeId": "SC-TST-001",
+  "Facility": "Unassigned",
+  "JobId": "AR-840E073DF10F4EAC",
+  "ReviewedCareAppRoles": "CareWorker",
+  "ReviewedGovernedGroups": "SG-SC-CareWorkers",
+  "TargetRole": "Nurse",
+  "UserObjectId": "24078780-828d-4675-9864-be92782e05cd"
+}

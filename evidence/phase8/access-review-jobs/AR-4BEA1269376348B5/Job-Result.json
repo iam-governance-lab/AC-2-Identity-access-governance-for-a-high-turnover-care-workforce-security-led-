@@ -1,0 +1,28 @@
+{
+  "GeneratedUtc": "2026-09-21T15:01:58.1004540Z",
+  "Mode": "PLAN",
+  "TenantId": "72a753ee-6910-4a9b-a36e-e8790da83acb",
+  "JobId": "AR-4BEA1269376348B5",
+  "Decision": "ChangeAccess",
+  "EmployeeId": "SC1013",
+  "UserObjectId": "67583254-adc1-4272-abfe-7fd0d9a2a371",
+  "CurrentRole": "CareWorker",
+  "TargetRole": "Nurse",
+  "RequiredApproval": "MOVE SC1013 CareWorker TO Nurse",
+  "Outcome": "BLOCKED",
+  "Message": "Live Entra state did not match the reviewed baseline.",
+  "BaselineVerified": false,
+  "FinalStateVerified": false,
+  "WriteOperationsExecuted": 0,
+  "ActionsCompleted": [],
+  "CurrentGroups": [],
+  "CurrentAppRoles": [
+    "Manager"
+  ],
+  "AccountEnabled": false,
+  "JobTitle": "CareWorker",
+  "ErrorMessage": "",
+  "PasswordRecorded": false,
+  "TokenRecorded": false,
+  "SecretRecorded": false
+}

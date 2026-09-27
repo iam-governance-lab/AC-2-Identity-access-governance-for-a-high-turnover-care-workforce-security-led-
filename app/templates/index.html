@@ -1,33 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>{{ title }}</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <h1>{{ title }}</h1>
     <h2>Welcome {{ user.get("name") }}!</h2>
 
-    <!-- There is much hassle to get the local static image to show up on App Service.
-    https://learn.microsoft.com/en-us/azure/app-service/configure-language-python#serve-static-files-for-django-apps
-    For now, we will use a remote image.
+    <!--
+    There is additional configuration required to serve local static files
+    through Azure App Service. The laboratory currently uses the remote
+    Microsoft identity sample topology image.
     -->
-    <img src="https://github.com/Azure-Samples/ms-identity-python-webapp/raw/main/topology.png" alt="Topology">
+    <img
+      src="https://github.com/Azure-Samples/ms-identity-python-webapp/raw/main/topology.png"
+      alt="Microsoft identity application topology"
+    />
+
+    {% set signed_in_roles = user.get("roles", []) %}
 
     <ul>
-    {% if api_endpoint %}
-      <li><a href='/call_api'>Call an API</a></li>
-    {% endif %}
+      {% if api_endpoint %}
+      <li>
+        <a href="{{ url_for('call_downstream_api') }}"> Call an API </a>
+      </li>
+      {% endif %} {% if edit_profile_url %}
+      <li>
+        <a href="{{ edit_profile_url }}"> Edit Profile </a>
+      </li>
+      {% endif %} {% if "Manager" in signed_in_roles or "Auditor" in
+      signed_in_roles %}
+      <li>
+        <a href="{{ url_for('access_review.dashboard') }}"> Access review </a>
+      </li>
+      {% endif %}
 
-    {% if edit_profile_url %}
-      <li><a href='{{edit_profile_url}}'>Edit Profile</a></li>
-    {% endif %}
-
-    <li><a href="{{ url_for('identity.logout') }}">Logout</a></li>
+      <li>
+        <a href="{{ url_for('identity.logout') }}"> Logout </a>
+      </li>
     </ul>
 
-    <hr>
-    <footer style="text-align: right">{{ title }}</footer>
-</body>
-</html>
+    <hr />
 
+    <footer style="text-align: right">{{ title }}</footer>
+  </body>
+</html>

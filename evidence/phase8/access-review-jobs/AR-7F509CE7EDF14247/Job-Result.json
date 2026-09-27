@@ -1,0 +1,34 @@
+{
+  "GeneratedUtc": "2026-09-21T15:39:11.4797570Z",
+  "Mode": "PLAN",
+  "TenantId": "72a753ee-6910-4a9b-a36e-e8790da83acb",
+  "JobId": "AR-7F509CE7EDF14247",
+  "Decision": "RemoveAccess",
+  "EmployeeId": "SC-TST-002",
+  "UserObjectId": "d875d2a3-b835-4119-9dca-e64793a7318c",
+  "CurrentRole": "Nurse",
+  "TargetRole": null,
+  "RequiredApproval": "REMOVE ACCESS SC-TST-002 Nurse",
+  "Outcome": "PLANNED",
+  "Message": "No-write plan completed and the reviewed baseline was verified.",
+  "BaselineVerified": true,
+  "FinalStateVerified": false,
+  "WriteOperationsExecuted": 0,
+  "ActionsCompleted": [
+    "PLANNED:REMOVE_CURRENT_APP_ROLE",
+    "PLANNED:REMOVE_CURRENT_GROUP",
+    "PLANNED:REVOKE_SIGN_IN_SESSIONS"
+  ],
+  "CurrentGroups": [
+    "SG-SC-Nurses"
+  ],
+  "CurrentAppRoles": [
+    "Nurse"
+  ],
+  "AccountEnabled": true,
+  "JobTitle": "Nurse",
+  "ErrorMessage": "",
+  "PasswordRecorded": false,
+  "TokenRecorded": false,
+  "SecretRecorded": false
+}

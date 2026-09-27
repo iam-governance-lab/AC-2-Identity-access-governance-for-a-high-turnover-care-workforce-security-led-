@@ -1,0 +1,37 @@
+{
+  "GeneratedUtc": "2026-09-21T15:27:37.6709730Z",
+  "Mode": "APPLY",
+  "TenantId": "72a753ee-6910-4a9b-a36e-e8790da83acb",
+  "JobId": "AR-840E073DF10F4EAC",
+  "Decision": "ChangeAccess",
+  "EmployeeId": "SC-TST-001",
+  "UserObjectId": "24078780-828d-4675-9864-be92782e05cd",
+  "CurrentRole": "CareWorker",
+  "TargetRole": "Nurse",
+  "RequiredApproval": "MOVE SC-TST-001 CareWorker TO Nurse",
+  "Outcome": "MOVED",
+  "Message": "Approved access-review remediation was applied and verified.",
+  "BaselineVerified": true,
+  "FinalStateVerified": true,
+  "WriteOperationsExecuted": 6,
+  "ActionsCompleted": [
+    "REMOVE_CURRENT_APP_ROLE",
+    "REMOVE_CURRENT_GROUP",
+    "UPDATE_USER_ATTRIBUTES",
+    "ADD_TARGET_GROUP",
+    "ADD_TARGET_APP_ROLE",
+    "REVOKE_SIGN_IN_SESSIONS"
+  ],
+  "CurrentGroups": [
+    "SG-SC-Nurses"
+  ],
+  "CurrentAppRoles": [
+    "Nurse"
+  ],
+  "AccountEnabled": true,
+  "JobTitle": "Nurse",
+  "ErrorMessage": "",
+  "PasswordRecorded": false,
+  "TokenRecorded": false,
+  "SecretRecorded": false
+}

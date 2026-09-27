@@ -1,0 +1,22 @@
+Exit code: 0
+STDOUT
+STEP 1 - Connect with read-only Graph permissions
+Authenticated tenant: 72a753ee-6910-4a9b-a36e-e8790da83acb
+Write permissions requested: 0
+STEP 2 - Read users and governed group memberships
+STEP 3 - Read Sunhaven care-app role assignments
+
+Sunhaven pre-review governed-access inventory
+---------------------------------------------
+Captured UTC: 2026-09-22T02:26:25.1660660Z
+Tenant ID: 72a753ee-6910-4a9b-a36e-e8790da83acb
+Application: Sunhaven Care Portal - LAB
+Users holding governed access: 6
+Enabled access holders: 4
+Missing employeeId values: 2
+Missing facility values: 2
+Review decisions initially blank: 6
+Write operations executed: 0
+Result: PASS
+
+STDERR

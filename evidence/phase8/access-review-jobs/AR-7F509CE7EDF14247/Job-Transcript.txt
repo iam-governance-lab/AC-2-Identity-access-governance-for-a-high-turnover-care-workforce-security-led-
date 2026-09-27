@@ -1,0 +1,37 @@
+Exit code: 0
+STDOUT
+Authenticated tenant: 72a753ee-6910-4a9b-a36e-e8790da83acb
+Authentication mode: Delegated
+
+[32;1mGeneratedUtc            : [0m2026-09-21T15:39:11.4797570Z
+[32;1mMode                    : [0mPLAN
+[32;1mTenantId                : [0m72a753ee-6910-4a9b-a36e-e8790da83acb
+[32;1mJobId                   : [0mAR-7F509CE7EDF14247
+[32;1mDecision                : [0mRemoveAccess
+[32;1mEmployeeId              : [0mSC-TST-002
+[32;1mUserObjectId            : [0md875d2a3-b835-4119-9dca-e64793a7318c
+[32;1mCurrentRole             : [0mNurse
+[32;1mTargetRole              : [0m
+[32;1mRequiredApproval        : [0mREMOVE ACCESS SC-TST-002 Nurse
+[32;1mOutcome                 : [0mPLANNED
+[32;1mMessage                 : [0mNo-write plan completed and the reviewed baseline 
+                          was verified.
+[32;1mBaselineVerified        : [0mTrue
+[32;1mFinalStateVerified      : [0mFalse
+[32;1mWriteOperationsExecuted : [0m0
+[32;1mActionsCompleted        : [0m{PLANNED:REMOVE_CURRENT_APP_ROLE, 
+                          PLANNED:REMOVE_CURRENT_GROUP, 
+                          PLANNED:REVOKE_SIGN_IN_SESSIONS}
+[32;1mCurrentGroups           : [0m{SG-SC-Nurses}
+[32;1mCurrentAppRoles         : [0m{Nurse}
+[32;1mAccountEnabled          : [0mTrue
+[32;1mJobTitle                : [0mNurse
+[32;1mErrorMessage            : [0m
+[REDACTED SENSITIVE OUTPUT]
+[32;1mTokenRecorded           : [0mFalse
+[32;1mSecretRecorded          : [0mFalse
+
+Required approval: REMOVE ACCESS SC-TST-002 Nurse
+Write operations executed: 0
+
+STDERR

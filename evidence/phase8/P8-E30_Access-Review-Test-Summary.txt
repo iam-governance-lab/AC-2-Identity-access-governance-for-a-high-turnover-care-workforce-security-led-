@@ -1,0 +1,91 @@
+SUNHAVEN CARE WORKFORCE IAM
+PHASE 8 - MANAGER ACCESS-REVIEW TEST SUMMARY
+
+Test date: 21 September 2026 UTC
+Environment: Controlled Microsoft Entra laboratory tenant
+Data classification: Fictional test identities only
+
+OBJECTIVE
+Demonstrate a secure web-based access-review workflow that imports a read-only
+Microsoft Entra access inventory, permits authorised review decisions, plans
+changes without writes, requires exact approval before remediation, verifies
+the final Entra state, prevents self-approval, and closes only completed
+campaigns.
+
+RESULT SUMMARY
+
+1. Inventory import - PASS
+   - A read-only Entra inventory was exported and imported successfully.
+   - Seven governed-access holders were included.
+   - The inventory operation executed zero directory writes.
+   - The campaign opened with a recorded capture time and source hash.
+
+2. Retain decision - PASS
+   - Appropriate access was retained for five identities.
+   - Retain decisions required a reason and were recorded in decision history.
+   - Retain decisions required no remediation or directory writes.
+
+3. Temporary-exception workflow - PASS
+   - The portal accepted a time-limited exception with a reason and expiry.
+   - The decision was recorded for audit purposes.
+
+4. Change-access planning - PASS
+   - An initial stale-baseline attempt was blocked before writes.
+   - A fresh inventory baseline was captured before the successful test.
+   - The CareWorker-to-Nurse plan completed with outcome PLANNED.
+   - The plan executed zero directory writes and generated an exact approval
+     phrase.
+
+5. Change-access remediation - PASS
+   - The approved Change job completed with outcome MOVED.
+   - Previous CareWorker group and application-role access was removed.
+   - Nurse group and application-role access was assigned.
+   - User attributes were updated and active sessions were revoked.
+   - FinalStateVerified was true and six directory writes were reported.
+
+6. Remove-access planning - PASS
+   - The Nurse access-removal plan completed with outcome PLANNED.
+   - The plan executed zero directory writes and required the exact phrase:
+     REMOVE ACCESS SC-TST-002 Nurse
+   - An incorrect phrase was rejected without queuing a write operation.
+
+7. Remove-access remediation - PASS
+   - The approved Remove job completed with outcome ACCESS_REMOVED.
+   - Governed group and application-role access were removed.
+   - The account remained enabled because this was access removal rather than
+     Leaver processing.
+   - Final-state verification completed successfully.
+
+8. Session and approval protection - PASS
+   - An Apply request made after local-session expiry returned HTTP 403.
+   - Exact employee-specific approval was required before a change could be
+     queued.
+
+9. Separation of duties - PASS
+   - A reviewer was prevented from approving their own Manager access.
+   - The self-review attempt returned HTTP 403 and was audit logged.
+   - A separate Auditor identity completed the Manager's Retain decision.
+
+10. Campaign completion - PASS
+    - All seven inventory items received decisions.
+    - Change and Remove remediation reached VERIFIED.
+    - The campaign closed with seven total users, zero pending decisions, and
+      zero outstanding remediation items.
+
+11. Automated regression tests - PASS
+    - Pytest result: 5 passed, 1 deprecation warning.
+    - The warning relates to Flask-Session FileSystemSessionInterface and does
+      not represent a failed security or functional test.
+
+12. Evidence sanitisation - PASS
+    - No access token, client secret, authorisation header, or recorded password
+      was identified in the Phase 8 evidence.
+    - Result files explicitly reported PasswordRecorded as false.
+
+FINAL RESULT: PASS
+
+The Phase 8 Manager Access Review capability operated successfully across
+inventory collection, Retain/Change/Remove decisions, no-write planning,
+controlled approval, remediation, final-state verification, self-review
+prevention, auditability, and campaign closure.
+

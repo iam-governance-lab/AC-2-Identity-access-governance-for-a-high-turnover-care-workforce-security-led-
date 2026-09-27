@@ -1,0 +1,9 @@
+Route,Purpose,AllowedRoles,UnauthorizedResult
+/access-review,List review campaigns,Manager|Auditor,HTTP 403
+/access-review/campaign/new,Create campaign and queue read-only inventory,Manager,HTTP 403
+/access-review/campaign/<campaign_id>,Review campaign users,Manager|Auditor,HTTP 403
+/access-review/item/<item_id>,Read current access and decision history,Manager|Auditor,HTTP 403
+/access-review/item/<item_id>/decision,Record access-review decision,Manager|Auditor,HTTP 403
+/access-review/job/<job_id>,Read background job and evidence status,Manager|Auditor,HTTP 403
+/access-review/job/<job_id>/apply,Queue exact approved Entra remediation,Manager,HTTP 403
+/access-review/campaign/<campaign_id>/close,Close completed campaign,Manager,HTTP 403

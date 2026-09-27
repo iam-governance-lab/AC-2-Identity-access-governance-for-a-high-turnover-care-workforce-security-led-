@@ -1,0 +1,12 @@
+{
+  "ApprovalText": "",
+  "CurrentRole": "CareWorker",
+  "Decision": "ChangeAccess",
+  "EmployeeId": "SC-TST-001",
+  "Facility": "Unassigned",
+  "JobId": "AR-C8D49C9ACE984DA6",
+  "ReviewedCareAppRoles": "CareWorker",
+  "ReviewedGovernedGroups": "SG-SC-CareWorkers",
+  "TargetRole": "Nurse",
+  "UserObjectId": "24078780-828d-4675-9864-be92782e05cd"
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Access review | Sunhaven Care Portal</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='access_review.css') }}"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Sunhaven Care Portal</p>
+        <h1>Manager access review</h1>
+      </div>
+      <nav aria-label="Account navigation">
+        <a href="/">Home</a>
+        <a href="{{ url_for('identity.logout') }}">Sign out</a>
+      </nav>
+    </header>
+
+    <main>
+      <p>
+        Signed in as <strong>{{ identity.display_name }}</strong>.
+        Roles: {{ identity.roles | sort | join(', ') }}.
+      </p>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+          <p class="message {{ category }}" role="status">{{ message }}</p>
+        {% endfor %}
+      {% endwith %}
+
+      {% if 'Manager' in identity.roles %}
+      <section aria-labelledby="new-campaign-heading">
+        <h2 id="new-campaign-heading">Create review campaign</h2>
+        <form
+          method="post"
+          action="{{ url_for('access_review.create_campaign_route') }}"
+          class="form-grid"
+        >
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="{{ access_review_csrf_token() }}"
+          />
+          <label>
+            Campaign name
+            <input
+              name="campaign_name"
+              required
+              maxlength="120"
+              placeholder="September 2026 workforce review"
+            />
+          </label>
+          <label>
+            Due date
+            <input name="due_date" type="date" min="{{ today }}" required />
+          </label>
+          <button type="submit">Create and import Entra inventory</button>
+        </form>
+      </section>
+      {% endif %}
+
+      <section aria-labelledby="campaigns-heading">
+        <h2 id="campaigns-heading">Review campaigns</h2>
+        {% if campaigns %}
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Campaign</th>
+                <th>Due date</th>
+                <th>Status</th>
+                <th>Total users</th>
+                <th>Pending</th>
+                <th>Remediation</th>
+                <th>Open</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in campaigns %}
+              <tr>
+                <td>{{ row.campaign_name }}</td>
+                <td>{{ row.due_date }}</td>
+                <td><span class="status">{{ row.status }}</span></td>
+                <td>{{ row.total_items or 0 }}</td>
+                <td>{{ row.pending_items or 0 }}</td>
+                <td>{{ row.remediation_items or 0 }}</td>
+                <td>
+                  <a
+                    class="button-link secondary"
+                    href="{{ url_for('access_review.campaign_detail', campaign_id=row.campaign_id) }}"
+                  >View</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+          <p>No access-review campaign has been created.</p>
+        {% endif %}
+      </section>
+
+      {% if campaign %}
+      <section aria-labelledby="campaign-heading">
+        <h2 id="campaign-heading">{{ campaign.campaign_name }}</h2>
+        <dl class="summary-grid">
+          <div><dt>Status</dt><dd>{{ campaign.status }}</dd></div>
+          <div><dt>Due date</dt><dd>{{ campaign.due_date }}</dd></div>
+          <div><dt>Captured UTC</dt><dd>{{ campaign.captured_utc or 'Pending' }}</dd></div>
+          <div><dt>Source hash</dt><dd class="mono">{{ campaign.source_hash or 'Pending' }}</dd></div>
+        </dl>
+
+        {% if items %}
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Worker</th>
+                <th>Current role</th>
+                <th>Facility</th>
+                <th>Decision</th>
+                <th>Remediation</th>
+                <th>Review</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in items %}
+              <tr>
+                <td>{{ item.employee_id }}</td>
+                <td>{{ item.display_name }}</td>
+                <td>{{ item.current_role }}</td>
+                <td>{{ item.facility }}</td>
+                <td>{{ item.decision or 'Pending' }}</td>
+                <td><span class="status">{{ item.remediation_status }}</span></td>
+                <td>
+                  <a
+                    class="button-link secondary"
+                    href="{{ url_for('access_review.item_detail', item_id=item.item_id) }}"
+                  >Review</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+          <p>The read-only inventory is still being imported.</p>
+        {% endif %}
+
+        {% if campaign.status == 'OPEN' and 'Manager' in identity.roles %}
+        <form
+          method="post"
+          action="{{ url_for('access_review.close_campaign_route', campaign_id=campaign.campaign_id) }}"
+          class="inline-form"
+        >
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="{{ access_review_csrf_token() }}"
+          />
+          <button type="submit" class="secondary">Close completed campaign</button>
+        </form>
+        {% endif %}
+      </section>
+      {% endif %}
+    </main>
+  </body>
+</html>

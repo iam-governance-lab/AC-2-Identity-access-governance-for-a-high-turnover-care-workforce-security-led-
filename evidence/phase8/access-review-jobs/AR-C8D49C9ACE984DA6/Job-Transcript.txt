@@ -1,0 +1,38 @@
+Exit code: 0
+STDOUT
+Authenticated tenant: 72a753ee-6910-4a9b-a36e-e8790da83acb
+Authentication mode: Delegated
+
+[32;1mGeneratedUtc            : [0m2026-09-21T15:20:16.5457750Z
+[32;1mMode                    : [0mPLAN
+[32;1mTenantId                : [0m72a753ee-6910-4a9b-a36e-e8790da83acb
+[32;1mJobId                   : [0mAR-C8D49C9ACE984DA6
+[32;1mDecision                : [0mChangeAccess
+[32;1mEmployeeId              : [0mSC-TST-001
+[32;1mUserObjectId            : [0m24078780-828d-4675-9864-be92782e05cd
+[32;1mCurrentRole             : [0mCareWorker
+[32;1mTargetRole              : [0mNurse
+[32;1mRequiredApproval        : [0mMOVE SC-TST-001 CareWorker TO Nurse
+[32;1mOutcome                 : [0mPLANNED
+[32;1mMessage                 : [0mNo-write plan completed and the reviewed baseline 
+                          was verified.
+[32;1mBaselineVerified        : [0mTrue
+[32;1mFinalStateVerified      : [0mFalse
+[32;1mWriteOperationsExecuted : [0m0
+[32;1mActionsCompleted        : [0m{PLANNED:REMOVE_CURRENT_APP_ROLE, 
+                          PLANNED:REMOVE_CURRENT_GROUP, 
+                          PLANNED:UPDATE_USER_ATTRIBUTES, 
+                          PLANNED:ADD_TARGET_GROUP…}
+[32;1mCurrentGroups           : [0m{SG-SC-CareWorkers}
+[32;1mCurrentAppRoles         : [0m{CareWorker}
+[32;1mAccountEnabled          : [0mTrue
+[32;1mJobTitle                : [0mCareWorker
+[32;1mErrorMessage            : [0m
+[REDACTED SENSITIVE OUTPUT]
+[32;1mTokenRecorded           : [0mFalse
+[32;1mSecretRecorded          : [0mFalse
+
+Required approval: MOVE SC-TST-001 CareWorker TO Nurse
+Write operations executed: 0
+
+STDERR

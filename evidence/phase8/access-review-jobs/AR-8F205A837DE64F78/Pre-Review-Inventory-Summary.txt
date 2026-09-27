@@ -1,0 +1,12 @@
+Sunhaven pre-review governed-access inventory
+---------------------------------------------
+Captured UTC: 2026-09-21T14:38:47.4864810Z
+Tenant ID: 72a753ee-6910-4a9b-a36e-e8790da83acb
+Application: Sunhaven Care Portal - LAB
+Users holding governed access: 7
+Enabled access holders: 5
+Missing employeeId values: 2
+Missing facility values: 4
+Review decisions initially blank: 7
+Write operations executed: 0
+Result: PASS

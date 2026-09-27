@@ -1,0 +1,37 @@
+{
+  "GeneratedUtc": "2026-09-21T15:20:16.5457750Z",
+  "Mode": "PLAN",
+  "TenantId": "72a753ee-6910-4a9b-a36e-e8790da83acb",
+  "JobId": "AR-C8D49C9ACE984DA6",
+  "Decision": "ChangeAccess",
+  "EmployeeId": "SC-TST-001",
+  "UserObjectId": "24078780-828d-4675-9864-be92782e05cd",
+  "CurrentRole": "CareWorker",
+  "TargetRole": "Nurse",
+  "RequiredApproval": "MOVE SC-TST-001 CareWorker TO Nurse",
+  "Outcome": "PLANNED",
+  "Message": "No-write plan completed and the reviewed baseline was verified.",
+  "BaselineVerified": true,
+  "FinalStateVerified": false,
+  "WriteOperationsExecuted": 0,
+  "ActionsCompleted": [
+    "PLANNED:REMOVE_CURRENT_APP_ROLE",
+    "PLANNED:REMOVE_CURRENT_GROUP",
+    "PLANNED:UPDATE_USER_ATTRIBUTES",
+    "PLANNED:ADD_TARGET_GROUP",
+    "PLANNED:ADD_TARGET_APP_ROLE",
+    "PLANNED:REVOKE_SIGN_IN_SESSIONS"
+  ],
+  "CurrentGroups": [
+    "SG-SC-CareWorkers"
+  ],
+  "CurrentAppRoles": [
+    "CareWorker"
+  ],
+  "AccountEnabled": true,
+  "JobTitle": "CareWorker",
+  "ErrorMessage": "",
+  "PasswordRecorded": false,
+  "TokenRecorded": false,
+  "SecretRecorded": false
+}

@@ -1,0 +1,12 @@
+{
+  "ApprovalText": "REMOVE ACCESS SC-TST-002 Nurse",
+  "CurrentRole": "Nurse",
+  "Decision": "RemoveAccess",
+  "EmployeeId": "SC-TST-002",
+  "Facility": "Unassigned",
+  "JobId": "AR-D55C7CBCD9184848",
+  "ReviewedCareAppRoles": "Nurse",
+  "ReviewedGovernedGroups": "SG-SC-Nurses",
+  "TargetRole": null,
+  "UserObjectId": "d875d2a3-b835-4119-9dca-e64793a7318c"
+}

@@ -1,0 +1,12 @@
+{
+  "ApprovalText": "",
+  "CurrentRole": "CareWorker",
+  "Decision": "ChangeAccess",
+  "EmployeeId": "SC1013",
+  "Facility": "Sydney",
+  "JobId": "AR-4BEA1269376348B5",
+  "ReviewedCareAppRoles": "Manager",
+  "ReviewedGovernedGroups": "<none>",
+  "TargetRole": "Nurse",
+  "UserObjectId": "67583254-adc1-4272-abfe-7fd0d9a2a371"
+}
