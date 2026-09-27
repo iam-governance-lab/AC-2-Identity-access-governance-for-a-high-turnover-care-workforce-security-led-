@@ -1,0 +1,23 @@
+SMFAA - Sunhaven MFA Fatigue Attack Analyzer
+Mode: operational detection (read-only)
+Input: /mnt/data/SMFAA_complete/Sunhaven MFA Fatigue Attack Analyzer/data/demo-events.csv
+Validated events: 14
+Workforce context: /mnt/data/sunhaven_repo_work/AC-2-Identity-access-governance-for-a-high-turnover-care-workforce-security-led--main/data/workforce.csv (read-only)
+
+Findings: 4
+- SMFAA-F001 | SC1002 (Noah Singh (TEST)) | PROMPT_BURST | MEDIUM
+  5 MFA prompts occurred within 2 minutes.
+  Evidence: DEMO-010, DEMO-011, DEMO-012, DEMO-013, DEMO-014
+- SMFAA-F002 | SC1004 (Liam Brooks (TEST)) | REPEATED_DENIAL | MEDIUM
+  3 MFA denials occurred within 5 minutes.
+  Evidence: DEMO-020, DEMO-021, DEMO-022
+- SMFAA-F003 | SC1006 (Ethan Khan (TEST)) | DENIAL_TO_SUCCESS | HIGH
+  3 MFA denials were followed by an MFA success within 10 minutes.
+  Evidence: DEMO-030, DEMO-031, DEMO-032, DEMO-033
+- SMFAA-F004 | SC1006 (Ethan Khan (TEST)) | REPEATED_DENIAL | MEDIUM
+  3 MFA denials occurred within 5 minutes.
+  Evidence: DEMO-030, DEMO-031, DEMO-032
+
+JSON report: /mnt/data/SMFAA_complete/Sunhaven MFA Fatigue Attack Analyzer/reports/demo-findings.json
+CSV report:  /mnt/data/SMFAA_complete/Sunhaven MFA Fatigue Attack Analyzer/reports/demo-findings.csv
+No IAM, Entra, JML or Flask state was changed.

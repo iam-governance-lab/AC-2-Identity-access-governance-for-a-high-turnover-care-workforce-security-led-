@@ -1,0 +1,12 @@
+SMFAA - Sunhaven MFA Fatigue Attack Analyzer
+Mode: operational detection (read-only)
+Input: /mnt/data/sunhaven_repo_work/AC-2-Identity-access-governance-for-a-high-turnover-care-workforce-security-led--main/evidence/phase6/P6-E14_Entra-SignIn-Sanitized.csv
+Entra adapter: 18 rows, 5 MFA events, 13 ignored, 0 unmapped
+Validated events: 5
+Workforce context: /mnt/data/sunhaven_repo_work/AC-2-Identity-access-governance-for-a-high-turnover-care-workforce-security-led--main/data/workforce.csv (read-only)
+
+No MFA-fatigue findings were produced.
+
+JSON report: /mnt/data/SMFAA_complete/Sunhaven MFA Fatigue Attack Analyzer/reports/repo-entra-findings.json
+CSV report:  /mnt/data/SMFAA_complete/Sunhaven MFA Fatigue Attack Analyzer/reports/repo-entra-findings.csv
+No IAM, Entra, JML or Flask state was changed.

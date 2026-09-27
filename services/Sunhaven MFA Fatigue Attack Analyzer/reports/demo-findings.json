@@ -1,0 +1,81 @@
+[
+  {
+    "finding_id": "SMFAA-F001",
+    "employee_id": "SC1002",
+    "rule": "PROMPT_BURST",
+    "severity": "MEDIUM",
+    "window_start": "2026-09-27T10:10:00Z",
+    "window_end": "2026-09-27T10:11:20Z",
+    "event_count": 5,
+    "supporting_event_ids": [
+      "DEMO-010",
+      "DEMO-011",
+      "DEMO-012",
+      "DEMO-013",
+      "DEMO-014"
+    ],
+    "reason": "5 MFA prompts occurred within 2 minutes.",
+    "display_name": "Noah Singh (TEST)",
+    "job_role": "Nurse",
+    "facility": "Sydney",
+    "workforce_status": "Active"
+  },
+  {
+    "finding_id": "SMFAA-F002",
+    "employee_id": "SC1004",
+    "rule": "REPEATED_DENIAL",
+    "severity": "MEDIUM",
+    "window_start": "2026-09-27T10:20:00Z",
+    "window_end": "2026-09-27T10:22:00Z",
+    "event_count": 3,
+    "supporting_event_ids": [
+      "DEMO-020",
+      "DEMO-021",
+      "DEMO-022"
+    ],
+    "reason": "3 MFA denials occurred within 5 minutes.",
+    "display_name": "Liam Brooks (TEST)",
+    "job_role": "AgencyWorker",
+    "facility": "Sydney",
+    "workforce_status": "Active"
+  },
+  {
+    "finding_id": "SMFAA-F003",
+    "employee_id": "SC1006",
+    "rule": "DENIAL_TO_SUCCESS",
+    "severity": "HIGH",
+    "window_start": "2026-09-27T10:30:00Z",
+    "window_end": "2026-09-27T10:34:00Z",
+    "event_count": 4,
+    "supporting_event_ids": [
+      "DEMO-030",
+      "DEMO-031",
+      "DEMO-032",
+      "DEMO-033"
+    ],
+    "reason": "3 MFA denials were followed by an MFA success within 10 minutes.",
+    "display_name": "Ethan Khan (TEST)",
+    "job_role": "CareWorker",
+    "facility": "Sydney",
+    "workforce_status": "Leaving"
+  },
+  {
+    "finding_id": "SMFAA-F004",
+    "employee_id": "SC1006",
+    "rule": "REPEATED_DENIAL",
+    "severity": "MEDIUM",
+    "window_start": "2026-09-27T10:30:00Z",
+    "window_end": "2026-09-27T10:32:00Z",
+    "event_count": 3,
+    "supporting_event_ids": [
+      "DEMO-030",
+      "DEMO-031",
+      "DEMO-032"
+    ],
+    "reason": "3 MFA denials occurred within 5 minutes.",
+    "display_name": "Ethan Khan (TEST)",
+    "job_role": "CareWorker",
+    "facility": "Sydney",
+    "workforce_status": "Leaving"
+  }
+]

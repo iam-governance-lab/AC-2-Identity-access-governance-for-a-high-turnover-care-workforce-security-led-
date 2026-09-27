@@ -1,0 +1,5 @@
+finding_id,employee_id,display_name,job_role,facility,workforce_status,rule,severity,window_start,window_end,event_count,supporting_event_ids,reason
+SMFAA-F001,SC1002,Noah Singh (TEST),Nurse,Sydney,Active,PROMPT_BURST,MEDIUM,2026-09-27T10:10:00Z,2026-09-27T10:11:20Z,5,DEMO-010|DEMO-011|DEMO-012|DEMO-013|DEMO-014,5 MFA prompts occurred within 2 minutes.
+SMFAA-F002,SC1004,Liam Brooks (TEST),AgencyWorker,Sydney,Active,REPEATED_DENIAL,MEDIUM,2026-09-27T10:20:00Z,2026-09-27T10:22:00Z,3,DEMO-020|DEMO-021|DEMO-022,3 MFA denials occurred within 5 minutes.
+SMFAA-F003,SC1006,Ethan Khan (TEST),CareWorker,Sydney,Leaving,DENIAL_TO_SUCCESS,HIGH,2026-09-27T10:30:00Z,2026-09-27T10:34:00Z,4,DEMO-030|DEMO-031|DEMO-032|DEMO-033,3 MFA denials were followed by an MFA success within 10 minutes.
+SMFAA-F004,SC1006,Ethan Khan (TEST),CareWorker,Sydney,Leaving,REPEATED_DENIAL,MEDIUM,2026-09-27T10:30:00Z,2026-09-27T10:32:00Z,3,DEMO-030|DEMO-031|DEMO-032,3 MFA denials occurred within 5 minutes.
