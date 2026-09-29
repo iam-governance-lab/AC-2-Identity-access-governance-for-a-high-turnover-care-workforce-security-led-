@@ -1,0 +1,21 @@
+[
+  {
+    "finding_id": "SMFAA-F001",
+    "employee_id": "SC-TST-002",
+    "rule": "REPEATED_DENIAL",
+    "severity": "MEDIUM",
+    "window_start": "2026-09-29T03:03:06Z",
+    "window_end": "2026-09-29T03:05:10Z",
+    "event_count": 3,
+    "supporting_event_ids": [
+      "1d8a92f4-7bd7-457e-ac62-1f95a18bc600",
+      "4bb3143d-88d0-40e5-946c-10494abe7100",
+      "7ee35201-9312-4e7d-a807-8af857ec6f00"
+    ],
+    "reason": "3 MFA denials occurred within 5 minutes.",
+    "display_name": "Test Nurse 01",
+    "job_role": "Nurse",
+    "facility": "Sydney Care Facility",
+    "workforce_status": "Active"
+  }
+]

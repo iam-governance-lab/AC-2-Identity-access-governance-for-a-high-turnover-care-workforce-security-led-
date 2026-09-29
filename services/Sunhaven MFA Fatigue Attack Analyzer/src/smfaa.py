@@ -6,6 +6,7 @@ from pathlib import Path
 
 from detector import detect_findings, export_findings, load_normalized_csv, load_rules
 from entra_csv_adapter import load_entra_export
+from entra_graph_adapter import load_graph_signins
 from sunhaven_adapter import (
     build_worker_context,
     find_repo_root,
@@ -26,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--source",
-        choices=("demo", "repo-entra", "csv"),
+        choices=("demo", "repo-entra", "csv", "live-entra"),
         default="demo",
         help="Input source. 'repo-entra' uses the existing Sunhaven Phase 6 Entra CSV.",
     )
@@ -87,7 +88,7 @@ def main() -> int:
         prefix = args.input.stem.lower().replace(" ", "-")
         print(f"Input: {args.input}")
 
-    else:
+    elif args.source == "repo-entra":
         if not repo_root:
             print(
                 "ERROR: Sunhaven repository root could not be found. Use --repo-root.",
@@ -103,6 +104,15 @@ def main() -> int:
         print(f"Input: {entra_path}")
         print(
             "Entra adapter: "
+            f"{stats['rows']} rows, {stats['normalized']} MFA events, "
+            f"{stats['ignored']} ignored, {stats['unmapped']} unmapped"
+        )
+    else:
+        print("Input: Microsoft Graph - live Entra sign-in logs")
+        events, stats = load_graph_signins(workforce, identity_rows)
+        prefix = "live-entra"
+        print(
+            "Graph adapter: "
             f"{stats['rows']} rows, {stats['normalized']} MFA events, "
             f"{stats['ignored']} ignored, {stats['unmapped']} unmapped"
         )
