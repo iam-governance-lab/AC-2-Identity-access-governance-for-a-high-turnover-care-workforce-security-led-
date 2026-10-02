@@ -26,7 +26,8 @@ The project uses only fictional `TEST` identities and resident records. It is an
 
 ## Architecture
 
-<img width="2149" height="1751" alt="Sunhaven Care Workforce IAM Architecture" src="https://github.com/user-attachments/assets/83eece3a-ee32-416b-b05b-5ef1e818eee8" />
+<img width="1064" height="805" alt="image" src="https://github.com/user-attachments/assets/44c402b9-3b41-4e9c-9ae4-71be50712cd7" />
+
 
 
 The final diagram will show the existing Entra/JML/Flask enforcement layer together with SAIF external onboarding, SITAS read-only security analysis and SMFAA authentication-event monitoring.
