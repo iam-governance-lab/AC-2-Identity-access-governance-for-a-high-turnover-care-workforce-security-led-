@@ -1,0 +1,12 @@
+**/__pycache__
+**/.pytest_cache
+**/*.pyc
+portal/data/*
+portal/backups/*
+**/.env
+**/.env.production
+**/*.ledger.key
+**/*.ledger.head
+original/evidence
+original/sunhaven-sitas-threat-simulator/evidence
+original/sunhaven-sitas-threat-simulator/docs/diagrams
