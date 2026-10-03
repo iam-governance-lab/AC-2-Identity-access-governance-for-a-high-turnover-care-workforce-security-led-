@@ -26,7 +26,8 @@ The project uses only fictional `TEST` identities and resident records. It is an
 
 ## Architecture
 
-> \*\*Final integrated architecture diagram will be inserted here.\*\*
+<img width="1253" height="882" alt="image" src="https://github.com/user-attachments/assets/5de5ade1-e2e6-4a2f-8c56-37a1705a6cc3" />
+
 
 The final diagram will show the existing Entra/JML/Flask enforcement layer together with SAIF external onboarding, SITAS read-only security analysis and SMFAA authentication-event monitoring.
 
