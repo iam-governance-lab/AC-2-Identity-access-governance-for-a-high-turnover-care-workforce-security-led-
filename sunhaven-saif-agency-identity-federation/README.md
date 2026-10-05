@@ -97,7 +97,7 @@ SAIF is documented through three architecture views. Together, these diagrams sh
 
 ### SAIF Component Architecture
 
-![SAIF Component Architecture](docs/diagrams/SAIF-Component-Architecture.png)
+![SAIF Component Architecture](diagrams/SAIF-Component-Architecture.png)
 
 The component architecture shows how an external worker is validated before B2B onboarding. Approved requests continue through Microsoft Graph and Entra, followed by identity mapping and handover to the existing Sunhaven IAM. Rejected requests stop before Graph processing.
 
@@ -105,7 +105,7 @@ The component architecture shows how an external worker is validated before B2B 
 
 ### External Worker Onboarding Flow
 
-![SAIF External Worker Onboarding Flow](docs/diagrams/SAIF-External-Worker-Onboarding-Flow.png)
+![SAIF External Worker Onboarding Flow](diagrams/SAIF-External-Worker-Onboarding.png)
 
 The onboarding flow shows SAIF's fail-closed decision process. Invalid requests are rejected, while approved workers continue through B2B invitation, Entra external identity creation, identity mapping and IAM handover.
 
@@ -113,7 +113,7 @@ The onboarding flow shows SAIF's fail-closed decision process. Invalid requests 
 
 ### Integrated Solution Architecture
 
-![SAIF Integrated Solution Architecture](docs/diagrams/SAIF-Integrated-Solution-Architecture.png)
+![SAIF Integrated Solution Architecture](diagrams/SAIF-Integrated-Solution-Architecture.png)
 
 The integrated architecture shows where SAIF fits within the overall Sunhaven solution. Internal workers continue through the existing IAM/JML path, while external agency workers enter through SAIF and Microsoft Entra B2B. After identity handover, the existing Sunhaven system remains responsible for authentication and access control.
 
@@ -206,7 +206,8 @@ sunhaven-saif-agency-identity-federation/
 ├── src/                 SAIF Python implementation
 ├── scripts/             Microsoft Graph B2B PowerShell integration
 ├── tests/               Automated SAIF tests
-├── docs/diagrams/       Architecture and workflow diagrams
+├── docs/                Design and test documentation
+├── diagrams/            Architecture and workflow diagrams
 ├── Security Policies/   SAIF security policy
 ├── evidence/            Selected implementation and test evidence
 └── README.md

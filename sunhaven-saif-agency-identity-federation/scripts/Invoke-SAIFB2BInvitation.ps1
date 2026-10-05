@@ -33,7 +33,7 @@ try {
     entraUserId = $invitation.InvitedUser.Id
 }
 
-$result | ConvertTo-Json
+$result | ConvertTo-Json -Compress
 }
 catch {
     Write-Host "SAIF ERROR: B2B invitation failed."
