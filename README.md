@@ -26,7 +26,8 @@ The project uses only fictional `TEST` identities and resident records. It is an
 
 ## Architecture
 
-<img width="1536" height="1024" alt="Sunhaven Care Identity Governance Architecture (1)" src="https://github.com/user-attachments/assets/231b9e5a-3139-4f1c-8a50-c468f4506abc" />
+<img width="5400" height="3975" alt="Sunhaven_Care_Architecture_Reviewed" src="https://github.com/user-attachments/assets/c2b25133-e1f1-41c4-9eeb-b4d187e2f5c0" />
+
 
 
 
