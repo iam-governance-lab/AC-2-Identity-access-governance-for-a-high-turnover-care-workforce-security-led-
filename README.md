@@ -26,7 +26,8 @@ The project uses only fictional `TEST` identities and resident records. It is an
 
 ## Architecture
 
-<img width="1253" height="882" alt="image" src="https://github.com/user-attachments/assets/5de5ade1-e2e6-4a2f-8c56-37a1705a6cc3" />
+<img width="1536" height="1024" alt="Sunhaven Care Identity Governance Architecture (1)" src="https://github.com/user-attachments/assets/231b9e5a-3139-4f1c-8a50-c468f4506abc" />
+
 
 
 The final diagram will show the existing Entra/JML/Flask enforcement layer together with SAIF external onboarding, SITAS read-only security analysis and SMFAA authentication-event monitoring.
