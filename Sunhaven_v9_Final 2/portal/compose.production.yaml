@@ -1,0 +1,38 @@
+services:
+  app:
+    build: .
+    env_file: .env.production
+    environment:
+      SUNHAVEN_ENV: production
+      SUNHAVEN_AUTH_MODE: entra
+      SUNHAVEN_GRAPH_MODE: mock
+      SUNHAVEN_SEED_DEMO: "0"
+    volumes:
+      - production-data:/data
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+  proxy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SUNHAVEN_DOMAIN: ${SUNHAVEN_DOMAIN:?Set SUNHAVEN_DOMAIN to your DNS hostname}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  production-data:
+  caddy-data:
+  caddy-config:

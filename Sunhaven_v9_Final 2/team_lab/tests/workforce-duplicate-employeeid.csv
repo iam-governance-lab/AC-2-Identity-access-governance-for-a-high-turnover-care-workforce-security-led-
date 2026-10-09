@@ -1,0 +1,3 @@
+employeeId,displayName,mailAlias,jobRole,facility,status,startDate,endDate
+SC9002,Duplicate One (TEST),duplicate.one,CareWorker,Sydney,Active,2026-08-10,
+SC9002,Duplicate Two (TEST),duplicate.two,Nurse,Sydney,Active,2026-08-10,

@@ -1,0 +1,29 @@
+{
+  "before": {
+    "status": "PASS",
+    "count": 24,
+    "head": "5faf200afbe43204497e48ab3b4ab42c2ea043374b18da3680705c84043116e7",
+    "new": 24
+  },
+  "ingested": [
+    {
+      "sequence": 25,
+      "correlation_id": "MFA-d79aa708b8b7"
+    },
+    {
+      "sequence": 26,
+      "correlation_id": "MFA-4b4fb122d0e0"
+    },
+    {
+      "sequence": 27,
+      "correlation_id": "MFA-478c5da2c2b3"
+    }
+  ],
+  "after": {
+    "count": 27,
+    "head": "772ed4b3e2cd31460cb44cf003fe1afdd3fd2471440f28adc9121b567eeab96f",
+    "last_audit_id": 24,
+    "status": "PASS",
+    "pending": 0
+  }
+}

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Review {{ item.employee_id }} | Sunhaven Care Portal</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='access_review.css') }}"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">{{ item.campaign_name }}</p>
+        <h1>Review {{ item.display_name }}</h1>
+      </div>
+      <nav aria-label="Review navigation">
+        <a href="{{ url_for('access_review.campaign_detail', campaign_id=item.campaign_id) }}">Campaign</a>
+        <a href="/">Home</a>
+        <a href="{{ url_for('identity.logout') }}">Sign out</a>
+      </nav>
+    </header>
+
+    <main>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+          <p class="message {{ category }}" role="status">{{ message }}</p>
+        {% endfor %}
+      {% endwith %}
+
+      <section aria-labelledby="current-access-heading">
+        <h2 id="current-access-heading">Current reviewed access</h2>
+        <dl class="summary-grid">
+          <div><dt>Employee ID</dt><dd>{{ item.employee_id }}</dd></div>
+          <div><dt>Object ID</dt><dd class="mono">{{ item.user_object_id }}</dd></div>
+          <div><dt>Current role</dt><dd>{{ item.current_role }}</dd></div>
+          <div><dt>Facility</dt><dd>{{ item.facility }}</dd></div>
+          <div><dt>Account enabled</dt><dd>{{ 'Yes' if item.account_enabled else 'No' }}</dd></div>
+          <div><dt>Governed groups</dt><dd>{{ item.governed_groups }}</dd></div>
+          <div><dt>Application roles</dt><dd>{{ item.care_app_roles }}</dd></div>
+          <div><dt>Remediation status</dt><dd>{{ item.remediation_status }}</dd></div>
+        </dl>
+      </section>
+
+      {% if item.campaign_status == 'OPEN' %}
+      <section aria-labelledby="decision-heading">
+        <h2 id="decision-heading">Record decision</h2>
+        <p>
+          Change and Remove create a no-write background plan first. Retain and
+          Temporary Exception do not change Microsoft Entra ID.
+        </p>
+        <form
+          method="post"
+          action="{{ url_for('access_review.submit_decision', item_id=item.item_id) }}"
+        >
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="{{ access_review_csrf_token() }}"
+          />
+          <fieldset>
+            <legend>Decision</legend>
+            <label><input type="radio" name="decision" value="RETAIN" required /> Retain access</label>
+            <label><input type="radio" name="decision" value="CHANGE" /> Change access</label>
+            <label><input type="radio" name="decision" value="REMOVE" /> Remove governed access</label>
+            <label><input type="radio" name="decision" value="TEMPORARY_EXCEPTION" /> Temporary exception</label>
+          </fieldset>
+
+          <div class="form-grid">
+            <label>
+              Target role for Change
+              <select name="target_role">
+                <option value="">Select only for Change</option>
+                {% for role in allowed_roles %}
+                  {% if role != item.current_role %}
+                  <option value="{{ role }}">{{ role }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </label>
+            <label>
+              Exception expiry
+              <input name="exception_expiry" type="date" min="{{ today }}" />
+            </label>
+          </div>
+
+          <label>
+            Reason
+            <textarea
+              name="reason"
+              minlength="10"
+              maxlength="500"
+              required
+              rows="4"
+              placeholder="Explain why this access decision is required."
+            ></textarea>
+          </label>
+          <button type="submit">Record decision and continue</button>
+        </form>
+      </section>
+      {% endif %}
+
+      <section aria-labelledby="history-heading">
+        <h2 id="history-heading">Decision history</h2>
+        {% if decisions %}
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Decision</th>
+                <th>Target role</th>
+                <th>Reviewer</th>
+                <th>Reviewed UTC</th>
+                <th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for decision in decisions %}
+              <tr>
+                <td>{{ decision.decision_version }}</td>
+                <td>{{ decision.decision }}</td>
+                <td>{{ decision.target_role or '-' }}</td>
+                <td>{{ decision.reviewer_display_name }}</td>
+                <td>{{ decision.reviewed_at }}</td>
+                <td>{{ decision.reason }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+          <p>No decision has been recorded.</p>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

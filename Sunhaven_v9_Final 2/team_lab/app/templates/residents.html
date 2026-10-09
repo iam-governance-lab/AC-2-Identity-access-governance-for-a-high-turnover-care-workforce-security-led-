@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Residents | Sunhaven Care Portal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f4f7fb;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border: 1px solid #ccd3dc;
+        text-align: left;
+      }
+
+      th {
+        background: #126b43;
+        color: white;
+      }
+
+      .allowed {
+        color: #126b43;
+        font-weight: bold;
+      }
+
+      nav a {
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/care-notes">Care notes</a>
+      <a href="/clinical">Clinical</a>
+      <a href="/review">Review</a>
+      <a href="/app-audit">App audit</a>
+      <a href="{{ url_for('identity.logout') }}">Sign out</a>
+    </nav>
+
+    <h1>Assigned TEST residents</h1>
+
+    <p class="allowed">Access permitted</p>
+
+    <p><strong>User:</strong> {{ identity.display_name }}</p>
+
+    <p>
+      <strong>Role:</strong>
+      {{ identity.roles | sort | join(", ") }}
+    </p>
+
+    {% if residents %}
+    <table>
+      <thead>
+        <tr>
+          <th>Resident ID</th>
+          <th>Fictional name</th>
+          <th>Facility</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for resident in residents %}
+        <tr>
+          <td>{{ resident.resident_id }}</td>
+          <td>{{ resident.display_name }}</td>
+          <td>{{ resident.facility }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>No active resident assignment was found for this user.</p>
+    {% endif %}
+  </body>
+</html>

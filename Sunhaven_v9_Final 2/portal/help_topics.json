@@ -1,0 +1,916 @@
+[
+  {
+    "id": "start",
+    "title": "Getting started",
+    "path": "/",
+    "roles": [],
+    "examples": [
+      "hello",
+      "hi",
+      "help me get started",
+      "what can you do",
+      "how does sunhaven work"
+    ],
+    "summary": "I can help you find a workspace and follow its documented steps. I cannot grant access, change records or read private worker data.",
+    "steps": [
+      "Choose a task below or describe what you need.",
+      "Use the link in my answer to open the correct workspace.",
+      "Follow the normal approval and confirmation steps there."
+    ],
+    "prerequisites": "Sign in with your own authorized identity. Local demo identities are fictional."
+  },
+  {
+    "id": "joiner",
+    "title": "Onboard a new employee",
+    "path": "/employees/new",
+    "roles": [
+      "IAMOperator"
+    ],
+    "examples": [
+      "new employee",
+      "onboard permanent staff",
+      "add worker",
+      "joiner",
+      "create employee"
+    ],
+    "summary": "Create a worker with an approved role, site and valid employment dates.",
+    "steps": [
+      "Open Employees and choose the new-worker action.",
+      "Enter a unique worker ID, name, email, role, site and dates.",
+      "Preview the proposed change, then apply it.",
+      "Verify qualifications and care assignments separately."
+    ],
+    "prerequisites": "IAM operator required. An agency worker also needs a sponsor and current end date. Provisioning is local/mock."
+  },
+  {
+    "id": "sponsor",
+    "title": "Sponsor an agency worker or contractor",
+    "path": "/sponsors",
+    "roles": [
+      "Manager",
+      "IAMOperator"
+    ],
+    "examples": [
+      "invite agency",
+      "sponsor intake",
+      "register contractor",
+      "temporary employee onboarding",
+      "agency worker onboarding"
+    ],
+    "summary": "Sponsors submit an intake; a different IAM operator approves it and creates a local worker record.",
+    "steps": [
+      "Open Sponsor intake and enter the fictional worker details.",
+      "Select Agency or ThirdParty and a contract of up to 90 days.",
+      "Submit the intake and ask an independent operator to review it.",
+      "After approval, verify qualifications before care access."
+    ],
+    "prerequisites": "Manager or IAM operator to submit; a different IAM operator to approve. No invitation email is sent."
+  },
+  {
+    "id": "transfer",
+    "title": "Change a role or site",
+    "path": "/employees",
+    "roles": [
+      "Manager",
+      "IAMOperator"
+    ],
+    "examples": [
+      "move worker",
+      "transfer site",
+      "change role",
+      "promotion",
+      "change facility",
+      "mover"
+    ],
+    "summary": "Role and site changes must follow the controlled workforce workflow.",
+    "steps": [
+      "Find the worker in Employees.",
+      "Open the move/role-change action.",
+      "Choose the new approved role and site, then preview/apply.",
+      "Verify previous access and session revocation, and request new app permissions if necessary."
+    ],
+    "prerequisites": "IAM operator applies lifecycle moves. Managers can request/review changes through Access requests. Only current active workers may be moved."
+  },
+  {
+    "id": "termination",
+    "title": "Offboard or terminate a worker",
+    "path": "/employees",
+    "roles": [
+      "IAMOperator"
+    ],
+    "examples": [
+      "employee left",
+      "terminate",
+      "fired",
+      "leaver",
+      "offboarding",
+      "disable account",
+      "remove employee"
+    ],
+    "summary": "Termination disables the local identity and revokes sessions; connector reconciliation separately removes delivered app permissions.",
+    "steps": [
+      "Find the worker and open their profile.",
+      "Use the leaver/termination action and review the confirmation.",
+      "Verify blocked status, removed role/assignments and revoked sessions.",
+      "Run reconciliation and process pending connector jobs; inspect the audit trail."
+    ],
+    "prerequisites": "IAM operator required. You cannot terminate yourself or remove the last eligible operator. External applications are not connected."
+  },
+  {
+    "id": "requests",
+    "title": "Request and approve role access",
+    "path": "/requests",
+    "roles": [],
+    "examples": [
+      "request role",
+      "approve request",
+      "reject request",
+      "approval",
+      "manager approval"
+    ],
+    "summary": "Access requests record a business reason and follow independent approval rules.",
+    "steps": [
+      "Submit a request with role, site and business reason.",
+      "An eligible independent manager/operator reviews it.",
+      "Check request history for the decision and evidence.",
+      "Withdraw your own pending request if it is no longer needed."
+    ],
+    "prerequisites": "Approval permissions depend on the requested role. Self-approval is denied; the assistant cannot approve for you."
+  },
+  {
+    "id": "apps",
+    "title": "Request application permissions",
+    "path": "/application-access",
+    "roles": [],
+    "examples": [
+      "application permission",
+      "entitlement",
+      "app access",
+      "just in time",
+      "jit",
+      "privileged access"
+    ],
+    "summary": "Request a named app permission for a limited duration; approval and delivery are separate steps.",
+    "steps": [
+      "Choose an eligible permission and duration.",
+      "Submit a business reason.",
+      "An independent reviewer approves; privileged requests require an IAM operator.",
+      "Ask the operator to process delivery jobs, then open the local resource check."
+    ],
+    "prerequisites": "Ordinary permission lifetime: 5 to 10080 minutes. Privileged lifetime: 5 to 60 minutes. Real applications are not connected."
+  },
+  {
+    "id": "shifts",
+    "title": "Schedule or cancel a care shift",
+    "path": "/shifts",
+    "roles": [],
+    "examples": [
+      "shift",
+      "roster hours",
+      "on duty",
+      "shift based access",
+      "cancel shift"
+    ],
+    "summary": "Care-record app access requires a current shift at the approved site, a current grant and valid qualifications.",
+    "steps": [
+      "Managers/operators create a shift at the worker approved site.",
+      "Use UTC start/end times; maximum duration is 16 hours.",
+      "Avoid overlapping shifts and dates after the contract ends.",
+      "Cancel a shift when it is no longer needed; local resource checks deny access immediately."
+    ],
+    "prerequisites": "Managers/operators edit shifts; workers see only their own. A shift alone does not grant access."
+  },
+  {
+    "id": "connector",
+    "title": "Reconcile application access",
+    "path": "/connectors",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "connector",
+      "sync permissions",
+      "reconciliation",
+      "drift",
+      "provisioning",
+      "deprovisioning",
+      "compare delivered permissions",
+      "actual versus desired access",
+      "delivery drift comparison"
+    ],
+    "summary": "Reconciliation compares current approved access with the local connector inventory and queues differences.",
+    "steps": [
+      "Open Connector operations.",
+      "Run reconciliation to identify differences.",
+      "Process due delivery jobs.",
+      "Inspect results and attempt history."
+    ],
+    "prerequisites": "IAM operator to run jobs. Auditor/manager views are read-only. This release uses a local connector, not live Entra or Microsoft 365."
+  },
+  {
+    "id": "retry",
+    "title": "Recover failed provisioning jobs",
+    "path": "/connectors",
+    "roles": [
+      "IAMOperator"
+    ],
+    "examples": [
+      "job failed",
+      "retry",
+      "dead letter",
+      "connector outage",
+      "provisioning error"
+    ],
+    "summary": "A failed local delivery retries with a delay; after three failed attempts it enters the dead-letter list.",
+    "steps": [
+      "Inspect the job and attempt history.",
+      "Resolve the connector problem; in the local demo, clear simulated failures.",
+      "For a dead job choose Retry.",
+      "Process due jobs and verify the delivered state."
+    ],
+    "prerequisites": "IAM operator required. New execution rechecks current access so a stale job cannot regrant terminated access. Retry history is preserved."
+  },
+  {
+    "id": "qualifications",
+    "title": "Verify or renew qualifications",
+    "path": "/qualifications",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor",
+      "SiteDelegate"
+    ],
+    "examples": [
+      "credential",
+      "qualification",
+      "safeguarding",
+      "registration expired",
+      "certificate",
+      "renew licence"
+    ],
+    "summary": "Qualified care access requires current verified evidence. Expired qualifications block the relevant care access checks.",
+    "steps": [
+      "Find the worker in Qualifications.",
+      "Choose Safeguarding or Professional registration.",
+      "Record the expiry date and an evidence reference.",
+      "Save and confirm that gaps/renewal alerts reflect the change."
+    ],
+    "prerequisites": "Manager, IAM operator or delegated site administrator can verify within their scope. Nurses need safeguarding and professional registration."
+  },
+  {
+    "id": "emergency",
+    "title": "Emergency break-glass access",
+    "path": "/coverage",
+    "roles": [
+      "Nurse",
+      "Manager",
+      "IAMOperator"
+    ],
+    "examples": [
+      "break glass",
+      "emergency",
+      "urgent resident access"
+    ],
+    "summary": "Emergency access is constrained to a resident and requires justification and independent review.",
+    "steps": [
+      "Open Cover & emergencies.",
+      "A qualified nurse enters the resident, incident reference and emergency reason.",
+      "Use the short-lived grant only for its intended purpose.",
+      "A separate authorized reviewer reviews the event."
+    ],
+    "prerequisites": "Use the actual policy limits displayed on the page. This does not grant administrator rights or bypass qualification requirements."
+  },
+  {
+    "id": "cover",
+    "title": "Temporary site cover",
+    "path": "/coverage",
+    "roles": [],
+    "examples": [
+      "cover another site",
+      "temporary assignment",
+      "site cover"
+    ],
+    "summary": "Site cover follows manager and separate IAM-operator approval.",
+    "steps": [
+      "Request a target site, duration and business reason.",
+      "Obtain the required two independent approval stages.",
+      "Check the resulting expiry and approved scope."
+    ],
+    "prerequisites": "Current nurse eligibility and the configured cover policy apply. A roster shift is not an alternative to this approval."
+  },
+  {
+    "id": "reviews",
+    "title": "Review workforce access",
+    "path": "/access-reviews",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "access review",
+      "attestation",
+      "recertification",
+      "review permissions"
+    ],
+    "summary": "Review whether access still matches each worker current duties.",
+    "steps": [
+      "Open Access Reviews or Quarterly reviews.",
+      "Inspect the worker role, site and current needs.",
+      "Record retain/remove decision with a clear reason.",
+      "Follow up on remediation; do not review your own access."
+    ],
+    "prerequisites": "Authorized independent reviewer required. A removal recommendation may require a separate lifecycle action."
+  },
+  {
+    "id": "campaigns",
+    "title": "Quarterly certification campaigns",
+    "path": "/campaigns",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "quarterly campaign",
+      "certification campaign",
+      "bulk certification"
+    ],
+    "summary": "Campaigns organize access decisions for a defined review period.",
+    "steps": [
+      "An IAM operator creates the quarterly campaign.",
+      "Independent reviewers inspect and decide assigned items.",
+      "Reconcile items if the worker state changed.",
+      "Track outstanding items and remediation."
+    ],
+    "prerequisites": "Self-certification is denied. Reviewers must inspect current evidence."
+  },
+  {
+    "id": "inbox",
+    "title": "Use notifications",
+    "path": "/notifications",
+    "roles": [],
+    "examples": [
+      "notification",
+      "inbox",
+      "mark read",
+      "unread reminders",
+      "alerts"
+    ],
+    "summary": "Filter reminders by text, category and read state. Marking a reminder read does not resolve the underlying issue.",
+    "steps": [
+      "Open Notifications and apply filters.",
+      "Read one reminder or mark unread reminders on the displayed page.",
+      "Follow its link to resolve the underlying task."
+    ],
+    "prerequisites": "Bulk read affects at most 25 current reminders and only your read state. Email delivery is not configured."
+  },
+  {
+    "id": "views",
+    "title": "Save a personal filtered view",
+    "path": "/saved-views",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "saved view",
+      "bookmark filters",
+      "save search",
+      "favourite search"
+    ],
+    "summary": "Saved views reopen your filters using current data and permissions.",
+    "steps": [
+      "Filter Employees, Notes or Review workbench.",
+      "Expand Save current view, name it and save.",
+      "Open Saved views to revisit or delete it."
+    ],
+    "prerequisites": "Governance role required. Maximum 20 private views; names must be unique for your account."
+  },
+  {
+    "id": "notes",
+    "title": "Write and find handover notes",
+    "path": "/notes",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "notes",
+      "handover",
+      "add note",
+      "search notes"
+    ],
+    "summary": "Notes preserve contextual handover and governance evidence.",
+    "steps": [
+      "Open Notes & handovers.",
+      "Search the complete history or filter by worker.",
+      "An authorized editor adds the category and note.",
+      "Review the saved note on the worker profile."
+    ],
+    "prerequisites": "Managers/operators can add notes; auditors read. Use fictional data in the demonstration."
+  },
+  {
+    "id": "audit",
+    "title": "Investigate the audit trail",
+    "path": "/audit",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "audit",
+      "investigation",
+      "correlation",
+      "who changed",
+      "logs"
+    ],
+    "summary": "Audit events record actors, targets, results and correlation identifiers.",
+    "steps": [
+      "Open Audit Log and filter the events.",
+      "Inspect the action, result and correlation.",
+      "Use Security assurance to check ledger integrity.",
+      "Use the connector export links for bounded NDJSON or FHIR-shaped event exports."
+    ],
+    "prerequisites": "Governance role required. Exports contain identifiers; handle them under your organisation privacy policy."
+  },
+  {
+    "id": "reports",
+    "title": "Reports and exports",
+    "path": "/reports",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "export",
+      "report",
+      "analytics",
+      "download csv",
+      "download pdf"
+    ],
+    "summary": "Reports summarize workforce and governance information in your permitted scope.",
+    "steps": [
+      "Open Reports and apply filters.",
+      "Choose the available CSV or PDF export.",
+      "Check the scope and reporting period before sharing."
+    ],
+    "prerequisites": "Reports are evidence snapshots, not a certification of regulatory compliance."
+  },
+  {
+    "id": "automation",
+    "title": "Run governance automation",
+    "path": "/control-centre",
+    "roles": [
+      "IAMOperator"
+    ],
+    "examples": [
+      "scheduled jobs",
+      "automation",
+      "automatic expiry",
+      "run daily job"
+    ],
+    "summary": "The daily governance job handles configured expiry and reminders. The application connector queue is a separate workflow.",
+    "steps": [
+      "Open Control centre and review policies.",
+      "Run the daily job when due.",
+      "Inspect the result and any alerts.",
+      "For app permissions, also reconcile and process connector jobs."
+    ],
+    "prerequisites": "IAM operator required. External scheduling is needed for unattended execution; use the documented queue CLI with one application process. App reconciliation/delivery can run in the same server process using SUNHAVEN_QUEUE_INTERVAL and SUNHAVEN_QUEUE_ACTOR."
+  },
+  {
+    "id": "roster",
+    "title": "Import a reviewed roster",
+    "path": "/workforce-sync",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "hr import",
+      "upload roster",
+      "csv import",
+      "bulk workforce",
+      "hris"
+    ],
+    "summary": "Roster CSV changes are staged for review before they can be applied.",
+    "steps": [
+      "Paste CSV using the exact displayed column format.",
+      "Stage it and inspect the proposed changes.",
+      "A different approver approves the import.",
+      "An authorized operator distinct from the approver applies the fresh approved snapshot."
+    ],
+    "prerequisites": "This is a reviewed manual import. No live HRIS connection or automatic external feed is configured."
+  },
+  {
+    "id": "services",
+    "title": "Govern service and AI-agent identities",
+    "path": "/services",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "service identity",
+      "ai agent",
+      "machine identity",
+      "service account",
+      "agent owner"
+    ],
+    "summary": "Service and agent identities have a named owner, limited local scopes and an expiry.",
+    "steps": [
+      "Open Service identities from Unified governance.",
+      "Register a bounded scope and owner.",
+      "Evaluate scope/expiry or disable an identity.",
+      "Use the workbench to replace an inactive owner."
+    ],
+    "prerequisites": "IAM operator changes identities. This registers and evaluates local identities; it does not execute agents or rotate external secrets."
+  },
+  {
+    "id": "insights",
+    "title": "Explain access risk",
+    "path": "/insights",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor",
+      "SiteDelegate"
+    ],
+    "examples": [
+      "risk",
+      "anomaly",
+      "intelligent insights",
+      "unusual access",
+      "recommendation",
+      "How do I check security risks?",
+      "Where are security risks?",
+      "Show workforce risk scores"
+    ],
+    "summary": "Risk explanations and recommendations help a human reviewer investigate. They do not automatically approve or remove high-risk access.",
+    "steps": [
+      "Open Risk insights and inspect the explanation.",
+      "Check the linked evidence and current worker context.",
+      "Assign remediation or follow the appropriate approval workflow."
+    ],
+    "prerequisites": "Existing insights are rule-based. Application-access insights separately show delivered permissions and observed usage."
+  },
+  {
+    "id": "policies",
+    "title": "Review policies and violations",
+    "path": "/policies",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "policy",
+      "segregation duties",
+      "sod",
+      "least privilege",
+      "violation"
+    ],
+    "summary": "Policies describe access constraints and surface findings for investigation.",
+    "steps": [
+      "Open Policies & risks.",
+      "Review the finding and affected scope.",
+      "Use an authorized workflow to resolve it and preserve evidence."
+    ],
+    "prerequisites": "Policy findings require interpretation; a dashboard is not proof of legal compliance."
+  },
+  {
+    "id": "login",
+    "title": "Sign-in, SSO and MFA",
+    "path": "/guide",
+    "roles": [],
+    "examples": [
+      "login",
+      "password",
+      "sso",
+      "mfa",
+      "sign in",
+      "passkey"
+    ],
+    "summary": "The local demo uses fictional identities. Production-mode sign-in uses the existing Entra configuration and needs tenant validation.",
+    "steps": [
+      "For a local demo choose a listed fictional identity.",
+      "For Entra, ask the administrator to configure tenant/app/redirect settings.",
+      "Configure and verify MFA/Conditional Access in the identity provider.",
+      "If sign-in expires, sign in again before submitting changes."
+    ],
+    "prerequisites": "Never expose the password-free local demo to the public internet. The assistant cannot reset credentials or assert that MFA is configured."
+  },
+  {
+    "id": "errors",
+    "title": "Recover from an error",
+    "path": "/help",
+    "roles": [],
+    "examples": [
+      "error",
+      "not working",
+      "request expired",
+      "403",
+      "409",
+      "503",
+      "failed",
+      "loading",
+      "connection"
+    ],
+    "summary": "Use the error message and request identifier to choose the recovery step.",
+    "steps": [
+      "For expired sessions or CSRF, reload/sign in and review the form.",
+      "For conflict/409, reload current records before retrying.",
+      "For database busy/503, wait briefly and check whether the change committed.",
+      "For audit-integrity errors, preserve all evidence files and ask the operator to investigate."
+    ],
+    "prerequisites": "Do not repeatedly submit a high-risk action without checking its current state. The assistant cannot inspect server logs."
+  },
+  {
+    "id": "backup",
+    "title": "Backup and restore",
+    "path": "/help",
+    "roles": [
+      "IAMOperator"
+    ],
+    "examples": [
+      "backup",
+      "restore",
+      "recovery",
+      "database lost"
+    ],
+    "summary": "Back up the database and its associated ledger files as one consistent set while writers are stopped.",
+    "steps": [
+      "Stop writers and copy the entire data directory.",
+      "Preserve database, audit key, checkpoint and any journal/sidecars.",
+      "Restore to an isolated environment and verify integrity.",
+      "Rehearse with qa/backup_check.py before production operations."
+    ],
+    "prerequisites": "Do not delete ledger files to bypass verification. Automated external backup storage is not connected."
+  },
+  {
+    "id": "navigation",
+    "title": "Tablet navigation and keyboard shortcuts",
+    "path": "/help",
+    "roles": [],
+    "examples": [
+      "tablet",
+      "mobile",
+      "menu",
+      "keyboard",
+      "where is navigation",
+      "dark mode"
+    ],
+    "summary": "Use the collapsible menu on tablets, quick navigation and contextual help to move around.",
+    "steps": [
+      "Open the menu; use Escape or the backdrop to close it.",
+      "Use Go to or Ctrl/Cmd+K to find a workspace.",
+      "Use Help on this page for contextual instructions.",
+      "Open Ask Sunhaven for guided task help."
+    ],
+    "prerequisites": "Tables may scroll horizontally. The assistant does not execute the instructions for you."
+  },
+  {
+    "id": "workbench",
+    "title": "Work through governance tasks",
+    "path": "/workbench",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "workbench",
+      "pending tasks",
+      "remediation owner",
+      "review queue"
+    ],
+    "summary": "The workbench brings pending approvals, certifications, remediation and emergency reviews together.",
+    "steps": [
+      "Filter by task type, text or overdue state.",
+      "Open the task and inspect its evidence.",
+      "Use the authorized decision or reassignment action."
+    ],
+    "prerequisites": "Actions retain their normal role and independence checks."
+  },
+  {
+    "id": "catalog",
+    "title": "Request a local access package",
+    "path": "/catalog",
+    "roles": [],
+    "examples": [
+      "catalogue",
+      "catalog",
+      "package",
+      "learning workspace"
+    ],
+    "summary": "Access packages bundle a specific local workspace and limited duration.",
+    "steps": [
+      "Choose an eligible package in Access catalogue.",
+      "Submit a business reason.",
+      "Wait for independent approval, then open the package resource."
+    ],
+    "prerequisites": "Package expiry and separation-of-duty rules are enforced; a package is different from an application entitlement."
+  },
+  {
+    "id": "residents",
+    "title": "Find permitted residents",
+    "path": "/residents",
+    "roles": [],
+    "examples": [
+      "resident",
+      "patient list",
+      "care assignment"
+    ],
+    "summary": "The resident list is limited by your role, current assignments, site and qualification checks.",
+    "steps": [
+      "Open Residents.",
+      "Select a resident you are authorized to see.",
+      "If a necessary resident is missing, ask the authorized manager/operator to review the assignment."
+    ],
+    "prerequisites": "Do not use emergency access to avoid ordinary assignment controls."
+  },
+  {
+    "id": "hub",
+    "title": "Explore unified governance",
+    "path": "/hub",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "hub",
+      "unified governance",
+      "module overview"
+    ],
+    "summary": "The governance hub links related operational modules.",
+    "steps": [
+      "Open Unified governance.",
+      "Choose the relevant module: services, incidents, policy lab or integrations.",
+      "Use Help on this page for the module instructions."
+    ],
+    "prerequisites": "Different modules have different authorization requirements."
+  },
+  {
+    "id": "compliance",
+    "title": "Investigate compliance findings",
+    "path": "/compliance",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "compliance",
+      "finding",
+      "scan controls"
+    ],
+    "summary": "Compliance checks surface potential violations for human review.",
+    "steps": [
+      "Open Compliance and review the findings.",
+      "Run checks if your role permits it.",
+      "Investigate current evidence and resolve through the appropriate controlled workflow."
+    ],
+    "prerequisites": "Passing a check does not establish legal or regulatory compliance."
+  },
+  {
+    "id": "incidents",
+    "title": "Manage a security incident",
+    "path": "/incidents",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "incident",
+      "investigation case",
+      "containment"
+    ],
+    "summary": "Incident cases move through Open, Investigating, Contained and Resolved.",
+    "steps": [
+      "Request the temporary incident-response package.",
+      "Obtain independent approval.",
+      "Create or transition a case with evidence and an accountable owner."
+    ],
+    "prerequisites": "A valid incident-response package and eligible governance role are required."
+  },
+  {
+    "id": "checklist",
+    "title": "Complete onboarding tasks",
+    "path": "/onboarding",
+    "roles": [
+      "Manager",
+      "IAMOperator",
+      "Auditor"
+    ],
+    "examples": [
+      "induction checklist",
+      "onboarding checklist",
+      "check onboarding tasks"
+    ],
+    "summary": "The onboarding checklist records progress and supporting evidence.",
+    "steps": [
+      "Open Onboarding and select the worker.",
+      "Review the required steps.",
+      "Record completion and evidence with the authorized editor."
+    ],
+    "prerequisites": "A checklist does not replace verified qualifications, account approval or access provisioning."
+  },
+  {
+    "id": "search",
+    "title": "Search the workspace",
+    "path": "/search",
+    "roles": [],
+    "examples": [
+      "global search",
+      "find worker",
+      "find a record"
+    ],
+    "summary": "Global search returns information within the scope of your identity.",
+    "steps": [
+      "Enter at least two characters in the top search box.",
+      "Open a matching result.",
+      "For saved filters, use Employees, Notes or Review workbench."
+    ],
+    "prerequisites": "Restricted worker/audit information is not exposed to ordinary workers."
+  },
+  {
+    "id": "ai-workspace",
+    "title": "AI workspace and access explanations",
+    "path": "/ai-workspace",
+    "roles": [],
+    "summary": "Explain your current application access and review aggregate governance evidence.",
+    "examples": [
+      "Explain my access",
+      "What qualifications expire soon?",
+      "Give me review priorities",
+      "Where is AI workspace?",
+      "Download a governance briefing",
+      "Suggest access reviews"
+    ],
+    "steps": [
+      "Open AI workspace.",
+      "Review your permission explanations.",
+      "Governance roles can inspect renewal counts, risk and review priorities.",
+      "Use the JSON briefing export for aggregate evidence."
+    ],
+    "prerequisites": "Read-only explanations. Human approval is required for access changes; external model optional."
+  },
+  {
+    "id": "roles",
+    "title": "Manage workforce roles",
+    "path": "/employees",
+    "roles": [
+      "IAMOperator",
+      "Manager"
+    ],
+    "examples": [
+      "Where can I manage roles?",
+      "How do I manage employee roles?",
+      "Open role management",
+      "Change an employee role"
+    ],
+    "summary": "Open the workforce directory to inspect a worker and request or perform an authorized role change. Changes require the normal approval workflow.",
+    "steps": [
+      "Find the worker in Employees.",
+      "Review current role, site and qualifications.",
+      "Use the authorized role change or access request workflow.",
+      "Inspect the decision, resulting worker state and audit trail."
+    ],
+    "prerequisites": "An authorized manager or IAM operator and a documented business reason."
+  },
+  {
+    "id": "team-services",
+    "title": "MFA analysis and team services",
+    "path": "/team-services",
+    "roles": [
+      "IAMOperator",
+      "Manager",
+      "Auditor"
+    ],
+    "examples": [
+      "Analyse MFA fatigue",
+      "Show MFA denials",
+      "Run the team security services",
+      "Where is the Graph access review?"
+    ],
+    "summary": "Use Team services to run the integrated MFA detector and find the Entra access review lab.",
+    "steps": [
+      "Open Team services.",
+      "Run the controlled MFA demonstration or submit normalized event CSV.",
+      "Review evidence and export the finding JSON.",
+      "Use the documented lab startup for live Entra review campaigns."
+    ],
+    "prerequisites": "A governance role; live Entra operations separately require tenant setup."
+  }
+]

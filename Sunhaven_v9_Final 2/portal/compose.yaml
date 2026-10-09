@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      SUNHAVEN_ENV: development
+      SUNHAVEN_AUTH_MODE: local
+      SUNHAVEN_GRAPH_MODE: mock
+      SUNHAVEN_SEED_DEMO: "1"
+    volumes:
+      - demo-data:/data
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  demo-data:

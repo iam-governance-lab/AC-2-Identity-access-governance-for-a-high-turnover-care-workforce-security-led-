@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.production.example
+data/*.db*
+backups/
+*.zip
+
+# Security ledger private state and generated local evidence
+*.ledger.key
+*.ledger.head
+demo-evidence/

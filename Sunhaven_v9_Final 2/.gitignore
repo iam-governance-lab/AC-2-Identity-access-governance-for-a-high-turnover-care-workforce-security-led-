@@ -1,0 +1,35 @@
+# Local credentials (keep sample configuration)
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample.*
+*.pem
+*.pfx
+*.p12
+# OS files and caches
+.DS_Store
+._*
+__MACOSX/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+# Generated state and output
+runtime/
+backups/
+evidence/
+reports/
+demo-evidence/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.ledger.key
+*.ledger.head
+*.log
+*.zip

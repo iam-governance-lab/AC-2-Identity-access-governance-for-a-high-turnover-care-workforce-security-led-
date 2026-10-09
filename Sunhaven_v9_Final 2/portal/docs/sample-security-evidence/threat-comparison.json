@@ -1,0 +1,104 @@
+{
+  "source": "local synthetic workforce snapshot",
+  "state": {
+    "workers": 42,
+    "active_assignments": 29,
+    "enabled_former_workers": [],
+    "unexpected_admin": [],
+    "invalid_assignments": [
+      "SC1001",
+      "SC1001",
+      "SC1003",
+      "SC1006",
+      "SC1006",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042",
+      "SC1037",
+      "SC1041",
+      "SC1042"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "STOLEN_CREDENTIAL",
+      "scenario": "Stolen credentials",
+      "control": "MFA policy",
+      "baseline": "OPEN",
+      "controlled": "OPEN",
+      "baseline_risk": 5,
+      "controlled_risk": 5,
+      "evidence": "Design simulation only"
+    },
+    {
+      "id": "SHARED_SESSION",
+      "scenario": "Shared active session",
+      "control": "Short session + logout",
+      "baseline": "OPEN",
+      "controlled": "OPEN",
+      "baseline_risk": 4,
+      "controlled_risk": 4,
+      "evidence": "Design simulation only"
+    },
+    {
+      "id": "FORMER_WORKER",
+      "scenario": "Former worker still enabled",
+      "control": "Leaver block",
+      "baseline": "OPEN",
+      "controlled": "BLOCKED",
+      "baseline_risk": 5,
+      "controlled_risk": 0,
+      "evidence": "Sunhaven state snapshot"
+    },
+    {
+      "id": "EXCESS_PRIVILEGE",
+      "scenario": "Excessive care access",
+      "control": "Role + assignment checks",
+      "baseline": "OPEN",
+      "controlled": "OPEN",
+      "baseline_risk": 4,
+      "controlled_risk": 4,
+      "evidence": "Sunhaven state snapshot"
+    },
+    {
+      "id": "PRIVILEGED_COMPROMISE",
+      "scenario": "Privileged account compromise",
+      "control": "Operator separation",
+      "baseline": "OPEN",
+      "controlled": "OPEN",
+      "baseline_risk": 5,
+      "controlled_risk": 5,
+      "evidence": "Sunhaven state snapshot"
+    },
+    {
+      "id": "UNMANAGED_DEVICE",
+      "scenario": "Unmanaged device",
+      "control": "Device trust (future work)",
+      "baseline": "OPEN",
+      "controlled": "OPEN",
+      "baseline_risk": 3,
+      "controlled_risk": 3,
+      "evidence": "Design simulation only"
+    }
+  ],
+  "baseline_risk": 26,
+  "controlled_risk": 21
+}

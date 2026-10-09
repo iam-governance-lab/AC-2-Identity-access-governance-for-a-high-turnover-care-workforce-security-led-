@@ -1,0 +1,8 @@
+{
+  "displayName": "Sunhaven Care Portal - LAB",
+  "tenantId": "72a753ee-6910-4a9b-a36e-e8790da83acb",
+  "clientId": "3f042245-9f0a-4251-862e-827cce2e2006",
+  "applicationObjectId": "9f5e6eb6-511e-4ed8-b9c4-3507a9122bdd",
+  "redirectUri": "http://localhost:5000/redirect",
+  "signInAudience": "AzureADMyOrg"
+}

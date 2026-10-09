@@ -1,0 +1,91 @@
+{
+  "modelName": "SITAS 5x5 Cybersecurity Risk Model",
+  "version": "1.0",
+  "description": "Risk model used by the Sunhaven Identity Threat and Attack-Path Simulator to calculate scenario risk from likelihood and impact.",
+
+  "scale": {
+    "minimum": 1,
+    "maximum": 5
+  },
+
+  "formula": "likelihood * impact",
+
+  "likelihoodLevels": [
+    {
+      "value": 1,
+      "label": "Rare",
+      "description": "The threat is unlikely to occur under normal conditions."
+    },
+    {
+      "value": 2,
+      "label": "Unlikely",
+      "description": "The threat could occur but is not expected frequently."
+    },
+    {
+      "value": 3,
+      "label": "Possible",
+      "description": "The threat could reasonably occur in the environment."
+    },
+    {
+      "value": 4,
+      "label": "Likely",
+      "description": "The threat has a strong possibility of occurring."
+    },
+    {
+      "value": 5,
+      "label": "Almost Certain",
+      "description": "The threat is expected to occur frequently or under common conditions."
+    }
+  ],
+
+  "impactLevels": [
+    {
+      "value": 1,
+      "label": "Insignificant",
+      "description": "Minimal security or operational impact."
+    },
+    {
+      "value": 2,
+      "label": "Minor",
+      "description": "Limited impact that can be handled with normal operational processes."
+    },
+    {
+      "value": 3,
+      "label": "Moderate",
+      "description": "Noticeable security or operational impact requiring investigation."
+    },
+    {
+      "value": 4,
+      "label": "Major",
+      "description": "Serious impact involving important systems, identities or information."
+    },
+    {
+      "value": 5,
+      "label": "Severe",
+      "description": "Very serious impact involving sensitive information, privileged access or major system exposure."
+    }
+  ],
+
+  "severityBands": [
+    {
+      "minimum": 1,
+      "maximum": 4,
+      "label": "Low"
+    },
+    {
+      "minimum": 5,
+      "maximum": 9,
+      "label": "Medium"
+    },
+    {
+      "minimum": 10,
+      "maximum": 16,
+      "label": "High"
+    },
+    {
+      "minimum": 17,
+      "maximum": 25,
+      "label": "Critical"
+    }
+  ]
+}

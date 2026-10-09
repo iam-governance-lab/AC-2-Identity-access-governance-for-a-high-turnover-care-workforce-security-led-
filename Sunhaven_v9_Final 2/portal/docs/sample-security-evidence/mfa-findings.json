@@ -1,0 +1,43 @@
+[
+  {
+    "rule_id": "MFA_REPEATED_DENIAL",
+    "severity": "High",
+    "actor_id": "SC1005",
+    "timestamp_utc": "2026-09-24T14:59:10Z",
+    "event_ids": [
+      "MFA-0",
+      "MFA-1",
+      "MFA-2"
+    ],
+    "explanation": "Repeated user denials: 3 related events within 5 minutes."
+  },
+  {
+    "rule_id": "MFA_PROMPT_BURST",
+    "severity": "High",
+    "actor_id": "SC1005",
+    "timestamp_utc": "2026-09-24T15:00:10Z",
+    "event_ids": [
+      "MFA-0",
+      "MFA-1",
+      "MFA-2",
+      "MFA-3",
+      "MFA-4"
+    ],
+    "explanation": "Burst of MFA prompts: 5 related events within 5 minutes."
+  },
+  {
+    "rule_id": "MFA_DENIAL_TO_SUCCESS",
+    "severity": "Critical",
+    "actor_id": "SC1005",
+    "timestamp_utc": "2026-09-24T15:00:40Z",
+    "event_ids": [
+      "MFA-0",
+      "MFA-1",
+      "MFA-2",
+      "MFA-3",
+      "MFA-4",
+      "MFA-5"
+    ],
+    "explanation": "Denials followed by success: 6 related events within 5 minutes."
+  }
+]

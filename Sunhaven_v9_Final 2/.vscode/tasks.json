@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Sunhaven 14",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "run.py"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Test Sunhaven 14",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "run.py",
+        "test"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Verify release files",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "verify_release.py"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

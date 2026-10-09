@@ -1,0 +1,6 @@
+Route,Purpose,AllowedRoles,UnauthorizedResult
+/residents,List permitted TEST residents,CareWorker|Nurse|Manager|AgencyWorker,HTTP 403
+/care-notes,Open fictional care-note area,CareWorker|Nurse|Manager|AgencyWorker,HTTP 403
+/clinical,Open clinical workspace,Nurse|Manager,HTTP 403
+/review,Open manager review workspace,Manager,HTTP 403
+/app-audit,Read sanitized application audit,Manager|Auditor,HTTP 403

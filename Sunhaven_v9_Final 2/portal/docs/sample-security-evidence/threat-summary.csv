@@ -1,0 +1,7 @@
+id,scenario,control,baseline,controlled,baseline_risk,controlled_risk,evidence
+STOLEN_CREDENTIAL,Stolen credentials,MFA policy,OPEN,OPEN,5,5,Design simulation only
+SHARED_SESSION,Shared active session,Short session + logout,OPEN,OPEN,4,4,Design simulation only
+FORMER_WORKER,Former worker still enabled,Leaver block,OPEN,BLOCKED,5,0,Sunhaven state snapshot
+EXCESS_PRIVILEGE,Excessive care access,Role + assignment checks,OPEN,OPEN,4,4,Sunhaven state snapshot
+PRIVILEGED_COMPROMISE,Privileged account compromise,Operator separation,OPEN,OPEN,5,5,Sunhaven state snapshot
+UNMANAGED_DEVICE,Unmanaged device,Device trust (future work),OPEN,OPEN,3,3,Design simulation only

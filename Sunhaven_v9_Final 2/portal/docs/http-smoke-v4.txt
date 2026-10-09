@@ -1,0 +1,10 @@
+Local HTTP smoke check, temporary synthetic database
+/ -> 200
+/notifications -> 200
+/onboarding -> 200
+/search?q=Sarah -> 200
+/reports -> 200
+/reports?format=pdf -> 200
+/static/app.js -> 200
+/static/theme.js -> 200
+/static/workspace.css -> 200

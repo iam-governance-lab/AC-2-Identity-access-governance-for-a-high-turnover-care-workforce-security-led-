@@ -1,0 +1,6 @@
+employeeId,displayName,mailAlias,jobRole,facility,status,startDate,endDate
+SC1001,Mia Carter (TEST),mia.carter,CareWorker,Sydney,Active,2026-08-10,
+SC1002,Noah Singh (TEST),noah.singh,Nurse,Sydney,Active,2026-08-10,
+SC1004,Liam Brooks (TEST),liam.brooks,AgencyWorker,Sydney,Active,2026-08-10,2026-08-20
+SC1006,Ethan Khan (TEST),ethan.khan,CareWorker,Sydney,Leaving,2026-07-01,2026-08-05
+

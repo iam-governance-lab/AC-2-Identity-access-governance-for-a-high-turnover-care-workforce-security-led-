@@ -1,0 +1,15 @@
+{
+  "scenarioId": "SITAS-S04",
+  "name": "Excessive Privilege Abuse",
+  "description": "A fictional compromised care worker identity has access beyond its intended role and attempts to use restricted administrative functionality to reach fictional resident records.",
+
+  "startNode": "compromised_care_worker",
+  "targetNode": "resident_records",
+
+  "likelihood": 3,
+  "impact": 5,
+
+  "relatedControls": [
+    "CTRL-RBAC"
+  ]
+}

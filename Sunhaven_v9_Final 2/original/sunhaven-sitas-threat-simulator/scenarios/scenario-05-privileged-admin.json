@@ -1,0 +1,15 @@
+{
+  "scenarioId": "SITAS-S05",
+  "name": "Privileged Administrator Credential Compromise",
+  "description": "A fictional external attacker obtains an administrator credential and attempts to use the privileged identity to reach the restricted admin console and fictional resident records.",
+
+  "startNode": "admin_attacker",
+  "targetNode": "resident_records",
+
+  "likelihood": 2,
+  "impact": 5,
+
+  "relatedControls": [
+    "CTRL-PRIVAUTH"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+    "workers": [
+        {
+            "workerId": "EXT001",
+            "displayName": "Sarah Khan",
+            "email": "sarah@sydneycare.example",
+            "agencyId": "AG001"
+        },
+        {
+            "workerId": "EXT002",
+            "displayName": "Daniel Lee",
+            "email": "daniel@harbourhealth.example",
+            "agencyId": "AG002"
+        },
+        {
+            "workerId": "EXT003",
+            "displayName": "Adnan Bawazir",
+            "email": "adnan@unknowncare.example",
+            "agencyId": "AG003"
+        },
+        {
+            "workerId": "EXT004",
+            "displayName": "Emma Wilson",
+            "email": "emma@random.example",
+            "agencyId": "AG001"
+        },
+        {
+            "workerId": "EXT005",
+            "displayName": "James Wilson",
+            "email": "james@sydneycare.example",
+            "agencyId": "AG001"
+        }
+    ]
+}

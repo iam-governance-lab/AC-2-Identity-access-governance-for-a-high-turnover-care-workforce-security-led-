@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Application audit | Sunhaven Care Portal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1250px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f4f7fb;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccd3dc;
+        text-align: left;
+      }
+
+      th {
+        background: #25364d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="/">Home</a>
+      |
+      <a href="{{ url_for('identity.logout') }}">Sign out</a>
+    </p>
+
+    <h1>Sanitized application audit</h1>
+
+    <p>
+      This page contains user Object IDs, actions, object IDs, times and
+      results. It does not contain passwords, access tokens or secrets.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>User Object ID</th>
+          <th>Action</th>
+          <th>Object</th>
+          <th>UTC time</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in events %}
+        <tr>
+          <td>{{ event.event_id }}</td>
+          <td>{{ event.user_object_id }}</td>
+          <td>{{ event.action }}</td>
+          <td>{{ event.object_id }}</td>
+          <td>{{ event.event_time }}</td>
+          <td>{{ event.result }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

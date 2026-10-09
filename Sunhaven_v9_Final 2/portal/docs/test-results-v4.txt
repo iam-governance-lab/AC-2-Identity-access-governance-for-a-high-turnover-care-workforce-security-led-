@@ -1,0 +1,43 @@
+test_agency_requires_sponsor_and_end_date (test_core.SunhavenCoreTests.test_agency_requires_sponsor_and_end_date) ... ok
+test_audit_redacts_secret_fields (test_core.SunhavenCoreTests.test_audit_redacts_secret_fields) ... ok
+test_compliance_detects_seeded_expired_agency (test_core.SunhavenCoreTests.test_compliance_detects_seeded_expired_agency) ... ok
+test_joiner_creates_role_and_audit (test_core.SunhavenCoreTests.test_joiner_creates_role_and_audit) ... ok
+test_leaver_removes_access_and_blocks (test_core.SunhavenCoreTests.test_leaver_removes_access_and_blocks) ... ok
+test_mover_removes_old_role_before_new_state (test_core.SunhavenCoreTests.test_mover_removes_old_role_before_new_state) ... ok
+test_seed_contains_required_roles (test_core.SunhavenCoreTests.test_seed_contains_required_roles) ... ok
+test_checklist_save_reopen_and_no_grant (test_experience.ExperienceTests.test_checklist_save_reopen_and_no_grant) ... ok
+test_filtered_pdf_and_search_escape (test_experience.ExperienceTests.test_filtered_pdf_and_search_escape) ... ok
+test_notification_reads_are_personal (test_experience.ExperienceTests.test_notification_reads_are_personal) ... ok
+test_own_history_and_checklist_validation (test_experience.ExperienceTests.test_own_history_and_checklist_validation) ... ok
+test_worker_scope (test_experience.ExperienceTests.test_worker_scope) ... ok
+test_workspace_pages_and_assets (test_experience.ExperienceTests.test_workspace_pages_and_assets) ... ok
+test_assignment_facility_and_role (test_governance.GovernanceTests.test_assignment_facility_and_role) ... ok
+test_audit_failure_rolls_back_access_change (test_governance.GovernanceTests.test_audit_failure_rolls_back_access_change) ... ok
+test_execution_atomic_and_once (test_governance.GovernanceTests.test_execution_atomic_and_once) ... ok
+test_expired_approval_denied (test_governance.GovernanceTests.test_expired_approval_denied) ... ok
+test_operation_permissions_and_page (test_governance.GovernanceTests.test_operation_permissions_and_page) ... ok
+test_sessions_revoked (test_governance.GovernanceTests.test_sessions_revoked) ... ok
+test_stale_approval_denied (test_governance.GovernanceTests.test_stale_approval_denied) ... ok
+test_task_and_review_closure (test_governance.GovernanceTests.test_task_and_review_closure) ... ok
+test_all_governance_pages_render (test_web.WebTests.test_all_governance_pages_render) ... ok
+test_approval_duplicate_and_final_decision (test_web.WebTests.test_approval_duplicate_and_final_decision) ... ok
+test_auditor_cannot_add_note (test_web.WebTests.test_auditor_cannot_add_note) ... ok
+test_body_limit_method_and_health (test_web.WebTests.test_body_limit_method_and_health) ... ok
+test_csrf_missing_and_forged (test_web.WebTests.test_csrf_missing_and_forged) ... ok
+test_csv_formula_neutralisation (test_web.WebTests.test_csv_formula_neutralisation) ... ok
+test_disabled_session_denied (test_web.WebTests.test_disabled_session_denied) ... ok
+test_entra_disables_demo_login (test_web.WebTests.test_entra_disables_demo_login) ... ok
+test_expired_agency_denied (test_web.WebTests.test_expired_agency_denied) ... ok
+test_manager_cannot_approve_privilege (test_web.WebTests.test_manager_cannot_approve_privilege) ... ok
+test_mover_revokes_session_and_cannot_reactivate (test_web.WebTests.test_mover_revokes_session_and_cannot_reactivate) ... ok
+test_note_persistence_and_html_escape (test_web.WebTests.test_note_persistence_and_html_escape) ... ok
+test_production_config_and_cookies (test_web.WebTests.test_production_config_and_cookies) ... ok
+test_review_validation (test_web.WebTests.test_review_validation) ... ok
+test_seed_counts (test_web.WebTests.test_seed_counts) ... ok
+test_self_approval_denied (test_web.WebTests.test_self_approval_denied) ... ok
+test_worker_permissions_and_assignment_scope (test_web.WebTests.test_worker_permissions_and_assignment_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.328s
+
+OK

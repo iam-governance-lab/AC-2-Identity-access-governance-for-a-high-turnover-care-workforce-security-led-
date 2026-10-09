@@ -1,0 +1,25 @@
+name: Verify Sunhaven
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-deploy.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python -m compileall -q .
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t sunhaven:ci .
+      - run: docker run -d --name sunhaven-test -p 127.0.0.1:8000:8000 sunhaven:ci
+      - run: curl --retry 10 --retry-connrefused --retry-delay 2 --fail http://127.0.0.1:8000/health

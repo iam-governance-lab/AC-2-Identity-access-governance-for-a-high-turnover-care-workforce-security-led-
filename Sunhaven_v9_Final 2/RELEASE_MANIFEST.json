@@ -1,0 +1,2637 @@
+{
+  "version": "9.0-final",
+  "created_utc": "2026-10-07T01:38:05.197989+00:00",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "6a4f23d16843008fa59427a08b85f99337c715fc6dad9eec1d796758f14b4cd9",
+      "bytes": 255
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "sha256": "8c6811ba59bc3a315ad7f4c8fe0e0d9fc3bd87e7cd3741f959f3afc6c1e38c85",
+      "bytes": 367
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "30495d0854b933eceaf00b0f5b02dc2158ebe97e5be2970dd3c043187b28817a",
+      "bytes": 411
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "sha256": "ebca698bf437aea0700935a9ff0a6fd4e43d224416d9babed67178ae449f75c2",
+      "bytes": 78
+    },
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "a06cfbedd2c75ecc6f8c40f8a9d9dcd13998630220b7c9ed3126de23b89d73e3",
+      "bytes": 436
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "sha256": "bb75bd38e6fe68dd8170f11b77715a492110dfa493e4ceb86ca2470fe30e26fa",
+      "bytes": 595
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "610e91f549703c9fa3bcbf8d74551301078848ff5700b18b715f7d9a29aa6d10",
+      "bytes": 768
+    },
+    {
+      "path": "GITHUB_UPLOAD_NOTES.md",
+      "sha256": "30b49600a540e1cd4acb7aaecfc33e8c6244c606426b7ce9975f7a89c53f1c11",
+      "bytes": 1164
+    },
+    {
+      "path": "ORIGINAL_MANIFEST.json",
+      "sha256": "9cba2dc0a713625c9043276f6ef9332bfc7658ed75ecfbdebe337bcbe1f63b25",
+      "bytes": 29008
+    },
+    {
+      "path": "README.md",
+      "sha256": "e1aed53bfd728c16dbb20ab920d61fdec8a2898ff2a7157ea3574ae53560b22b",
+      "bytes": 3911
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "aeb97ae93e017c77d8ecf3f24c7f217a543457ab2669148fefd4032415afda42",
+      "bytes": 252
+    },
+    {
+      "path": "docs/OPERATING_GUIDE.md",
+      "sha256": "665ce1c39df5b66b7b84ce273e906da5edc854839a07d4cd01929d39f94ef8d2",
+      "bytes": 9105
+    },
+    {
+      "path": "docs/RELEASE_NOTES.md",
+      "sha256": "795c16db5285afa27db9fc109d01436e4dda0c8a58c6775d1d2b7bd9ba8f95d4",
+      "bytes": 3919
+    },
+    {
+      "path": "docs/TEST_REPORT.md",
+      "sha256": "5196551ace577c90dbe86b32d676b07381f11be6095b5367790f2263ecd9427c",
+      "bytes": 3403
+    },
+    {
+      "path": "docs_v9_baseline/FEATURE_MATRIX.md",
+      "sha256": "eede91ae6ed844124f087a5a96a572294d0817819cf6c4b9325ec84bff08a910",
+      "bytes": 3125
+    },
+    {
+      "path": "docs_v9_baseline/OPERATING_GUIDE.md",
+      "sha256": "b67088143ef07b4209f49c2942e88516ff9e5f2a088e6efcedec546275116e5b",
+      "bytes": 14312
+    },
+    {
+      "path": "docs_v9_baseline/RELEASE_V9.md",
+      "sha256": "90264267ad09557055b7854355d5b35975d6f3b2c76c6ca6bbf4431c73559d51",
+      "bytes": 1809
+    },
+    {
+      "path": "docs_v9_baseline/RESEARCH.md",
+      "sha256": "d8d71ecf08144aadfdab4b30692194c84d0f2b04a1523212ce471845927fa12f",
+      "bytes": 1518
+    },
+    {
+      "path": "docs_v9_baseline/ROADMAP.md",
+      "sha256": "9285306f2109510238ec48f26f0f312f3578154c5ff5390aebb488b1066cc97e",
+      "bytes": 2268
+    },
+    {
+      "path": "docs_v9_baseline/Sunhaven_v9_Final_Report.md",
+      "sha256": "0f43d816d46b2dd66fadab9544b010c1aa978a9bbcfabe80bc25bd7c53a79030",
+      "bytes": 28597
+    },
+    {
+      "path": "docs_v9_baseline/Sunhaven_v9_Operator_Handbook.md",
+      "sha256": "166e6a9bb52005e17a105462fba85cf795ce41cd2bfbcdbedf0c14d9c818edf6",
+      "bytes": 23769
+    },
+    {
+      "path": "docs_v9_baseline/TEST_EVIDENCE.md",
+      "sha256": "227bce5660021c81e5c90bd3c7367949de9de712c53b57910e0c1cd48e98a124",
+      "bytes": 2445
+    },
+    {
+      "path": "docs_v9_baseline/historical-root/Sunhaven_Unified_8_Operating_Guide.pdf",
+      "sha256": "80ad6ff07a59c3d4502568401830acbef3e89b247f756b89fc496b48e9f5655b",
+      "bytes": 67092
+    },
+    {
+      "path": "docs_v9_baseline/historical-root/Sunhaven_v9_Final_Report.pdf",
+      "sha256": "c08bfafd136d44390f9ae564a1ba70df8322a90927d81162e7a2d5fd000e318f",
+      "bytes": 1346334
+    },
+    {
+      "path": "docs_v9_baseline/historical-root/Sunhaven_v9_Operator_Handbook.pdf",
+      "sha256": "60f7f2425a0f5a3a0c8ab8e3dbb0b66679e673b54d9e76ddade704dbb2f78e1e",
+      "bytes": 535487
+    },
+    {
+      "path": "docs_v9_baseline/historical-root/portal-test-results.txt",
+      "sha256": "464f708c1b3383b6aeb67b08bce1de08d1b8a36a042eeaa6be641e184e06ad72",
+      "bytes": 98
+    },
+    {
+      "path": "docs_v9_baseline/historical-root/saif-test-results.txt",
+      "sha256": "49fe519117eb3a1a0dbce40d1dab9c45780991249ad6d7555781869efa04df51",
+      "bytes": 99
+    },
+    {
+      "path": "docs_v9_baseline/historical-root/sitas-test-results.txt",
+      "sha256": "53d32374fe16fa8fd28ac3fd2810f200149ce7dfa30672a14f6c1649ab14f526",
+      "bytes": 99
+    },
+    {
+      "path": "original/.gitignore",
+      "sha256": "cfedede44562a4111173575db5db235ce9067f8a78b20ec0934891874696e4bb",
+      "bytes": 1264
+    },
+    {
+      "path": "original/README.md",
+      "sha256": "97a25257758525b364eabc78d1aa2c8852822b0ea4135b7b22b479dca3c77443",
+      "bytes": 12575
+    },
+    {
+      "path": "original/TECHNICAL_ACCOMPLISHMENTS.md",
+      "sha256": "a2a8cff2c3ff6410dec5e7300850896a44f42af44b93af075aa8a648aa08e939",
+      "bytes": 8292
+    },
+    {
+      "path": "original/app/.env.example",
+      "sha256": "0f273ca74da979cc1202a3ae8b6b647a77dce13d309b36ef522d3b8ce1337cf7",
+      "bytes": 1005
+    },
+    {
+      "path": "original/app/.env.sample.b2c",
+      "sha256": "982b4b217925dd52b018cab8f21efd02e6865cf187084cb7bea49abebc13317f",
+      "bytes": 1148
+    },
+    {
+      "path": "original/app/.env.sample.entra-id",
+      "sha256": "0f273ca74da979cc1202a3ae8b6b647a77dce13d309b36ef522d3b8ce1337cf7",
+      "bytes": 1005
+    },
+    {
+      "path": "original/app/.env.sample.external-id",
+      "sha256": "2fb3e49a0c2692d3b4b379b294b4d9d3228f3d285ca492bcfe307506195026e4",
+      "bytes": 875
+    },
+    {
+      "path": "original/app/.env.sample.external-id-custom-domain",
+      "sha256": "0192d6b395c7e5235cde00a995e2bc5e91f95e621cd9599f339be010d3455213",
+      "bytes": 900
+    },
+    {
+      "path": "original/app/.gitignore",
+      "sha256": "49b964d59bf3efa6b2a56f4397dfff3c0dceb96c96a94411c5f5ed23d0602068",
+      "bytes": 1290
+    },
+    {
+      "path": "original/app/.vscode/extensions.json",
+      "sha256": "0a42aec3f5e5aac5eb0495dd0ffdc1a3c0c46a2aad748bfcb8bb5ba42b28facb",
+      "bytes": 177
+    },
+    {
+      "path": "original/app/AppCreationScripts/AppCreationScripts.md",
+      "sha256": "2710910b37ce58a7200031cea8b38eb76b1b9d4e04da1922ce0496fd2f252aca",
+      "bytes": 6727
+    },
+    {
+      "path": "original/app/AppCreationScripts/Cleanup.ps1",
+      "sha256": "e29937ec3ce4b9d6eeb7adcd83e7d01d42beb260f0c01fdc71f0e8c270957d13",
+      "bytes": 5068
+    },
+    {
+      "path": "original/app/AppCreationScripts/Configure.ps1",
+      "sha256": "d62591887b389c5f9e8d9f87789059002f309316fe40fa622676715350695383",
+      "bytes": 8908
+    },
+    {
+      "path": "original/app/AppCreationScripts/sample.json",
+      "sha256": "e0afcc4e345e71e7659df2d215c8d9773eac87c32dab62c2df7b9366c4d1cb6a",
+      "bytes": 1900
+    },
+    {
+      "path": "original/app/CODE_OF_CONDUCT.md",
+      "sha256": "539b1bfc810aa62738af95866bfe584d568b0dca71aebed0bd81db0bdaebade3",
+      "bytes": 453
+    },
+    {
+      "path": "original/app/LICENSE",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "bytes": 1162
+    },
+    {
+      "path": "original/app/README.md",
+      "sha256": "81e5b30a8871795bea49112fc935dd8913c24384af2e136d7c52f23e52abcfc5",
+      "bytes": 6421
+    },
+    {
+      "path": "original/app/SECURITY.md",
+      "sha256": "dc962b096c20d09869b0501e80c1555553d38dae142f78fefa2c9818483a2ed9",
+      "bytes": 2414
+    },
+    {
+      "path": "original/app/app.py",
+      "sha256": "6a5c42e3ac286a37eacfada0c195104ff5cd5ab1356162ddcd5211b9f1098124",
+      "bytes": 12898
+    },
+    {
+      "path": "original/app/app_config.py",
+      "sha256": "6ec19f46b94fe78df799038db9d0e2adf86b46f2b61f4d58e891e5ea4acab9e6",
+      "bytes": 801
+    },
+    {
+      "path": "original/app/assign_test_user.py",
+      "sha256": "413287074f4aa22e475b9915f11234f4e6d2d6bcd2c5a9a976d22940bc8de28d",
+      "bytes": 1779
+    },
+    {
+      "path": "original/app/auto-config.json",
+      "sha256": "caeac1e6ee428426ecc6f4dbf6b5a216c44f46d75467bafb5db2ac3828e669ab",
+      "bytes": 797
+    },
+    {
+      "path": "original/app/database.py",
+      "sha256": "aecbdfb53aff255fe2d235e9b4aea82ed93f180ab3c1a9cb7e4712d6b267cfdf",
+      "bytes": 8646
+    },
+    {
+      "path": "original/app/manage_blocked_user.py",
+      "sha256": "257d228a4a431b278883d9421f6f312e8b93eec2c03284992d579baecca9d7e9",
+      "bytes": 2495
+    },
+    {
+      "path": "original/app/requirements.txt",
+      "sha256": "71737ee93bcbd4bf41e64fc9e424f6642f2075335b393a534db861998caeb1b0",
+      "bytes": 235
+    },
+    {
+      "path": "original/app/templates/403.html",
+      "sha256": "4134bb5fb454668010203173b20abdef37d4a17c7fa5ec8a52c5d50136842f04",
+      "bytes": 907
+    },
+    {
+      "path": "original/app/templates/app_audit.html",
+      "sha256": "c1b812d06d7ae216e510d3a14eb8e6ab6268bf9825cae8c2e722efa1e0c53c84",
+      "bytes": 1598
+    },
+    {
+      "path": "original/app/templates/display.html",
+      "sha256": "300875be8bc003511dd2d42690c3c453beb2709405ddb5a5bfff7aa51dc17240",
+      "bytes": 407
+    },
+    {
+      "path": "original/app/templates/index.html",
+      "sha256": "03e3d193a853adcc7e97a5cc80c3fa19f067e59720440f8de74a8dbc47a613e5",
+      "bytes": 926
+    },
+    {
+      "path": "original/app/templates/protected_page.html",
+      "sha256": "31c33c35aca6fd628e0d374b15d96b8c5daf44004f939e0fe1b419e7e6959174",
+      "bytes": 1286
+    },
+    {
+      "path": "original/app/templates/residents.html",
+      "sha256": "9913794e29f952e9815c31db67e55018baa8a9c89fe12bb323f9bd8c02e8235c",
+      "bytes": 1827
+    },
+    {
+      "path": "original/app/test_app.py",
+      "sha256": "9e1b066c4968442bf1c3817d2b490eb1036591c5f47ef39057c4fce7fb17a928",
+      "bytes": 600
+    },
+    {
+      "path": "original/app/topology.png",
+      "sha256": "c2af744ac70d51c172af78d8e1bf53ff8d5ca804d41202ac457b724e8c7eb281",
+      "bytes": 27384
+    },
+    {
+      "path": "original/app/tox.ini",
+      "sha256": "3a268314f16630e21dbf19024f5c3e2879e89a23936597bc6345279e866cdc20",
+      "bytes": 364
+    },
+    {
+      "path": "original/automation/Export-SunhavenAccessReview.ps1",
+      "sha256": "e6461923a63882e7c5ccca7c06cb611ad74a7b72115266b24f6ea5213e828091",
+      "bytes": 7705
+    },
+    {
+      "path": "original/automation/Export-SunhavenWorkerState.ps1",
+      "sha256": "f01b144edef06912d0ba18b55697f59881bd704100a5f9c0e337b01ecc141403",
+      "bytes": 7079
+    },
+    {
+      "path": "original/automation/Get-WorkforceDryRunPlan.ps1",
+      "sha256": "16b2ec58315d930dd62c2488c38e6dbbb635414c0a69529d333640a857a069c0",
+      "bytes": 18165
+    },
+    {
+      "path": "original/automation/Invoke-SunhavenAccessReviewRemediation.ps1",
+      "sha256": "e411c93c4e1ad12096facb19eaa9d3774c0923a041a1c11bf93d055ed07f6135",
+      "bytes": 9458
+    },
+    {
+      "path": "original/automation/Invoke-SunhavenJoiner.ps1",
+      "sha256": "975953fa269d3a18f9accfbe65c572c687f4dc6ded0d1075b940055a77f3a2c4",
+      "bytes": 35796
+    },
+    {
+      "path": "original/automation/Invoke-SunhavenLeaver.ps1",
+      "sha256": "09d968719781fd183cb462c4d55bdff5cb863391e2036e4a74654d08560ff6e8",
+      "bytes": 26746
+    },
+    {
+      "path": "original/automation/Invoke-SunhavenMover.ps1",
+      "sha256": "98619a9078cc64c6b1aeedcca7b6a090118181adc8218f94e9520f3bcb9f2157",
+      "bytes": 22540
+    },
+    {
+      "path": "original/automation/Test-SunhavenRepositorySafety.py",
+      "sha256": "8e1473d20f62cb91c1318bb48ea8fb161d6a278e471185a85188911d99d44b09",
+      "bytes": 5613
+    },
+    {
+      "path": "original/automation/Test-WorkforceInput.ps1",
+      "sha256": "c61921b5f70d6d647e5360e2c90ee836b5fd995da80454b4a03f225a9919adf4",
+      "bytes": 13801
+    },
+    {
+      "path": "original/config/app-registration.json",
+      "sha256": "8d84546d76ca127d714f83022b1082c903bc1bf163274e167ef25febcba57f9f",
+      "bytes": 310
+    },
+    {
+      "path": "original/config/app-role-ids.json",
+      "sha256": "31fdcacf5c61c82c41c048c31c026773926abe3087a7501f768664e600cd9b88",
+      "bytes": 274
+    },
+    {
+      "path": "original/config/group-object-ids.json",
+      "sha256": "4aaed2b44b555065c4559e00e39e48e0317e26330447a0459cad07b1688de0f3",
+      "bytes": 309
+    },
+    {
+      "path": "original/config/route-role-map.csv",
+      "sha256": "65cc5afd75faa5a3e90f3ee90f88a1ca88ccf7d1e1471d04794e1775a35e17cf",
+      "bytes": 403
+    },
+    {
+      "path": "original/data/Sunhaven_Workforce_Design.xlsx",
+      "sha256": "cbd43567f49960bc2bd78da5be26b3caf67d83c25c34808aac2363dd328cd614",
+      "bytes": 41370
+    },
+    {
+      "path": "original/data/workforce.csv",
+      "sha256": "0d3f9ea0ea1f9f4a3f6f5719557c81f985e800bc7a9319ba432587ea18e6fec0",
+      "bytes": 388
+    },
+    {
+      "path": "original/docs/saif-architecture.md",
+      "sha256": "f2a5958921a9450fff83159a1c4a440ab5ac77a1ad66fb9f604265223e3af642",
+      "bytes": 4124
+    },
+    {
+      "path": "original/docs/workforce-input-schema.md",
+      "sha256": "8721673ccb52fa5a86b38e7b84d5ee43063976689f7ccc1063eb21e20fa158fa",
+      "bytes": 2195
+    },
+    {
+      "path": "original/governance/policies/POL-01-Access-Management-Policy.md",
+      "sha256": "39b1ff41ea7262a41bbf65e14af6fe52932dd662d0539b03405718b016a6ca9f",
+      "bytes": 13103
+    },
+    {
+      "path": "original/governance/policies/POL-02-Workforce-Identity-Lifecycle-Policy.md",
+      "sha256": "377ace146e515abc75b2b6fd49427947bfcbb2ced41ab7c0d5e18d88db2aff51",
+      "bytes": 13929
+    },
+    {
+      "path": "original/governance/policies/POL-03-Authentication-and-Shared-Device-Security-Policy.md",
+      "sha256": "216e089ed3825d666a9ab2efd03944262e11b5c09fed8f00cb1bb417096e2550",
+      "bytes": 14172
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/Security Policies./01-SMFAA-policy-alignment.md",
+      "sha256": "12458989192e3efcd61994b90b4eff7a9861f21cd788fa2503c0314415e1d501",
+      "bytes": 2966
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/README.md",
+      "sha256": "dc196232a6df255f5cdfe6e986fe58b986e52168e34fce9a5704a22085ca9ce8",
+      "bytes": 5774
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/SMFAA_Project_Plan.md",
+      "sha256": "7c3b3872c106a4016a3e727a0f234bf92bbe722a2bacb91622b696c68af08bf9",
+      "bytes": 4965
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/architecture-and-design.md",
+      "sha256": "baed57f3cfc780d4f182c8cf8220c6fbe0127cbf2b17422f5af51695405ad596",
+      "bytes": 4532
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Individual Solution Design.png",
+      "sha256": "971c6055ab95397eaac0ffbbb261b02bee0d5bb2f9e0cb12fbb098de578d16b8",
+      "bytes": 137617
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Integration within the Sunhaven Care IAM Architecture.png",
+      "sha256": "63e9a3ce57c59c38d3aca651143da0999cc7672895b7048b5fc179a906b3b634",
+      "bytes": 147134
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Operational MFA Fatigue Detection Workflow.png",
+      "sha256": "0227bf4342c699f882da2d4bc6d032887618f23c188bc34633d46e8ce7d177d3",
+      "bytes": 159082
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/requirements.md",
+      "sha256": "aed000af90a4ce41b5ed08f9855ec741ccfa921f2b02ab139789b3ae73980192",
+      "bytes": 5567
+    },
+    {
+      "path": "original/services/Sunhaven MFA Fatigue Attack Analyzer/docs/scope-boundary.md",
+      "sha256": "2f2564dd548696915dce7a5c9b1f13a9c0b3af6dda09c4b7043dfa6b4238dc34",
+      "bytes": 2878
+    },
+    {
+      "path": "original/services/readme.md",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/README.md",
+      "sha256": "e007e31f3094deb4e56c1b7ed750d03c575c727015d3922face77e8f3db1431b",
+      "bytes": 13763
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/Security Policies/SAIF-External-Identity-Policy.md",
+      "sha256": "8b0f21802bc559e9c88cea60c20b93e71fea9e8eed55c02abb42e5c78ac8786a",
+      "bytes": 7784
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/config/approved-agencies.json",
+      "sha256": "1d3b3d5faa2b366cafd891f6a88b763910dbbe4c8d34d427af2ce92334d90ee6",
+      "bytes": 474
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/data/agency-workers.json",
+      "sha256": "72085d6f35ee54e8fa620760bce05dcda71d49e40834a9217b68995af737c804",
+      "bytes": 916
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/docs/SAIF-Design-Solution.md",
+      "sha256": "2ba23f6cc34ee96c7cd45e57fee05b4235002fb1bd141f4b7701d3731c68ef15",
+      "bytes": 4846
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/docs/SAIF-Test-Plan.md",
+      "sha256": "8ce839a28790c3a55b7243f67ee93aa0fdbcede8b3b5589452f9ce0caa6ee510",
+      "bytes": 3051
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/docs/diagrams/SAIF-Component-Architecture.png",
+      "sha256": "c62cd302bbe3e8d7bcba066dc735fd13cdf4d42be219cecb9dff3282d5080322",
+      "bytes": 125381
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/docs/diagrams/SAIF-External-Worker-Onboarding-Flow.png",
+      "sha256": "d9f6b467e81eed3a23fdcc289d9ada967bf3293307c24a15fb9e631cc4f47eda",
+      "bytes": 93650
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/docs/diagrams/SAIF-Integrated-Solution-Architecture.png",
+      "sha256": "3d1e8f6785956f4163ef11368e7bb16c20d9718beb22683fef7a30f930b60df7",
+      "bytes": 229690
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/scripts/Invoke-SAIFB2BInvitation.ps1",
+      "sha256": "5b44defd41b2cf964d7a00f617cc8e6114f9347777aa8814cf0764b0b8bf43dc",
+      "bytes": 1016
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/src/saif_agency_validation.py",
+      "sha256": "ee2934d0ac7e94faef588e6382ea51d592b61f505e63cd7e2f08e3e63db94f23",
+      "bytes": 1798
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/src/saif_b2b_invitation.py",
+      "sha256": "ef18e46c9e0d12a46728fbcc8889f79a22ab8a376f9eb3e727d4320f6a0459c3",
+      "bytes": 283
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/src/saif_graph_transport.py",
+      "sha256": "97711ffbb75fcee3bbc721b0e0ce9830a543651288eb297d1f2dc69a6b7d3ebc",
+      "bytes": 712
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/src/saif_iam_handover.py",
+      "sha256": "0532aae052a9ca39b253d69a2821c560e9aea33b57966b11b966a33f31b33d6d",
+      "bytes": 393
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/src/saif_identity_mapping.py",
+      "sha256": "d419bb1944e8ed843413f4c660d1c47585112387496f056d4aec89f744feee75",
+      "bytes": 252
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/src/saif_workflow.py",
+      "sha256": "39d9803d8f41ef9ec0a4eca6a9dc00ed8561c3589da79c5144e91641924f2b5f",
+      "bytes": 939
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/tests/test_agency_validation.py",
+      "sha256": "a2bbb10b00bbe7777dd4d0ebdcc9a596a4e1e1ad19a5e723b8f3b947e4a3409d",
+      "bytes": 2094
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/tests/test_b2b_invitation.py",
+      "sha256": "53a4d098720707e3b94246964af9608050cf8ce3569174ac581c07541cd6f9aa",
+      "bytes": 624
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/tests/test_graph_transport.py",
+      "sha256": "807fe7ec45125d508428531485426845c99b945cfc82ec7e3cb51ddcc8e48188",
+      "bytes": 1225
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/tests/test_iam_handover.py",
+      "sha256": "bdd501af60af42715aa834959980e34ac96383c50d76217d51c8379113394b37",
+      "bytes": 662
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/tests/test_identity_mapping.py",
+      "sha256": "cddbdb32465d69ea48863b9efffffb44f433874a4fef271ebb556b5db121e5eb",
+      "bytes": 574
+    },
+    {
+      "path": "original/sunhaven-saif-agency-identity-federation/tests/test_saif_workflow.py",
+      "sha256": "a1c0ef3bc58df3279fb90487e712639407668082dffebb81171a8297065f7e95",
+      "bytes": 2484
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/README.md",
+      "sha256": "f5b584fb7bf6be8c5264dff5735fa868378fdba48a88ec95f21f7618419a42be",
+      "bytes": 15782
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/SITAS_Development_Progress_1.md",
+      "sha256": "ab4fe2a02a1c6203ff461e820846b7fe2794b5c4af659b6e46ba844b0bbf161d",
+      "bytes": 7804
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/SITAS_Development_Progress_2.md",
+      "sha256": "6bee767f37e2bedd29bb5892258b1e9c5b738adcd0026978cb4e2c3970cdf872",
+      "bytes": 12894
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/SITAS_Development_Progress_3.md",
+      "sha256": "61d7d22d01285ed5c4fe620d9e6db5b647dd2049ee2169e144e5534ad2a141bf",
+      "bytes": 2547
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/Security Policies/01-SITAS-policy-alignment.md",
+      "sha256": "a798cdde434dbefe4c81e035953e7541a681bb7220f2c219c3d5ec808e2ea1c8",
+      "bytes": 1534
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/Security Policies/02-SITAS-secure-development-and-testing-standard.md",
+      "sha256": "4ff5906001cfcd2190e3e84e27c396f9b6d7742860e94a2fb015216eeb3f3cc3",
+      "bytes": 1581
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/Security Policies/03-SITAS-risk-and-control-validation-standard.md",
+      "sha256": "18556f6a04167c91ce7e9afe3638216d71378e0073031cdcefbc2509b0f8b5d1",
+      "bytes": 1525
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/Security Policies/04-SITAS-evidence-and-data-handling-standard.md",
+      "sha256": "86e7a7552df755d0621287233fd20522eded920fcc0bb0aa254e9bd0f80995ee",
+      "bytes": 1694
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/Security Policies/05-SITAS-control-mapping-register.md",
+      "sha256": "0a29ef82cdf1a1b226a972b79eedd8f33fa74c58c078219858c79942f9ad6699",
+      "bytes": 1429
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/Security Policies/README.md",
+      "sha256": "c55000376d2217eede33951e8ab414589e2d1d12e93759d8cdba8fb1ce7244a8",
+      "bytes": 3773
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/config/controls.json",
+      "sha256": "8807cd117276f40a1b726804d9964d1be097e4e2e6327161270bcfd8298b7f60",
+      "bytes": 1224
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/config/environment.json",
+      "sha256": "691533b33838eecbb618f719ba7a78143d8808f1531830deef58168e8da4a1b9",
+      "bytes": 5947
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/config/risk-model.json",
+      "sha256": "1466ed2a0d0f20f75458c265d3f0ad1b3fcfc59b46ea283a1e6ee5227a3f8758",
+      "bytes": 2233
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/SITAS_Integration_Roadmap.md",
+      "sha256": "6c0ff061642b69fda8aec8b3469e366e9c8d868a0b05394b0cfe485dfbd1971f",
+      "bytes": 1755
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/SITAS_Project_Plan.md",
+      "sha256": "6aaa5b10dcd3a5b0f328c6c9e997bc298a2ea6d3290a4f7683de8c4979da41ee",
+      "bytes": 13182
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/Sunhaven_Integration.md",
+      "sha256": "0ebefc9a2ce802d2c90dd1afe6b0d2854c890a2035fd753327ba391b0f683114",
+      "bytes": 5155
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/diagrams/Attack Path and Control Evaluation.png",
+      "sha256": "628fed12672a4cbd318e6df6c54981a1664c366d9b4b63e9505d06c05216fdc4",
+      "bytes": 210750
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Final Solution Architecture.png",
+      "sha256": "00a535a1abe3e93634801f8e5ca7587a7cde64f468296c4ad0c68dfb5dbabb86",
+      "bytes": 146862
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Individual Solution Design.png",
+      "sha256": "427598faf9091136ea990b408c973aa862e519f8a7bf53465bea24152981ff3b",
+      "bytes": 324249
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Integrated Leaver Example.png",
+      "sha256": "77ce7784ce409a8da807f43f9594119f3c435d1c4c000f4019066a10861fcbfc",
+      "bytes": 110276
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Threat Scenario Processing Workflow.png",
+      "sha256": "bf1c3e750ca85b4054624755d45dad7ae9ee36bcd9fbcbd08a39b52a96952d2e",
+      "bytes": 101032
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/requirements-traceability.md",
+      "sha256": "30a6fa868bf97b7f2436718f45db9d4839c6f1f75e0b95f3725d75c88a336b11",
+      "bytes": 9814
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/requirements.md",
+      "sha256": "b402f4b9fe33fbc8ddd2796d618d946653432de9ada45261f4c212c8842b1e67",
+      "bytes": 8337
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/risk-analysis.md",
+      "sha256": "0d4911a67947e7863b219bc8089d8cf9771aa0d821b3f6caa97c85b41449a8a5",
+      "bytes": 11578
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/docs/test-plan.md",
+      "sha256": "99cdd7efc1a2a3d40a68b6e7a845636aeef1592efa2e0c72dbdac6be184bb973",
+      "bytes": 3962
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/pytest.ini",
+      "sha256": "c98f5b9d2d01d5b01861605bc50472260522fd3067641cd7b2affa0d03718a9c",
+      "bytes": 47
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/scenarios/scenario-01-stolen-nurse-credential.json",
+      "sha256": "e3323279f28904c569a818b231774b7b216224a36385d9576f89d46afa491d15",
+      "bytes": 361
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/scenarios/scenario-02-shared-session.json",
+      "sha256": "d0571d68d7affd3dbf94da69b06e8e84d464218d465d2ad75653ad87353ed9bd",
+      "bytes": 422
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/scenarios/scenario-03-former-worker.json",
+      "sha256": "dfb8d855d60868deb2d671728a431ab45b9c1220553b408906f6239be4f8020b",
+      "bytes": 406
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/scenarios/scenario-04-excessive-privilege.json",
+      "sha256": "a32176e23ba38f4284257b0c47c07367e6e747b35003caae358ae2f23a6b02b4",
+      "bytes": 443
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/scenarios/scenario-05-privileged-admin.json",
+      "sha256": "42276e57c843d27ac788e87fe4a08850d99ba0011981c6f570c05972c8520287",
+      "bytes": 461
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/scenarios/scenario-06-unmanaged-device.json",
+      "sha256": "76213cd1527c9edc02d4a81e4a7b7e774842b85bee3d853793bae91d332e0326",
+      "bytes": 419
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/analysis_engine.py",
+      "sha256": "77cee202eeb3e387a28dfe0f856de1a929f1822db6142318037cef1098185a44",
+      "bytes": 1957
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/comparison_engine.py",
+      "sha256": "4b7d647a48064f6378a46e7ea7e15178a1bde51b5a50b27dfb3ceb045aa72c65",
+      "bytes": 2012
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/control_engine.py",
+      "sha256": "ae9aee31559e31d83d99017401c4b744d4117013ec6c59ded0c184b146467733",
+      "bytes": 4743
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/graph_engine.py",
+      "sha256": "dcce43b2f69ac696a0ef66726d052291c960769af745dbd625008fadc7b3828a",
+      "bytes": 705
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/model_loader.py",
+      "sha256": "a4f76cea6d9025f40b2ebb3b12adc1fc0e333f0babe75a35495183598bf97aae",
+      "bytes": 1228
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/pathfinder.py",
+      "sha256": "e160a2b60e414214eb08c2b9e7e8dc8c9924926c7f4f4f57602c49f04bf10780",
+      "bytes": 679
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/report_generator.py",
+      "sha256": "2e2453c8c4d1dab8826e3036ead89af3af75740beaa772877e93162e971a3ec2",
+      "bytes": 4765
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/risk_engine.py",
+      "sha256": "6f1dac1f659d219f272b00e29c8c2aede935f6150e3c70949452a62beb629413",
+      "bytes": 2454
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/sitas.py",
+      "sha256": "dc1efba34dd9eac2c38d7ebb017dd559254822135db88c94712ce7905f6af9ff",
+      "bytes": 11154
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/sunhaven_adapter.py",
+      "sha256": "23f5f681e5fa9889d8ccc0b5db96191e12b04e36854a61fa3d9fabc6b3d1f364",
+      "bytes": 24886
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/src/sunhaven_report_generator.py",
+      "sha256": "1e21eddace6b7ecb75a5f84186372115d65dcfbf43153847d07c8be2d11d12d5",
+      "bytes": 6990
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/conftest.py",
+      "sha256": "43939626c6855bc17861d059280864b5105948f5baab2ef1b5933c2d178d717f",
+      "bytes": 920
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_comparison_engine.py",
+      "sha256": "018abf7ca58567d402982f5e468b8309ea9b58ba81489d1ce58ad39063afbd08",
+      "bytes": 922
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_control_engine.py",
+      "sha256": "e9adce87fb5dcfd1c88b58ab3ba3bb0c7c3bf7f1684cdf005bc579ccf569c7b1",
+      "bytes": 8031
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_graph_pathfinder.py",
+      "sha256": "65d20c6ed727d2534a0dea675c65ce9ea950873c05c1ee12b02f930adb4be93f",
+      "bytes": 5682
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_model_loader.py",
+      "sha256": "2f67b99ec0cdf1787a673af5fb9c01276ea292775ba81a5c88213df836c8111a",
+      "bytes": 4369
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_report_generator.py",
+      "sha256": "fdf8260a716aeda6b6e1d7d065f8d45c0dd618c5989fab90d8f4fcd158cdd501",
+      "bytes": 1976
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_risk_engine.py",
+      "sha256": "0e7fb9e1742442a66201e7c2a394f0bb14172c0ed0c2562f685ea3ece74bb429",
+      "bytes": 3259
+    },
+    {
+      "path": "original/sunhaven-sitas-threat-simulator/tests/test_sunhaven_adapter.py",
+      "sha256": "4658b9f7cb8f6d93d34a7af5cc462f28da72d0e8e76d7b91ff6b9e63fad4e78e",
+      "bytes": 14135
+    },
+    {
+      "path": "original/tests/Test-JoinerFailureHandling.ps1",
+      "sha256": "53c92451e96bac648b8750e33179df022a782927e7a110a79a66594244e1fd46",
+      "bytes": 3803
+    },
+    {
+      "path": "original/tests/Test-TC014-WrongTenantGuard.ps1",
+      "sha256": "8a5e5ee2736015576f3adece4d6a43009f649a3b2532cd95e2de5c047d069c59",
+      "bytes": 4233
+    },
+    {
+      "path": "original/tests/joiner-sc1008.csv",
+      "sha256": "eaa3acd861a5629367708ae592705e2479e3a98c1f61bdb4f4377d9091cfb010",
+      "bytes": 156
+    },
+    {
+      "path": "original/tests/joiner-sc1009.csv",
+      "sha256": "56ac96bef574c5a613b68ce1f79a3666fd10b66ded8de6b7efa6402f567dfa89",
+      "bytes": 152
+    },
+    {
+      "path": "original/tests/joiner-sc1012-agency.csv",
+      "sha256": "ce6c2d03d404ce9fa72257ee2f7607177f44621cf3ba58a08368c911efcd37ad",
+      "bytes": 164
+    },
+    {
+      "path": "original/tests/leaver-sc1008.csv",
+      "sha256": "1dd2f59613de137ed84be1e348ed03ce856af8e84d3f0a5ab386ceca8212d6ce",
+      "bytes": 194
+    },
+    {
+      "path": "original/tests/mover-sc1008-careworker-to-nurse.csv",
+      "sha256": "9529dfe2e291080c00dc21dd2a7489e30e9db6aec666f60d1750675fa3c0e3c9",
+      "bytes": 150
+    },
+    {
+      "path": "original/tests/mover-sc1009-careworker-to-nurse.csv",
+      "sha256": "ff0d1ce352fbec81befc50798d62d2688ce63d548b50da2cdd674d1b36a9d07a",
+      "bytes": 147
+    },
+    {
+      "path": "original/tests/rehearsal-joiner-sc1013.csv",
+      "sha256": "8b581870e21e9f3d710dc929b82c5ae1541189d63d6038c0a7ae4011d886bd75",
+      "bytes": 170
+    },
+    {
+      "path": "original/tests/rehearsal-leaver-sc1013.csv",
+      "sha256": "e316abe9ce210422f8e7f6d1b63a502ee2558ad0630619c4e760e4fd933d7d38",
+      "bytes": 181
+    },
+    {
+      "path": "original/tests/tc007-invalid-jobrole.csv",
+      "sha256": "945df0072e91dc07b73d4e7c5675686c623f513151abaf940659287e7df019c4",
+      "bytes": 153
+    },
+    {
+      "path": "original/tests/tc008-duplicate-employeeid.csv",
+      "sha256": "944cf9624e0afabbd2b260b55c864c97309b28e62245b5f93e475c25958ff2e4",
+      "bytes": 256
+    },
+    {
+      "path": "original/tests/tc009-agency-expired-sc1012.csv",
+      "sha256": "2f27b9bc3fc9d205ea6610ba40ce75c94f453f18eecb7a45d956b95059cca781",
+      "bytes": 164
+    },
+    {
+      "path": "original/tests/tc010-leaver-sc1012.csv",
+      "sha256": "cb85f48b06fa998db3af965cacf74d5f3d49486841d486b0947ed68e319ecde8",
+      "bytes": 165
+    },
+    {
+      "path": "original/tests/workforce-duplicate-employeeid.csv",
+      "sha256": "ba2b287990b07d78622c37a4c21de5e4a11805ad0e41142fe36df1b7f9e03327",
+      "bytes": 228
+    },
+    {
+      "path": "original/tests/workforce-duplicate-upn.csv",
+      "sha256": "2c0c0dc3b650fae0619e0010ada876fc2ebc9ec20cab2cc232090d91296ae370",
+      "bytes": 244
+    },
+    {
+      "path": "original/tests/workforce-invalid-role.csv",
+      "sha256": "b524c4b39d9307aca2914e4add23e6c606edc5833598d5abb32509493ba9b0d1",
+      "bytes": 166
+    },
+    {
+      "path": "original/tests/workforce-missing-enddate.csv",
+      "sha256": "d9e5a0ed082f23a37e16f383b11b3e6cf900c631e8ee9d0bd0e6e772a7bb40e7",
+      "bytes": 167
+    },
+    {
+      "path": "portal/.dockerignore",
+      "sha256": "a27ad85234216602abf6cbdeabc734b1cb895fbbf3cadc110dd3b9cb014e411e",
+      "bytes": 75
+    },
+    {
+      "path": "portal/.env.production.example",
+      "sha256": "fa1e5d7de6bb4a18440f9a593fa7f0bcbcfd3e87c2c68422383bf6835b81338e",
+      "bytes": 693
+    },
+    {
+      "path": "portal/.github/workflows/tests.yml",
+      "sha256": "44adde3155867d99c3e4d97f8ed4c61143de4b8d16682f32b7a94736d986d0aa",
+      "bytes": 797
+    },
+    {
+      "path": "portal/.gitignore",
+      "sha256": "16ab8221efae470509a3c5d9e1eacdfc6357a33d5153aaa2ba1f5ae1fc89b6b8",
+      "bytes": 193
+    },
+    {
+      "path": "portal/Caddyfile",
+      "sha256": "2c2f1fd9839009ea5bec4a3878ae9b52aa98c3f9f734bf1c76d7f728413695b6",
+      "bytes": 113
+    },
+    {
+      "path": "portal/Dockerfile",
+      "sha256": "02ffbc1b1bf18b08c8f660cbe53cc7bf5e5ab447cdaae94d63068613d372c53b",
+      "bytes": 649
+    },
+    {
+      "path": "portal/README.md",
+      "sha256": "d03d32a601b5f4274d5588086f61c7ef0813f3cb35a4746b45160967030457d7",
+      "bytes": 408
+    },
+    {
+      "path": "portal/agent_assistant.py",
+      "sha256": "d043b51cb461e79eee46832ba0bcb4defd710c473b3112f24d5f565eed2459f0",
+      "bytes": 15316
+    },
+    {
+      "path": "portal/ai_insights.py",
+      "sha256": "3aceed697aa2a1717fcbb998831356bae060091c9d91be3e67e76993b1226b2f",
+      "bytes": 4414
+    },
+    {
+      "path": "portal/ai_ui.py",
+      "sha256": "c145db8531b1ce14c9918c98270e674eea53f3d5bae62e8adffd026d195d2833",
+      "bytes": 2367
+    },
+    {
+      "path": "portal/assets.py",
+      "sha256": "19f089216fb6646f4f978706dd4f6e843095d4d475ce12845833376b910f90a6",
+      "bytes": 686
+    },
+    {
+      "path": "portal/assurance.py",
+      "sha256": "879f8cf8f3b0af7d593b2e43c1d0cee1ad9bcddc3523a82a2fe1ea0ce1f088e5",
+      "bytes": 26004
+    },
+    {
+      "path": "portal/assurance_ui.py",
+      "sha256": "c13c4aeaacbecc43ddba8847271344ae64e132daf3c8787ae84e3f5de05caa45",
+      "bytes": 22036
+    },
+    {
+      "path": "portal/audit.py",
+      "sha256": "0f036154962a66aba3ae87eaad6b2b831f692397cb8888211a57920430ebf0a0",
+      "bytes": 1779
+    },
+    {
+      "path": "portal/audit_export.py",
+      "sha256": "dc1f0e558a58a59c4769cdca67c77afb3b26fdb5d9cd4701f1931fb707d96f26",
+      "bytes": 1385
+    },
+    {
+      "path": "portal/auth.py",
+      "sha256": "017570bcb2653ef337e7d0f9e849b6e9f6d31d85ea6841ba7e7ce50ffe50dd23",
+      "bytes": 3707
+    },
+    {
+      "path": "portal/automation.py",
+      "sha256": "4eed0148e31832e36868662a66f74213a6627916a6097d5befc3b9665b8d3922",
+      "bytes": 3761
+    },
+    {
+      "path": "portal/automation_ui.py",
+      "sha256": "41e3442a37f288e659c7a64ee15e85fc97053d78bb98b3f7cd81740123b014bc",
+      "bytes": 4643
+    },
+    {
+      "path": "portal/clock.py",
+      "sha256": "fbb067ab5d8886a1c51638ea419fd8b2e12409f2c19afb6fb879c8e1fac69df0",
+      "bytes": 186
+    },
+    {
+      "path": "portal/compliance.py",
+      "sha256": "cfe136f97b9bbf9ab80054c87ce881e5148a578c8122e6cd6106d15f6d803c14",
+      "bytes": 5190
+    },
+    {
+      "path": "portal/compose.production.yaml",
+      "sha256": "3db0e679ea457696b3caa3d107149272bc18e64adae0cdd71b42790f9697a967",
+      "bytes": 832
+    },
+    {
+      "path": "portal/compose.yaml",
+      "sha256": "922db2a6441d964c1991e59f3a7cb55585df962a83a70eaa3f72fba077ec1ef6",
+      "bytes": 420
+    },
+    {
+      "path": "portal/config.py",
+      "sha256": "12454325530da4bf94d235b38f984deef1b6c5a024b9f492005556f695ef7fce",
+      "bytes": 3410
+    },
+    {
+      "path": "portal/connectors.py",
+      "sha256": "68d68b501c1a2a997dd675885a46af835214263c498543e5a1802cf297a84ced",
+      "bytes": 1252
+    },
+    {
+      "path": "portal/database.py",
+      "sha256": "39e24c56615caa617e94c36bfe0f26ce9830c628104d38f85be46b91ddf3c688",
+      "bytes": 11732
+    },
+    {
+      "path": "portal/demo_data.py",
+      "sha256": "d38ba955b45d63965d6b6d9feabd7c8e0bc09d636d430ee116d84dee7fcb33df",
+      "bytes": 4263
+    },
+    {
+      "path": "portal/demo_v10.py",
+      "sha256": "c3871b4e715c8f236cc6dfc2a07fac52ba882e6a678c44c13af620d953c3d8c7",
+      "bytes": 3912
+    },
+    {
+      "path": "portal/demo_v12.py",
+      "sha256": "3e646ee508678aed30bb98151c3600e5f4f84293688dd31a4fa0a64d92fd9a1f",
+      "bytes": 2431
+    },
+    {
+      "path": "portal/docs/ARCHITECTURE.svg",
+      "sha256": "28827d27a5fb4a2770866ca1d7bda394a6c3b000aecf9a105547c3f2bb3b6202",
+      "bytes": 3041
+    },
+    {
+      "path": "portal/docs/ARCHITECTURE_V6.md",
+      "sha256": "46c552550760b3494ffe393936452789eb829ef37f0e81be7591e1b99dafcc62",
+      "bytes": 953
+    },
+    {
+      "path": "portal/docs/DELIVERY_MATRIX_V6.md",
+      "sha256": "afdb995ae677308b093b8550d3c964e05c4e9e5fc7ee64b3e2139a51da3bf5d8",
+      "bytes": 2878
+    },
+    {
+      "path": "portal/docs/DEMO_SCRIPT.md",
+      "sha256": "b0f1864eb61a8811d8b4501d93e71fc24c69dfba8e50fd8587837025142e8d37",
+      "bytes": 3011
+    },
+    {
+      "path": "portal/docs/DEPLOYMENT.md",
+      "sha256": "9633848ad671f4b1c74db4c14ac45bd55fd5c82b7747d4c0ac9ecc717b22e3ac",
+      "bytes": 4369
+    },
+    {
+      "path": "portal/docs/FINAL_PROJECT_OPERATING_GUIDE.md",
+      "sha256": "32f5731a450c2453fdce0ab3e4bf4fc6c9070f33ea539da7e269b4add9b91816",
+      "bytes": 9735
+    },
+    {
+      "path": "portal/docs/GROUP_PROJECT_INTEGRATION_GUIDE.md",
+      "sha256": "1dbecc811f9c6281c0578e6f5f35dacc3156d5187d1c529d9841359b900b8ed8",
+      "bytes": 9221
+    },
+    {
+      "path": "portal/docs/OPERATIONS.md",
+      "sha256": "9b9aecd704e2bf94b8a00a8fc538eca20a082731f5f326fc6311119c9ee4b5ec",
+      "bytes": 1414
+    },
+    {
+      "path": "portal/docs/POLICY_SECURITY_PACK.md",
+      "sha256": "636ef533a6872485b2aafa5b95ec2b2b9f80f4c145ae8381442c5e339e98d94e",
+      "bytes": 5576
+    },
+    {
+      "path": "portal/docs/PRESENTATION_RUNBOOK_V6.md",
+      "sha256": "42baf9f52dc3fbfba6ba1181f7304e6706c1d30c2c47a39459802c13a35787f7",
+      "bytes": 4157
+    },
+    {
+      "path": "portal/docs/RELEASE_NOTES.md",
+      "sha256": "64ef7626bc59e01426e59f1cf27c92a965444dcf88347c22563608e21b43c93b",
+      "bytes": 1738
+    },
+    {
+      "path": "portal/docs/REQUIREMENTS_CHECKLIST.md",
+      "sha256": "834d012be73287849ddc00c16912624ab021bc2463ed001aa925093a740caf3b",
+      "bytes": 2080
+    },
+    {
+      "path": "portal/docs/Sunhaven_Care_IAM_Complete_Development_Brief.pdf",
+      "sha256": "9c53de40fb6afbd7b23cd5bc3a1117ea6b12fe8365ffda5c207a7831c5abd0d9",
+      "bytes": 25364
+    },
+    {
+      "path": "portal/docs/Sunhaven_Care_IAM_Non_Technical_Project_Guide.pdf",
+      "sha256": "9925022e9486bc248fd5829d8f739d8a2192f0b0cc87c73c416ef5330b47249f",
+      "bytes": 42430
+    },
+    {
+      "path": "portal/docs/Sunhaven_Care_IAM_Operating_and_Technical_Guide.docx",
+      "sha256": "28f8618bdf0fa4758a03d37aafe28c139cc6c0509dca288d63f18a5e965bcb55",
+      "bytes": 51031
+    },
+    {
+      "path": "portal/docs/Sunhaven_Care_IAM_V6_Operating_and_Technical_Report.docx",
+      "sha256": "84430267882d7b3ca62b22da19a9e1d1fd74f2b7128ba0929a43a12c6428c155",
+      "bytes": 41581
+    },
+    {
+      "path": "portal/docs/V4_FEATURE_GUIDE.md",
+      "sha256": "37e3667ff436b8a85a1a1afb44fd65db288848e4ffd1089969d999cd9059b489",
+      "bytes": 7017
+    },
+    {
+      "path": "portal/docs/VERIFICATION.md",
+      "sha256": "c80bb5dfcb6ba1abb66bd12644532867a43a447390a704e988c46c8f1d4798af",
+      "bytes": 2173
+    },
+    {
+      "path": "portal/docs/http-smoke-v4.txt",
+      "sha256": "d5f292c7fa5efe4b1e5c186c01b649e4d112113fc2519715a39b213f39665634",
+      "bytes": 244
+    },
+    {
+      "path": "portal/docs/sample-security-evidence/ledger-verification.json",
+      "sha256": "c87f7a39f13ec591b713941210dfc4de31a1e2f521dababe88b2b9ba7c7fdb38",
+      "bytes": 588
+    },
+    {
+      "path": "portal/docs/sample-security-evidence/mfa-findings.json",
+      "sha256": "d7123d8e64d251939b57cfa01d6058347c76a89f1d82aceadd05a40e525d0e1b",
+      "bytes": 959
+    },
+    {
+      "path": "portal/docs/sample-security-evidence/threat-comparison.json",
+      "sha256": "529a17f4b9d1b054805002706dc157100313de462d475e819d1c2ea0a74095f0",
+      "bytes": 2435
+    },
+    {
+      "path": "portal/docs/sample-security-evidence/threat-report.html",
+      "sha256": "284dc7b11a10d70f0ec672f16a2b70b4d73f5a547ea919a9365f584e6834cae7",
+      "bytes": 1265
+    },
+    {
+      "path": "portal/docs/sample-security-evidence/threat-summary.csv",
+      "sha256": "9ce2a311010c166560cf1c741e86843304c0ca87650eb4d2f6c9691a644e6cc8",
+      "bytes": 674
+    },
+    {
+      "path": "portal/docs/test-results-v4.txt",
+      "sha256": "d24ea41ce0e83c2c734b99c969b373ac10542ad2c8f25c842660e836720af761",
+      "bytes": 3967
+    },
+    {
+      "path": "portal/docs/test-results-v5.txt",
+      "sha256": "f85d4d38a5b677abc6585deb1a8a8e1633890c4dc28e50d60cab2659f1fbb82d",
+      "bytes": 4779
+    },
+    {
+      "path": "portal/docs/test-results-v6.txt",
+      "sha256": "350f2c2c66e108ad1d4146500193d9a110a85292930b132691900d673d52ab1a",
+      "bytes": 5155
+    },
+    {
+      "path": "portal/docs/test-results.txt",
+      "sha256": "a17d74fdc2fb1ab7fd17d3d11081c9d35fac01fa788d00548f53273dbb399450",
+      "bytes": 3311
+    },
+    {
+      "path": "portal/enterprise.py",
+      "sha256": "7c1cab972634ae57a2e562fd93302ff4297de3423946e654452246c691abd124",
+      "bytes": 12518
+    },
+    {
+      "path": "portal/enterprise_ui.py",
+      "sha256": "4449af3758034a26f5ed2eeed95041bd85e937e86e239b65219d868ade7c6655",
+      "bytes": 14611
+    },
+    {
+      "path": "portal/experience.py",
+      "sha256": "1cc6c32c5dea6b9b2e79cd8369f3e09cb8689f141b3c9542947df4c1c69c675e",
+      "bytes": 17412
+    },
+    {
+      "path": "portal/features.py",
+      "sha256": "2a77d8326deefb71e1cb656a8ff67c0440ee4a716ed692eb3fc1b583450b72d2",
+      "bytes": 17566
+    },
+    {
+      "path": "portal/governance.py",
+      "sha256": "f8cbbbe30624b1109c1c5ac832251c7c5fe08cabbc21702d27561c19079b4005",
+      "bytes": 8816
+    },
+    {
+      "path": "portal/graph_service.py",
+      "sha256": "dfa82680fa6cbaacf2fd3789f83de8f94557cfa4c1b3a47455caafeb7a55fb3c",
+      "bytes": 5465
+    },
+    {
+      "path": "portal/help_assistant.py",
+      "sha256": "498f96d630f60ccd9642b05c2708a3a6d90089672fde7087640b6ba1d032a430",
+      "bytes": 5429
+    },
+    {
+      "path": "portal/help_model.json",
+      "sha256": "97439274ab17da57d7cbe4db5228597bea2e51ca8c0d49bb46aba4422e5581e2",
+      "bytes": 24356
+    },
+    {
+      "path": "portal/help_topics.json",
+      "sha256": "cbdbe3fe7fc4e0417e23629cc9f5b2c02125dbf3ed878be79b48f4be55fcf426",
+      "bytes": 30527
+    },
+    {
+      "path": "portal/integration_worker.py",
+      "sha256": "ddd0d565dcb3f0c5d1f42b4e3e0c1aea9f8c0443d3975313a3cdf6da2cf7dcf1",
+      "bytes": 3307
+    },
+    {
+      "path": "portal/integrations.py",
+      "sha256": "3f001aec5148f6c4894a3fb161781bc6080de56b9274d0ca026a46fd37b791ef",
+      "bytes": 1867
+    },
+    {
+      "path": "portal/lifecycle.py",
+      "sha256": "a6d24002724de43a1d807f40151c0fc87d91302318f63cddc61ec20cb2fbb9ec",
+      "bytes": 13652
+    },
+    {
+      "path": "portal/manage.py",
+      "sha256": "dae756056fd0b5c086d974a9d6a9a231ba125321f58fec492f992cac643ff9ea",
+      "bytes": 5390
+    },
+    {
+      "path": "portal/operations_ui.py",
+      "sha256": "42a4b760b2f684fc192cbffadb205d361678adb0cceb2d5fa7a7af7747223538",
+      "bytes": 5464
+    },
+    {
+      "path": "portal/policy_catalog.py",
+      "sha256": "444fbdcc2ef20e323f91b1e30746c88be4f6df35ee1fc959b4d968815616d6ed",
+      "bytes": 2903
+    },
+    {
+      "path": "portal/queue_worker.py",
+      "sha256": "cd51d7c41824b18172d81f30c2f0e37b203d557027f08ee2847a981777582b05",
+      "bytes": 1769
+    },
+    {
+      "path": "portal/recovery.py",
+      "sha256": "5a383d71db0ba89e81d46aba2d6494ca39a4c32e9d1aa1fa7fd57bea214751fd",
+      "bytes": 6126
+    },
+    {
+      "path": "portal/release_v10.py",
+      "sha256": "dbbb7566fe59668039c8df9547d9183c8d921b5232bc454b5dea23fb350ae43c",
+      "bytes": 8645
+    },
+    {
+      "path": "portal/release_v11.py",
+      "sha256": "0a2443e7550766c9ddd07e5983344dcd1ee314dc9a6a92d83c9def9165c7b552",
+      "bytes": 6810
+    },
+    {
+      "path": "portal/release_v12.py",
+      "sha256": "1f4cf3c6d5d4191db460c2893ed90a0341696b0275e5afdf3ba2574fc2840286",
+      "bytes": 20693
+    },
+    {
+      "path": "portal/requirements-deploy.txt",
+      "sha256": "6592f1dcc2eed772eaa6a0938bc3dfdc49d2ab4493f863ce4dee793345a58d20",
+      "bytes": 29
+    },
+    {
+      "path": "portal/requirements-entra.txt",
+      "sha256": "eebfb239b7e73ad5401c77318597242ff43ebe59f2582ae061a294aa77d35b3c",
+      "bytes": 13
+    },
+    {
+      "path": "portal/requirements.txt",
+      "sha256": "b397c785564dd4f8e1ab88ec3e891e0fe044797246fd4a776fa517ac68b20e67",
+      "bytes": 57
+    },
+    {
+      "path": "portal/reset_demo.py",
+      "sha256": "2b42dc9f7567731f84b48473bb4c9cea40d6bf5c775650f06b92c11df1671497",
+      "bytes": 702
+    },
+    {
+      "path": "portal/run.py",
+      "sha256": "13e0c06244f033376a7ac2fc3e4ce2a954f4423bbb61bec370ee25f5464d1569",
+      "bytes": 61
+    },
+    {
+      "path": "portal/scheduler.py",
+      "sha256": "13129a4e26fec6f22fe4d2c5f4f4932459a53082cbde59e4f453eff00818152e",
+      "bytes": 1689
+    },
+    {
+      "path": "portal/security.py",
+      "sha256": "196227dc62ae33c4b060c069e450fc41471f8f37538be3de047a79ad0b565b12",
+      "bytes": 1730
+    },
+    {
+      "path": "portal/security_workstream/__init__.py",
+      "sha256": "21e83b94ff6579647888ca31fa6d78d114af959038512b146b5a6cd72e6e900c",
+      "bytes": 75
+    },
+    {
+      "path": "portal/security_workstream/analyze_file.py",
+      "sha256": "835d7a6a2c424a0553b70d74124c97be6e61b7bdee8ce4b07507c2de7f107d62",
+      "bytes": 1137
+    },
+    {
+      "path": "portal/security_workstream/demo.py",
+      "sha256": "de4a6a64690d1b64aa39302a019c6e1b9ba9ad077a165277b2932fc01dc6e925",
+      "bytes": 2367
+    },
+    {
+      "path": "portal/security_workstream/ledger.py",
+      "sha256": "a76458f0b5ed858e111caa534dba9557fd525e32bdb3b2292486f8c55782d1fe",
+      "bytes": 11189
+    },
+    {
+      "path": "portal/security_workstream/mfa.py",
+      "sha256": "81add0d4ddc8b6fb3ab8d18e21d10973bbf7740975fbbc8be8e453a23b00cedf",
+      "bytes": 2602
+    },
+    {
+      "path": "portal/security_workstream/threats.py",
+      "sha256": "ea6d3cae1fd795fb2a05f4a40e6b5b03dbd887b0f5337ccc85ec973639fb6521",
+      "bytes": 2753
+    },
+    {
+      "path": "portal/serve.py",
+      "sha256": "242181840d9f5acd80cc947188cb4e51add19c2cae60d1ef3d1f0c7f9683ef7c",
+      "bytes": 653
+    },
+    {
+      "path": "portal/server.py",
+      "sha256": "b465a6e723b96d6d3391741f458394e087a74a0185332c0d6c2f58c2d43fb966",
+      "bytes": 59536
+    },
+    {
+      "path": "portal/start_unix.sh",
+      "sha256": "706915ae899f1cb33748b3787907da730fc3aa6acf2a6164f72bd15ecaa7ec31",
+      "bytes": 59
+    },
+    {
+      "path": "portal/start_windows.bat",
+      "sha256": "ae3b16391ccd5f608d61e71cabebeb1125eb5b8793995277a012c217daa67b07",
+      "bytes": 44
+    },
+    {
+      "path": "portal/static/app.bundle.css",
+      "sha256": "a84786aac429492954d7f704b88133c42e929cc704fa54b0d0adb7516947e864",
+      "bytes": 47669
+    },
+    {
+      "path": "portal/static/app.js",
+      "sha256": "31c20171ba3fd516926908f63c6277f623a96a85c6f287b12b3b59268713a3a6",
+      "bytes": 5305
+    },
+    {
+      "path": "portal/static/final.css",
+      "sha256": "529f57d65db03d1d1d34f217f99cb22265a6e6e93fdcd04278e56146b7c0cdc9",
+      "bytes": 2982
+    },
+    {
+      "path": "portal/static/style.css",
+      "sha256": "87d68805c08e9eb555a53863b5b405d50277f19d85d0b71e23151fc8f243bb86",
+      "bytes": 24005
+    },
+    {
+      "path": "portal/static/theme.js",
+      "sha256": "00e02358bf89cea25611bdd6af9f7187328b26d77cbe08e9dcc4121d6da937d5",
+      "bytes": 264
+    },
+    {
+      "path": "portal/static/unified.css",
+      "sha256": "4fb7ef45ce9f066d2e39380bbec58603a47490a4e43b7f267f07063ca50e93f2",
+      "bytes": 1284
+    },
+    {
+      "path": "portal/static/v10.css",
+      "sha256": "747b8c38f62e8a3bd585480ad8da1c38cb161cd390d9f88457217d66244f6ebe",
+      "bytes": 5968
+    },
+    {
+      "path": "portal/static/v11.css",
+      "sha256": "c1ad44d314e6a2a12d61439456dc94b8ac7326319d6ab2d1c5575c05d35dfac6",
+      "bytes": 2699
+    },
+    {
+      "path": "portal/static/v11.js",
+      "sha256": "a901b58bc88aa72dd1f250b6c149ae92fa2ef45e37d5a526a85174f09c01f86c",
+      "bytes": 2887
+    },
+    {
+      "path": "portal/static/v12.css",
+      "sha256": "b0a41ca6de58d6dca6caafbbd60f8ce4d3f0cf879e95c8af89ca453b6353a233",
+      "bytes": 3756
+    },
+    {
+      "path": "portal/static/v12.js",
+      "sha256": "e1781bbd52a4a3b551bbaac84b6e3b2cad3b15593414136a060c09defa0216e4",
+      "bytes": 4874
+    },
+    {
+      "path": "portal/static/workspace.css",
+      "sha256": "7f3ce81acdb060f70c0ec6fe27d457de176670efb39f6af219cb886cf0375ab9",
+      "bytes": 6969
+    },
+    {
+      "path": "portal/team_services.py",
+      "sha256": "fbd678982cc26196dba99c7c2320ad547338600d605e2560cc524ea595fa1d65",
+      "bytes": 2503
+    },
+    {
+      "path": "portal/team_ui.py",
+      "sha256": "413e6835c7ecd382a93b4fd3380de8dab3ad14b40ca597959b69508f5705c8a8",
+      "bytes": 2921
+    },
+    {
+      "path": "portal/tests/test_agent_assistant.py",
+      "sha256": "6badb1f9e745115fd9e06f6390f733e35f27315ae77e47170850b64954830dd1",
+      "bytes": 6468
+    },
+    {
+      "path": "portal/tests/test_automation.py",
+      "sha256": "d106043d133c8617e90b22fd394386f1ba9df50311a2467c35e1e98d13ea6cea",
+      "bytes": 3756
+    },
+    {
+      "path": "portal/tests/test_core.py",
+      "sha256": "32a926ed74ec14159c468d0b21b89640db238194c029b84361a06e7f6324f67d",
+      "bytes": 3629
+    },
+    {
+      "path": "portal/tests/test_enterprise.py",
+      "sha256": "2105d975cd58a7b93198d9a4c239c0548573defe628cd327ec5f4bed2911d0fa",
+      "bytes": 8823
+    },
+    {
+      "path": "portal/tests/test_experience.py",
+      "sha256": "447101a61c1fbb319cad60d1e91c431ef1fed7c6812db8843e0643944f3783bd",
+      "bytes": 4046
+    },
+    {
+      "path": "portal/tests/test_final9.py",
+      "sha256": "70332b5e921dc83c2d725a695e0cec0256888464e41379f5b2909e2c0eb5aedf",
+      "bytes": 2372
+    },
+    {
+      "path": "portal/tests/test_final_assurance.py",
+      "sha256": "691124609dfcfc6ec5908370c1a91ec3559dbbfbdcf963dce909c6cda3401ca9",
+      "bytes": 11249
+    },
+    {
+      "path": "portal/tests/test_governance.py",
+      "sha256": "bdbef578d2a59489c67996679075a9d266bc996de45c86f272598e186eb518c2",
+      "bytes": 4409
+    },
+    {
+      "path": "portal/tests/test_recovery.py",
+      "sha256": "6e7c3bbd046f091a939437c8f044b203d2a7f711ceeabbb002dc9a58bd246e45",
+      "bytes": 2493
+    },
+    {
+      "path": "portal/tests/test_security_workstream.py",
+      "sha256": "1cb662c03dca34a7a080eb4b2a81d90612ec4caaa3496ba5938dd6086bbb2086",
+      "bytes": 5101
+    },
+    {
+      "path": "portal/tests/test_v10.py",
+      "sha256": "2806df7934451ce52421f713d0d9171c81fa06d923677061f366827162bb2aba",
+      "bytes": 11597
+    },
+    {
+      "path": "portal/tests/test_v11.py",
+      "sha256": "b18106f85f1b6d83b775b0be9be005f40b7f2302060ed6d98cf2eb74617dbff3",
+      "bytes": 6655
+    },
+    {
+      "path": "portal/tests/test_v12.py",
+      "sha256": "1e34b4b526e1f4fd0fa064ef6003cc1481d73cdfc57f6dfd49401b335f2e8e14",
+      "bytes": 12928
+    },
+    {
+      "path": "portal/tests/test_v14.py",
+      "sha256": "0af4ec9915c0c0199e931f0ee4b04ee47352d6ea9d439115dd216c2c8cd5663e",
+      "bytes": 3772
+    },
+    {
+      "path": "portal/tests/test_web.py",
+      "sha256": "5b895fb15514e8f579ca8d38071cd875bd74dd4f7c0f1560692ecf71f8f64958",
+      "bytes": 7610
+    },
+    {
+      "path": "portal/tests/test_workforce_v8.py",
+      "sha256": "7924693f48ad4154c55f37fe5d48807ad143182dd7e369b5a9a5b9a0fea5ab72",
+      "bytes": 5941
+    },
+    {
+      "path": "portal/ui.py",
+      "sha256": "dc88dbdf3a35ff0ebd73b7e47d9b3c14d356b342d5effe2af45f643355462f64",
+      "bytes": 10417
+    },
+    {
+      "path": "portal/v10_ui.py",
+      "sha256": "c2e99f6cebe4f50a7bf53ba8057a6e791eb73eb1835959af26d11164f29c2133",
+      "bytes": 8820
+    },
+    {
+      "path": "portal/v11_ui.py",
+      "sha256": "5612e0a3434ba7f4a46e332252f59ba5b9486e335109e24017bdcc55885ce69c",
+      "bytes": 5248
+    },
+    {
+      "path": "portal/v12_ui.py",
+      "sha256": "084995a14930db6ed0256700937045291b50c46a6af25d8782c24e58f5d9eb19",
+      "bytes": 17107
+    },
+    {
+      "path": "portal/workforce_v8.py",
+      "sha256": "0d35c7eea520d02e0daddc66c847a8f3275e0c1d51045736a3b4cee7009a6154",
+      "bytes": 12555
+    },
+    {
+      "path": "portal/workforce_v8_ui.py",
+      "sha256": "70fc2ce171b2ec1e845ec31770a2a97088ff929e6a964bffbda70e1879d0a52b",
+      "bytes": 5636
+    },
+    {
+      "path": "portal/wsgi.py",
+      "sha256": "e53c446c7814079e804afb76bb03ca9b06492c959dd3e0ab89ae1c23ef6b826b",
+      "bytes": 2760
+    },
+    {
+      "path": "qa/backup_check.py",
+      "sha256": "74b2ef32c38d48286afbc0b137a33c065f9216341c82f5325d2550aff5d227df",
+      "bytes": 1301
+    },
+    {
+      "path": "qa/benchmark_v10.py",
+      "sha256": "52092851630bff93d2c9692899f4fad073346f8d66674715babe50abe70e1ba9",
+      "bytes": 1307
+    },
+    {
+      "path": "qa/browser_final9.py",
+      "sha256": "e74a48f2c4a6bfbdc44f91d0b1439a5cdb2f00c3ead786fa2c9644d9dfd77a23",
+      "bytes": 3660
+    },
+    {
+      "path": "qa/build_assets.py",
+      "sha256": "c10ac442622e0ecd1d840aad03c448e726eeea9453c8f21ca2215bdfab691f96",
+      "bytes": 320
+    },
+    {
+      "path": "qa/dom_v11.cjs",
+      "sha256": "42efeabb3bb758cbc0c691381442b776b5494ce3679511f1795fcc1694df7739",
+      "bytes": 4020
+    },
+    {
+      "path": "qa/dom_v12.cjs",
+      "sha256": "80f1bc776cce021df945952a71d4d7fccc86982f8a14175cebfc9eb98480dc55",
+      "bytes": 7062
+    },
+    {
+      "path": "qa/dom_v14.cjs",
+      "sha256": "0041227cdc7347c479159833a0fe616ac870fb99dbc5e7ecded794b2fb20d914",
+      "bytes": 7062
+    },
+    {
+      "path": "qa/http_final.py",
+      "sha256": "7df3234a3a9322793e8d4e7d7bf3de1405ae3e15337fdcc2bd24b2a87f94f3be",
+      "bytes": 12150
+    },
+    {
+      "path": "qa/http_final9.py",
+      "sha256": "e0a295672ffe6ae24fa12847a2d3776625bfad9743e35a043e102b4366cf9a32",
+      "bytes": 21404
+    },
+    {
+      "path": "qa/http_v10.py",
+      "sha256": "79fb3bcc15a33bc374d6072cecce1ff743e4b5f997ee863ea3bd3c4c98f39a6e",
+      "bytes": 13907
+    },
+    {
+      "path": "qa/http_v11.py",
+      "sha256": "7597d94a5ab5fc415f094c787a49c8abca6d1b1aaf96d0996fddf98d85716ad9",
+      "bytes": 15458
+    },
+    {
+      "path": "qa/http_v12.py",
+      "sha256": "bfdc6a975d30ae044b36e5a8f848bc6c8febeb2d18bde8781c59c30bbdef6a88",
+      "bytes": 20440
+    },
+    {
+      "path": "qa/http_v12_1.py",
+      "sha256": "f6a2fbb7c1d2e3eae1c26d391ca37285e715beaa6b57e96dbeceb5f4657617c9",
+      "bytes": 20442
+    },
+    {
+      "path": "qa/http_v12_2.py",
+      "sha256": "a9732a2c056289d0070c7206e20923c9e1a684d9a98be6476e5675f48f638b31",
+      "bytes": 20442
+    },
+    {
+      "path": "qa/http_v14.py",
+      "sha256": "91475228e0366783c881d69562544bad0c49431a85003c342241b5d8607167b8",
+      "bytes": 21042
+    },
+    {
+      "path": "qa/preflight.py",
+      "sha256": "b3e97f51a7f784111749e8f4e29200adfed418900b90e1872c070cc12ead0d47",
+      "bytes": 1763
+    },
+    {
+      "path": "qa/profile_v11.py",
+      "sha256": "abcfdaf55a59b75d3b3a16635ea2a46193de7db27aca097eecec1ef6207fd6be",
+      "bytes": 1288
+    },
+    {
+      "path": "qa/profile_v12.py",
+      "sha256": "dfdbd03dd803d327a579b2903e6038cce0cfff389c989f94e6c88f466dbc492f",
+      "bytes": 1411
+    },
+    {
+      "path": "qa/render_evidence.py",
+      "sha256": "d4e0a8e148381e9b104b691ab56aad743fac8e41320287ae96db0bfec0a03283",
+      "bytes": 1662
+    },
+    {
+      "path": "qa/render_v10.py",
+      "sha256": "b8ae76dd2b5c64f7fcda3f163cef615796e135a904b4a2331cd6cbda2bc110ca",
+      "bytes": 1670
+    },
+    {
+      "path": "qa/scheduler_v12.py",
+      "sha256": "290e5ee62f4ef064ada06f10eb4e6e4bbd99f930906eed0d09b7bf9887945250",
+      "bytes": 2052
+    },
+    {
+      "path": "qa/train_assistant.py",
+      "sha256": "2ec484dab514525f0de05007c89d9366e691901a41997f4e596fac474454ff25",
+      "bytes": 3012
+    },
+    {
+      "path": "qa/upgrade_final9.py",
+      "sha256": "fb29a1377888592ad0436efc6d8b0048544a8f5fb043fda430f0d0b70fee0836",
+      "bytes": 1613
+    },
+    {
+      "path": "qa/upgrade_v12_1.py",
+      "sha256": "13488f54b7fd62f7e24262d9776820c08d67e8a71da66ae6303694986a363a10",
+      "bytes": 1609
+    },
+    {
+      "path": "qa/upgrade_v14.py",
+      "sha256": "3f74fb243bc6759f18e8c8572c6d82d5f39686469979a39eb16209926f7b8c49",
+      "bytes": 1611
+    },
+    {
+      "path": "requirements-test.txt",
+      "sha256": "58b4437ceaeb31c8c60fc00b48c32138d4d94e8f95af5be18f3bbabaffbf2e38",
+      "bytes": 30
+    },
+    {
+      "path": "run.py",
+      "sha256": "553eda6b1289c35584046ad2228ac8b256e16e3ee3282a2a136475d7e7dfc38d",
+      "bytes": 2732
+    },
+    {
+      "path": "start_unix.sh",
+      "sha256": "4925f9c51d62b328173aaa17e00aa8889d4da2259de0d994b8bd100c6eadad09",
+      "bytes": 61
+    },
+    {
+      "path": "start_windows.bat",
+      "sha256": "ae3b16391ccd5f608d61e71cabebeb1125eb5b8793995277a012c217daa67b07",
+      "bytes": 44
+    },
+    {
+      "path": "team_lab/README.md",
+      "sha256": "627785b683cedb432d5fe94801ca2fa2a4d02f265c1b500ebc5ae006976ec505",
+      "bytes": 14368
+    },
+    {
+      "path": "team_lab/TECHNICAL_ACCOMPLISHMENTS.md",
+      "sha256": "a2a8cff2c3ff6410dec5e7300850896a44f42af44b93af075aa8a648aa08e939",
+      "bytes": 8292
+    },
+    {
+      "path": "team_lab/app/.env.access-review.example",
+      "sha256": "b067c1d61a3b2ccc1f4e1e837aa5d166f2edce5a1595999481df0a31ec06a45e",
+      "bytes": 882
+    },
+    {
+      "path": "team_lab/app/.env.example",
+      "sha256": "0f273ca74da979cc1202a3ae8b6b647a77dce13d309b36ef522d3b8ce1337cf7",
+      "bytes": 1005
+    },
+    {
+      "path": "team_lab/app/.env.sample.b2c",
+      "sha256": "982b4b217925dd52b018cab8f21efd02e6865cf187084cb7bea49abebc13317f",
+      "bytes": 1148
+    },
+    {
+      "path": "team_lab/app/.env.sample.entra-id",
+      "sha256": "0f273ca74da979cc1202a3ae8b6b647a77dce13d309b36ef522d3b8ce1337cf7",
+      "bytes": 1005
+    },
+    {
+      "path": "team_lab/app/.env.sample.external-id",
+      "sha256": "2fb3e49a0c2692d3b4b379b294b4d9d3228f3d285ca492bcfe307506195026e4",
+      "bytes": 875
+    },
+    {
+      "path": "team_lab/app/.env.sample.external-id-custom-domain",
+      "sha256": "0192d6b395c7e5235cde00a995e2bc5e91f95e621cd9599f339be010d3455213",
+      "bytes": 900
+    },
+    {
+      "path": "team_lab/app/.gitignore",
+      "sha256": "49b964d59bf3efa6b2a56f4397dfff3c0dceb96c96a94411c5f5ed23d0602068",
+      "bytes": 1290
+    },
+    {
+      "path": "team_lab/app/.vscode/extensions.json",
+      "sha256": "0a42aec3f5e5aac5eb0495dd0ffdc1a3c0c46a2aad748bfcb8bb5ba42b28facb",
+      "bytes": 177
+    },
+    {
+      "path": "team_lab/app/AppCreationScripts/AppCreationScripts.md",
+      "sha256": "2710910b37ce58a7200031cea8b38eb76b1b9d4e04da1922ce0496fd2f252aca",
+      "bytes": 6727
+    },
+    {
+      "path": "team_lab/app/AppCreationScripts/Cleanup.ps1",
+      "sha256": "e29937ec3ce4b9d6eeb7adcd83e7d01d42beb260f0c01fdc71f0e8c270957d13",
+      "bytes": 5068
+    },
+    {
+      "path": "team_lab/app/AppCreationScripts/Configure.ps1",
+      "sha256": "d62591887b389c5f9e8d9f87789059002f309316fe40fa622676715350695383",
+      "bytes": 8908
+    },
+    {
+      "path": "team_lab/app/AppCreationScripts/sample.json",
+      "sha256": "e0afcc4e345e71e7659df2d215c8d9773eac87c32dab62c2df7b9366c4d1cb6a",
+      "bytes": 1900
+    },
+    {
+      "path": "team_lab/app/CODE_OF_CONDUCT.md",
+      "sha256": "539b1bfc810aa62738af95866bfe584d568b0dca71aebed0bd81db0bdaebade3",
+      "bytes": 453
+    },
+    {
+      "path": "team_lab/app/LICENSE",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "bytes": 1162
+    },
+    {
+      "path": "team_lab/app/README.md",
+      "sha256": "81e5b30a8871795bea49112fc935dd8913c24384af2e136d7c52f23e52abcfc5",
+      "bytes": 6421
+    },
+    {
+      "path": "team_lab/app/SECURITY.md",
+      "sha256": "dc962b096c20d09869b0501e80c1555553d38dae142f78fefa2c9818483a2ed9",
+      "bytes": 2414
+    },
+    {
+      "path": "team_lab/app/access_review.py",
+      "sha256": "1d2979279d1c149b8a0eda8a625d21490b4b14bed0f82df7af148b17ac788bc5",
+      "bytes": 10487
+    },
+    {
+      "path": "team_lab/app/access_review_db.py",
+      "sha256": "d6f08ad93fec5f1550b950d7748fd886af9d82abae0753464d778290837131de",
+      "bytes": 31229
+    },
+    {
+      "path": "team_lab/app/access_review_worker.py",
+      "sha256": "d4a588659a7f71570c6c770c590d41279563fbf823f32fc1ccacfb3c3b254267",
+      "bytes": 8682
+    },
+    {
+      "path": "team_lab/app/app.py",
+      "sha256": "542e5439025a85488df41821f3751af71ade143cb0a90640a4360ce69a4f234c",
+      "bytes": 13286
+    },
+    {
+      "path": "team_lab/app/app_config.py",
+      "sha256": "6ec19f46b94fe78df799038db9d0e2adf86b46f2b61f4d58e891e5ea4acab9e6",
+      "bytes": 801
+    },
+    {
+      "path": "team_lab/app/assign_test_user.py",
+      "sha256": "413287074f4aa22e475b9915f11234f4e6d2d6bcd2c5a9a976d22940bc8de28d",
+      "bytes": 1779
+    },
+    {
+      "path": "team_lab/app/auto-config.json",
+      "sha256": "caeac1e6ee428426ecc6f4dbf6b5a216c44f46d75467bafb5db2ac3828e669ab",
+      "bytes": 797
+    },
+    {
+      "path": "team_lab/app/database.py",
+      "sha256": "9fbbb3116fcbbc87ea43e92f6f9873ef2e9660b14755b62eafe4649f28d437fc",
+      "bytes": 8744
+    },
+    {
+      "path": "team_lab/app/manage_blocked_user.py",
+      "sha256": "257d228a4a431b278883d9421f6f312e8b93eec2c03284992d579baecca9d7e9",
+      "bytes": 2495
+    },
+    {
+      "path": "team_lab/app/requirements.access-review.txt",
+      "sha256": "053c7a4365fc6cf59592f60f3a5fffb436cff2c1ce6ea725668fe42b5cc4e246",
+      "bytes": 153
+    },
+    {
+      "path": "team_lab/app/requirements.txt",
+      "sha256": "71737ee93bcbd4bf41e64fc9e424f6642f2075335b393a534db861998caeb1b0",
+      "bytes": 235
+    },
+    {
+      "path": "team_lab/app/static/access_review.css",
+      "sha256": "ba3c91431dd827a8ed5faf758dc8e2d3a17537eb4237bf13856ac1c27421d710",
+      "bytes": 3216
+    },
+    {
+      "path": "team_lab/app/templates/403.html",
+      "sha256": "4134bb5fb454668010203173b20abdef37d4a17c7fa5ec8a52c5d50136842f04",
+      "bytes": 907
+    },
+    {
+      "path": "team_lab/app/templates/access_review_dashboard.html",
+      "sha256": "4a6eb231f7ebd997a188706b9250f63deaa5d1aa2cd5e904ef12f3067d16ddb5",
+      "bytes": 5731
+    },
+    {
+      "path": "team_lab/app/templates/access_review_item.html",
+      "sha256": "7fffff5ceff131b57604e21bbe8a8531bec6e70cb93b10a5ed8b342d717a154f",
+      "bytes": 5154
+    },
+    {
+      "path": "team_lab/app/templates/access_review_job.html",
+      "sha256": "eee9519c72cfe7825532e7b2847d07ac52f1f28dca7d13731c1899006da21d36",
+      "bytes": 4164
+    },
+    {
+      "path": "team_lab/app/templates/app_audit.html",
+      "sha256": "c1b812d06d7ae216e510d3a14eb8e6ab6268bf9825cae8c2e722efa1e0c53c84",
+      "bytes": 1598
+    },
+    {
+      "path": "team_lab/app/templates/display.html",
+      "sha256": "300875be8bc003511dd2d42690c3c453beb2709405ddb5a5bfff7aa51dc17240",
+      "bytes": 407
+    },
+    {
+      "path": "team_lab/app/templates/index.html",
+      "sha256": "688ae7b65c4c6aa59f26b3e7d4039165d424474bb7d5494f12590b6340a7de78",
+      "bytes": 1282
+    },
+    {
+      "path": "team_lab/app/templates/protected_page.html",
+      "sha256": "31c33c35aca6fd628e0d374b15d96b8c5daf44004f939e0fe1b419e7e6959174",
+      "bytes": 1286
+    },
+    {
+      "path": "team_lab/app/templates/residents.html",
+      "sha256": "9913794e29f952e9815c31db67e55018baa8a9c89fe12bb323f9bd8c02e8235c",
+      "bytes": 1827
+    },
+    {
+      "path": "team_lab/app/test_app.py",
+      "sha256": "9e1b066c4968442bf1c3817d2b490eb1036591c5f47ef39057c4fce7fb17a928",
+      "bytes": 600
+    },
+    {
+      "path": "team_lab/app/topology.png",
+      "sha256": "c2af744ac70d51c172af78d8e1bf53ff8d5ca804d41202ac457b724e8c7eb281",
+      "bytes": 27384
+    },
+    {
+      "path": "team_lab/app/tox.ini",
+      "sha256": "3a268314f16630e21dbf19024f5c3e2879e89a23936597bc6345279e866cdc20",
+      "bytes": 364
+    },
+    {
+      "path": "team_lab/automation/Export-SunhavenAccessReview.ps1",
+      "sha256": "e6461923a63882e7c5ccca7c06cb611ad74a7b72115266b24f6ea5213e828091",
+      "bytes": 7705
+    },
+    {
+      "path": "team_lab/automation/Export-SunhavenWorkerState.ps1",
+      "sha256": "f01b144edef06912d0ba18b55697f59881bd704100a5f9c0e337b01ecc141403",
+      "bytes": 7079
+    },
+    {
+      "path": "team_lab/automation/Get-WorkforceDryRunPlan.ps1",
+      "sha256": "16b2ec58315d930dd62c2488c38e6dbbb635414c0a69529d333640a857a069c0",
+      "bytes": 18165
+    },
+    {
+      "path": "team_lab/automation/Initialize-SunhavenReviewWorker.ps1",
+      "sha256": "7da06dd1cea35d6e24a8f3ad47772691a4f89f92ff96e3065189412f393b9a82",
+      "bytes": 1287
+    },
+    {
+      "path": "team_lab/automation/Invoke-SunhavenAccessReviewRemediation.ps1",
+      "sha256": "e411c93c4e1ad12096facb19eaa9d3774c0923a041a1c11bf93d055ed07f6135",
+      "bytes": 9458
+    },
+    {
+      "path": "team_lab/automation/Invoke-SunhavenJoiner.ps1",
+      "sha256": "975953fa269d3a18f9accfbe65c572c687f4dc6ded0d1075b940055a77f3a2c4",
+      "bytes": 35796
+    },
+    {
+      "path": "team_lab/automation/Invoke-SunhavenLeaver.ps1",
+      "sha256": "09d968719781fd183cb462c4d55bdff5cb863391e2036e4a74654d08560ff6e8",
+      "bytes": 26746
+    },
+    {
+      "path": "team_lab/automation/Invoke-SunhavenMover.ps1",
+      "sha256": "98619a9078cc64c6b1aeedcca7b6a090118181adc8218f94e9520f3bcb9f2157",
+      "bytes": 22540
+    },
+    {
+      "path": "team_lab/automation/Invoke-SunhavenReviewJob.ps1",
+      "sha256": "27c3a4e3b4480eb9673702706e0410c29a48e06cbca74c76747d81b711bd7a64",
+      "bytes": 20138
+    },
+    {
+      "path": "team_lab/automation/Test-SunhavenRepositorySafety.py",
+      "sha256": "8e1473d20f62cb91c1318bb48ea8fb161d6a278e471185a85188911d99d44b09",
+      "bytes": 5613
+    },
+    {
+      "path": "team_lab/automation/Test-WorkforceInput.ps1",
+      "sha256": "c61921b5f70d6d647e5360e2c90ee836b5fd995da80454b4a03f225a9919adf4",
+      "bytes": 13801
+    },
+    {
+      "path": "team_lab/config/app-registration.json",
+      "sha256": "8d84546d76ca127d714f83022b1082c903bc1bf163274e167ef25febcba57f9f",
+      "bytes": 310
+    },
+    {
+      "path": "team_lab/config/app-role-ids.json",
+      "sha256": "31fdcacf5c61c82c41c048c31c026773926abe3087a7501f768664e600cd9b88",
+      "bytes": 274
+    },
+    {
+      "path": "team_lab/config/group-object-ids.json",
+      "sha256": "4aaed2b44b555065c4559e00e39e48e0317e26330447a0459cad07b1688de0f3",
+      "bytes": 309
+    },
+    {
+      "path": "team_lab/config/route-role-map.csv",
+      "sha256": "65cc5afd75faa5a3e90f3ee90f88a1ca88ccf7d1e1471d04794e1775a35e17cf",
+      "bytes": 403
+    },
+    {
+      "path": "team_lab/data/Sunhaven_Workforce_Design.xlsx",
+      "sha256": "cbd43567f49960bc2bd78da5be26b3caf67d83c25c34808aac2363dd328cd614",
+      "bytes": 41370
+    },
+    {
+      "path": "team_lab/data/workforce.csv",
+      "sha256": "0d3f9ea0ea1f9f4a3f6f5719557c81f985e800bc7a9319ba432587ea18e6fec0",
+      "bytes": 388
+    },
+    {
+      "path": "team_lab/docs/access-review/app_py_changes.md",
+      "sha256": "5fd1ae96bd2396c5003fc96d900d8e9ec1c3374852dfb9fd56c9b49f19bbd179",
+      "bytes": 2054
+    },
+    {
+      "path": "team_lab/docs/access-review/route_role_map_rows.csv",
+      "sha256": "49d5500284e12681af7dd8a3428645feb86cbbea306cbdb097fbcc73605b1e1f",
+      "bytes": 743
+    },
+    {
+      "path": "team_lab/docs/saif-architecture.md",
+      "sha256": "f2a5958921a9450fff83159a1c4a440ab5ac77a1ad66fb9f604265223e3af642",
+      "bytes": 4124
+    },
+    {
+      "path": "team_lab/docs/workforce-input-schema.md",
+      "sha256": "8721673ccb52fa5a86b38e7b84d5ee43063976689f7ccc1063eb21e20fa158fa",
+      "bytes": 2195
+    },
+    {
+      "path": "team_lab/governance/policies/POL-01-Access-Management-Policy.md",
+      "sha256": "39b1ff41ea7262a41bbf65e14af6fe52932dd662d0539b03405718b016a6ca9f",
+      "bytes": 13103
+    },
+    {
+      "path": "team_lab/governance/policies/POL-02-Workforce-Identity-Lifecycle-Policy.md",
+      "sha256": "377ace146e515abc75b2b6fd49427947bfcbb2ced41ab7c0d5e18d88db2aff51",
+      "bytes": 13929
+    },
+    {
+      "path": "team_lab/governance/policies/POL-03-Authentication-and-Shared-Device-Security-Policy.md",
+      "sha256": "216e089ed3825d666a9ab2efd03944262e11b5c09fed8f00cb1bb417096e2550",
+      "bytes": 14172
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/README.md",
+      "sha256": "743900788a4f2942fadbd6c3430590c7d1af21793b0c1dd4000cb382fbf8f423",
+      "bytes": 7907
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/Security Policies/01-SMFAA-policy-alignment.md",
+      "sha256": "12458989192e3efcd61994b90b4eff7a9861f21cd788fa2503c0314415e1d501",
+      "bytes": 2966
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/config/detection-rules.json",
+      "sha256": "c0766492a074ef96a479e70b1f077977485ec72959b41dc116957b5891cbece4",
+      "bytes": 290
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/data/demo-events.csv",
+      "sha256": "4dad7b13f5286d2312160b47dc0702882b53095b5e773b7886d2b5609939db72",
+      "bytes": 716
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/data/identity-map.csv",
+      "sha256": "1380814614a626f4a808b3ac5c93cfad9b465c3c0dd832bb292cbb53a44ac853",
+      "bytes": 519
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/SMFAA_Project_Plan.md",
+      "sha256": "b2ef89c8e618f0062488c7e4b9094843b632ed51f91ebafb64d0eef717d9a9eb",
+      "bytes": 4436
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/architecture-and-design.md",
+      "sha256": "6153c1a6da49a3ade22a618855a7e2c837810ee23721a88150c5eab8530c8836",
+      "bytes": 6308
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Individual Solution Design.drawio",
+      "sha256": "1c1236e64459eb8dd387f339c40443f03ccfd1d49793a46fbf00000a848e71ec",
+      "bytes": 27457
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Individual Solution Design.png",
+      "sha256": "8c8d4361bfeaee721231ef904d7b14ae1b40afa9e9e9ed64bcb1327b8208046c",
+      "bytes": 146443
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Operational MFA Fatigue Detection Workflow.drawio",
+      "sha256": "ef4e0674efcb72784d5d92b548e940654e87ed35794c2080b91cc7ccf7bd2b9a",
+      "bytes": 24888
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/diagrams/SMFAA Operational MFA Fatigue Detection Workflow.png",
+      "sha256": "c9a872b540fbe636a4aae728d0b7819a25e477b37a5debae6e973cfc9eb6dfac",
+      "bytes": 130169
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/live-entra-integration.md",
+      "sha256": "55dce6b0adeaae1b1313b77c7c40d2a8b11c60e92ac12818f95610337a6befcd",
+      "bytes": 610
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/requirements.md",
+      "sha256": "e841970d2f18f022718c3252f1a8765aeedc31a91215e205b8c003453d1741b4",
+      "bytes": 4730
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/docs/scope-boundary.md",
+      "sha256": "83f9595c8dab180a99091d0ef4b73ad16224d051fdc30d150e4bc293d5098d06",
+      "bytes": 3970
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/requirements.txt",
+      "sha256": "ee84bdea80cc3bbd9b3851284ef08d1ba439bb392410cceab0fe1d2ec87aadb3",
+      "bytes": 30
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/src/__init__.py",
+      "sha256": "b0c31047a511beb769014f92ee25d8de493dc817ae2ee9028d254e858eb47d43",
+      "bytes": 52
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/src/detector.py",
+      "sha256": "ec51cb7fe77ac862a60ecba9530a26cb2391f1d607008dc512e2874dbfa85626",
+      "bytes": 9311
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/src/entra_csv_adapter.py",
+      "sha256": "824df5514422c0894a4a42d5ac96a1ecb44fd849ec41146cdca31f2ea4823d4d",
+      "bytes": 2478
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/src/entra_graph_adapter.py",
+      "sha256": "08941f6d687a13ceb7f10a660d89cfbe83e5ab1f3050ac8e50a499fd8b059359",
+      "bytes": 3969
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/src/smfaa.py",
+      "sha256": "f8d5d3fa5273aedc7bded31b59ded8a5034066145de72163c5581e1032526d9a",
+      "bytes": 4992
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/src/sunhaven_adapter.py",
+      "sha256": "99f9a8d877a8e494de21191c225ce607c0d41a83adf5211fe6780215a94edc73",
+      "bytes": 3048
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/tests/test_final9_hardening.py",
+      "sha256": "058ec5af4496373452416427e920375e59c61dcfb883fa5a4c84b3031a5e42a2",
+      "bytes": 1989
+    },
+    {
+      "path": "team_lab/services/Sunhaven MFA Fatigue Attack Analyzer/tests/test_smfaa.py",
+      "sha256": "3afec6f443f7fb2293ca3c341760b10576630aedf71b30ce8b7470207ec67bdf",
+      "bytes": 11911
+    },
+    {
+      "path": "team_lab/services/readme.md",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "team_lab/start_access_review_lab.sh",
+      "sha256": "514562e9ec9b99a48c6189ebbdd5bb781fbf0c8fb17cd2f3678a37ec374d3366",
+      "bytes": 471
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/README.md",
+      "sha256": "60172e7ccfdd2dbe4b66e0bdc0daba0b536f4a0d9853c10ca6c8076fb392652f",
+      "bytes": 13804
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/Security Policies/SAIF-External-Identity-Policy.md",
+      "sha256": "8b0f21802bc559e9c88cea60c20b93e71fea9e8eed55c02abb42e5c78ac8786a",
+      "bytes": 7784
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/config/approved-agencies.json",
+      "sha256": "1d3b3d5faa2b366cafd891f6a88b763910dbbe4c8d34d427af2ce92334d90ee6",
+      "bytes": 474
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/data/agency-workers.json",
+      "sha256": "72085d6f35ee54e8fa620760bce05dcda71d49e40834a9217b68995af737c804",
+      "bytes": 916
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/diagrams/SAIF-Component-Architecture.png",
+      "sha256": "c62cd302bbe3e8d7bcba066dc735fd13cdf4d42be219cecb9dff3282d5080322",
+      "bytes": 125381
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/diagrams/SAIF-External-Worker-Onboarding.png",
+      "sha256": "4ee425dd41dbd7c8b37b3cca8d1e328a250f2933e6b31432cb0bfce70f36affd",
+      "bytes": 153785
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/diagrams/SAIF-Integrated-Solution-Architecture.png",
+      "sha256": "3d1e8f6785956f4163ef11368e7bb16c20d9718beb22683fef7a30f930b60df7",
+      "bytes": 229690
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/docs/SAIF-Design-Solution.md",
+      "sha256": "2ba23f6cc34ee96c7cd45e57fee05b4235002fb1bd141f4b7701d3731c68ef15",
+      "bytes": 4846
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/docs/SAIF-Test-Plan.md",
+      "sha256": "8ce839a28790c3a55b7243f67ee93aa0fdbcede8b3b5589452f9ce0caa6ee510",
+      "bytes": 3051
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/scripts/Invoke-SAIFB2BInvitation.ps1",
+      "sha256": "030893d6d98234334ab742f201fba0db9f3f4c7c1eed8fda617c0d3daddf4457",
+      "bytes": 1026
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/src/saif_agency_validation.py",
+      "sha256": "ee2934d0ac7e94faef588e6382ea51d592b61f505e63cd7e2f08e3e63db94f23",
+      "bytes": 1798
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/src/saif_b2b_invitation.py",
+      "sha256": "ef18e46c9e0d12a46728fbcc8889f79a22ab8a376f9eb3e727d4320f6a0459c3",
+      "bytes": 283
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/src/saif_graph_transport.py",
+      "sha256": "97711ffbb75fcee3bbc721b0e0ce9830a543651288eb297d1f2dc69a6b7d3ebc",
+      "bytes": 712
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/src/saif_iam_handover.py",
+      "sha256": "0532aae052a9ca39b253d69a2821c560e9aea33b57966b11b966a33f31b33d6d",
+      "bytes": 393
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/src/saif_identity_mapping.py",
+      "sha256": "d419bb1944e8ed843413f4c660d1c47585112387496f056d4aec89f744feee75",
+      "bytes": 252
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/src/saif_workflow.py",
+      "sha256": "39d9803d8f41ef9ec0a4eca6a9dc00ed8561c3589da79c5144e91641924f2b5f",
+      "bytes": 939
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/tests/test_agency_validation.py",
+      "sha256": "a2bbb10b00bbe7777dd4d0ebdcc9a596a4e1e1ad19a5e723b8f3b947e4a3409d",
+      "bytes": 2094
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/tests/test_b2b_invitation.py",
+      "sha256": "53a4d098720707e3b94246964af9608050cf8ce3569174ac581c07541cd6f9aa",
+      "bytes": 624
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/tests/test_graph_transport.py",
+      "sha256": "807fe7ec45125d508428531485426845c99b945cfc82ec7e3cb51ddcc8e48188",
+      "bytes": 1225
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/tests/test_iam_handover.py",
+      "sha256": "bdd501af60af42715aa834959980e34ac96383c50d76217d51c8379113394b37",
+      "bytes": 662
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/tests/test_identity_mapping.py",
+      "sha256": "cddbdb32465d69ea48863b9efffffb44f433874a4fef271ebb556b5db121e5eb",
+      "bytes": 574
+    },
+    {
+      "path": "team_lab/sunhaven-saif-agency-identity-federation/tests/test_saif_workflow.py",
+      "sha256": "a1c0ef3bc58df3279fb90487e712639407668082dffebb81171a8297065f7e95",
+      "bytes": 2484
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/README.md",
+      "sha256": "f5b584fb7bf6be8c5264dff5735fa868378fdba48a88ec95f21f7618419a42be",
+      "bytes": 15782
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/SITAS_Development_Progress_1.md",
+      "sha256": "ab4fe2a02a1c6203ff461e820846b7fe2794b5c4af659b6e46ba844b0bbf161d",
+      "bytes": 7804
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/SITAS_Development_Progress_2.md",
+      "sha256": "6bee767f37e2bedd29bb5892258b1e9c5b738adcd0026978cb4e2c3970cdf872",
+      "bytes": 12894
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/SITAS_Development_Progress_3.md",
+      "sha256": "61d7d22d01285ed5c4fe620d9e6db5b647dd2049ee2169e144e5534ad2a141bf",
+      "bytes": 2547
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/Security Policies/01-SITAS-policy-alignment.md",
+      "sha256": "a798cdde434dbefe4c81e035953e7541a681bb7220f2c219c3d5ec808e2ea1c8",
+      "bytes": 1534
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/Security Policies/02-SITAS-secure-development-and-testing-standard.md",
+      "sha256": "4ff5906001cfcd2190e3e84e27c396f9b6d7742860e94a2fb015216eeb3f3cc3",
+      "bytes": 1581
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/Security Policies/03-SITAS-risk-and-control-validation-standard.md",
+      "sha256": "18556f6a04167c91ce7e9afe3638216d71378e0073031cdcefbc2509b0f8b5d1",
+      "bytes": 1525
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/Security Policies/04-SITAS-evidence-and-data-handling-standard.md",
+      "sha256": "86e7a7552df755d0621287233fd20522eded920fcc0bb0aa254e9bd0f80995ee",
+      "bytes": 1694
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/Security Policies/05-SITAS-control-mapping-register.md",
+      "sha256": "0a29ef82cdf1a1b226a972b79eedd8f33fa74c58c078219858c79942f9ad6699",
+      "bytes": 1429
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/Security Policies/README.md",
+      "sha256": "c55000376d2217eede33951e8ab414589e2d1d12e93759d8cdba8fb1ce7244a8",
+      "bytes": 3773
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/config/controls.json",
+      "sha256": "8807cd117276f40a1b726804d9964d1be097e4e2e6327161270bcfd8298b7f60",
+      "bytes": 1224
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/config/environment.json",
+      "sha256": "691533b33838eecbb618f719ba7a78143d8808f1531830deef58168e8da4a1b9",
+      "bytes": 5947
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/config/risk-model.json",
+      "sha256": "1466ed2a0d0f20f75458c265d3f0ad1b3fcfc59b46ea283a1e6ee5227a3f8758",
+      "bytes": 2233
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/SITAS_Integration_Roadmap.md",
+      "sha256": "6c0ff061642b69fda8aec8b3469e366e9c8d868a0b05394b0cfe485dfbd1971f",
+      "bytes": 1755
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/SITAS_Project_Plan.md",
+      "sha256": "6aaa5b10dcd3a5b0f328c6c9e997bc298a2ea6d3290a4f7683de8c4979da41ee",
+      "bytes": 13182
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/Sunhaven_Integration.md",
+      "sha256": "0ebefc9a2ce802d2c90dd1afe6b0d2854c890a2035fd753327ba391b0f683114",
+      "bytes": 5155
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/diagrams/Attack Path and Control Evaluation.png",
+      "sha256": "628fed12672a4cbd318e6df6c54981a1664c366d9b4b63e9505d06c05216fdc4",
+      "bytes": 210750
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Final Solution Architecture.png",
+      "sha256": "00a535a1abe3e93634801f8e5ca7587a7cde64f468296c4ad0c68dfb5dbabb86",
+      "bytes": 146862
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Individual Solution Design and Read-Only Sunhaven Integration.png",
+      "sha256": "8c637c5ab3f7de87f8f58ade38924d5d95d633aa326a43f358ce0c509489ca3b",
+      "bytes": 77000
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Integrated Leaver Example.png",
+      "sha256": "77ce7784ce409a8da807f43f9594119f3c435d1c4c000f4019066a10861fcbfc",
+      "bytes": 110276
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/diagrams/SITAS Threat Scenario Processing Workflow.png",
+      "sha256": "bf1c3e750ca85b4054624755d45dad7ae9ee36bcd9fbcbd08a39b52a96952d2e",
+      "bytes": 101032
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/requirements-traceability.md",
+      "sha256": "30a6fa868bf97b7f2436718f45db9d4839c6f1f75e0b95f3725d75c88a336b11",
+      "bytes": 9814
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/requirements.md",
+      "sha256": "b402f4b9fe33fbc8ddd2796d618d946653432de9ada45261f4c212c8842b1e67",
+      "bytes": 8337
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/risk-analysis.md",
+      "sha256": "0d4911a67947e7863b219bc8089d8cf9771aa0d821b3f6caa97c85b41449a8a5",
+      "bytes": 11578
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/docs/test-plan.md",
+      "sha256": "99cdd7efc1a2a3d40a68b6e7a845636aeef1592efa2e0c72dbdac6be184bb973",
+      "bytes": 3962
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/pytest.ini",
+      "sha256": "c98f5b9d2d01d5b01861605bc50472260522fd3067641cd7b2affa0d03718a9c",
+      "bytes": 47
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/scenarios/scenario-01-stolen-nurse-credential.json",
+      "sha256": "e3323279f28904c569a818b231774b7b216224a36385d9576f89d46afa491d15",
+      "bytes": 361
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/scenarios/scenario-02-shared-session.json",
+      "sha256": "d0571d68d7affd3dbf94da69b06e8e84d464218d465d2ad75653ad87353ed9bd",
+      "bytes": 422
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/scenarios/scenario-03-former-worker.json",
+      "sha256": "dfb8d855d60868deb2d671728a431ab45b9c1220553b408906f6239be4f8020b",
+      "bytes": 406
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/scenarios/scenario-04-excessive-privilege.json",
+      "sha256": "a32176e23ba38f4284257b0c47c07367e6e747b35003caae358ae2f23a6b02b4",
+      "bytes": 443
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/scenarios/scenario-05-privileged-admin.json",
+      "sha256": "42276e57c843d27ac788e87fe4a08850d99ba0011981c6f570c05972c8520287",
+      "bytes": 461
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/scenarios/scenario-06-unmanaged-device.json",
+      "sha256": "76213cd1527c9edc02d4a81e4a7b7e774842b85bee3d853793bae91d332e0326",
+      "bytes": 419
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/analysis_engine.py",
+      "sha256": "77cee202eeb3e387a28dfe0f856de1a929f1822db6142318037cef1098185a44",
+      "bytes": 1957
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/comparison_engine.py",
+      "sha256": "4b7d647a48064f6378a46e7ea7e15178a1bde51b5a50b27dfb3ceb045aa72c65",
+      "bytes": 2012
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/control_engine.py",
+      "sha256": "ae9aee31559e31d83d99017401c4b744d4117013ec6c59ded0c184b146467733",
+      "bytes": 4743
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/graph_engine.py",
+      "sha256": "dcce43b2f69ac696a0ef66726d052291c960769af745dbd625008fadc7b3828a",
+      "bytes": 705
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/model_loader.py",
+      "sha256": "a4f76cea6d9025f40b2ebb3b12adc1fc0e333f0babe75a35495183598bf97aae",
+      "bytes": 1228
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/pathfinder.py",
+      "sha256": "e160a2b60e414214eb08c2b9e7e8dc8c9924926c7f4f4f57602c49f04bf10780",
+      "bytes": 679
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/report_generator.py",
+      "sha256": "2e2453c8c4d1dab8826e3036ead89af3af75740beaa772877e93162e971a3ec2",
+      "bytes": 4765
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/risk_engine.py",
+      "sha256": "6f1dac1f659d219f272b00e29c8c2aede935f6150e3c70949452a62beb629413",
+      "bytes": 2454
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/sitas.py",
+      "sha256": "dc1efba34dd9eac2c38d7ebb017dd559254822135db88c94712ce7905f6af9ff",
+      "bytes": 11154
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/sunhaven_adapter.py",
+      "sha256": "23f5f681e5fa9889d8ccc0b5db96191e12b04e36854a61fa3d9fabc6b3d1f364",
+      "bytes": 24886
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/src/sunhaven_report_generator.py",
+      "sha256": "1e21eddace6b7ecb75a5f84186372115d65dcfbf43153847d07c8be2d11d12d5",
+      "bytes": 6990
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/conftest.py",
+      "sha256": "43939626c6855bc17861d059280864b5105948f5baab2ef1b5933c2d178d717f",
+      "bytes": 920
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_comparison_engine.py",
+      "sha256": "018abf7ca58567d402982f5e468b8309ea9b58ba81489d1ce58ad39063afbd08",
+      "bytes": 922
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_control_engine.py",
+      "sha256": "e9adce87fb5dcfd1c88b58ab3ba3bb0c7c3bf7f1684cdf005bc579ccf569c7b1",
+      "bytes": 8031
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_graph_pathfinder.py",
+      "sha256": "65d20c6ed727d2534a0dea675c65ce9ea950873c05c1ee12b02f930adb4be93f",
+      "bytes": 5682
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_model_loader.py",
+      "sha256": "2f67b99ec0cdf1787a673af5fb9c01276ea292775ba81a5c88213df836c8111a",
+      "bytes": 4369
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_report_generator.py",
+      "sha256": "fdf8260a716aeda6b6e1d7d065f8d45c0dd618c5989fab90d8f4fcd158cdd501",
+      "bytes": 1976
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_risk_engine.py",
+      "sha256": "0e7fb9e1742442a66201e7c2a394f0bb14172c0ed0c2562f685ea3ece74bb429",
+      "bytes": 3259
+    },
+    {
+      "path": "team_lab/sunhaven-sitas-threat-simulator/tests/test_sunhaven_adapter.py",
+      "sha256": "4658b9f7cb8f6d93d34a7af5cc462f28da72d0e8e76d7b91ff6b9e63fad4e78e",
+      "bytes": 14135
+    },
+    {
+      "path": "team_lab/tests/Test-JoinerFailureHandling.ps1",
+      "sha256": "53c92451e96bac648b8750e33179df022a782927e7a110a79a66594244e1fd46",
+      "bytes": 3803
+    },
+    {
+      "path": "team_lab/tests/Test-TC014-WrongTenantGuard.ps1",
+      "sha256": "8a5e5ee2736015576f3adece4d6a43009f649a3b2532cd95e2de5c047d069c59",
+      "bytes": 4233
+    },
+    {
+      "path": "team_lab/tests/joiner-sc1008.csv",
+      "sha256": "eaa3acd861a5629367708ae592705e2479e3a98c1f61bdb4f4377d9091cfb010",
+      "bytes": 156
+    },
+    {
+      "path": "team_lab/tests/joiner-sc1009.csv",
+      "sha256": "56ac96bef574c5a613b68ce1f79a3666fd10b66ded8de6b7efa6402f567dfa89",
+      "bytes": 152
+    },
+    {
+      "path": "team_lab/tests/joiner-sc1012-agency.csv",
+      "sha256": "ce6c2d03d404ce9fa72257ee2f7607177f44621cf3ba58a08368c911efcd37ad",
+      "bytes": 164
+    },
+    {
+      "path": "team_lab/tests/leaver-sc1008.csv",
+      "sha256": "1dd2f59613de137ed84be1e348ed03ce856af8e84d3f0a5ab386ceca8212d6ce",
+      "bytes": 194
+    },
+    {
+      "path": "team_lab/tests/mover-sc1008-careworker-to-nurse.csv",
+      "sha256": "9529dfe2e291080c00dc21dd2a7489e30e9db6aec666f60d1750675fa3c0e3c9",
+      "bytes": 150
+    },
+    {
+      "path": "team_lab/tests/mover-sc1009-careworker-to-nurse.csv",
+      "sha256": "ff0d1ce352fbec81befc50798d62d2688ce63d548b50da2cdd674d1b36a9d07a",
+      "bytes": 147
+    },
+    {
+      "path": "team_lab/tests/rehearsal-joiner-sc1013.csv",
+      "sha256": "8b581870e21e9f3d710dc929b82c5ae1541189d63d6038c0a7ae4011d886bd75",
+      "bytes": 170
+    },
+    {
+      "path": "team_lab/tests/rehearsal-leaver-sc1013.csv",
+      "sha256": "e316abe9ce210422f8e7f6d1b63a502ee2558ad0630619c4e760e4fd933d7d38",
+      "bytes": 181
+    },
+    {
+      "path": "team_lab/tests/tc007-invalid-jobrole.csv",
+      "sha256": "945df0072e91dc07b73d4e7c5675686c623f513151abaf940659287e7df019c4",
+      "bytes": 153
+    },
+    {
+      "path": "team_lab/tests/tc008-duplicate-employeeid.csv",
+      "sha256": "944cf9624e0afabbd2b260b55c864c97309b28e62245b5f93e475c25958ff2e4",
+      "bytes": 256
+    },
+    {
+      "path": "team_lab/tests/tc009-agency-expired-sc1012.csv",
+      "sha256": "2f27b9bc3fc9d205ea6610ba40ce75c94f453f18eecb7a45d956b95059cca781",
+      "bytes": 164
+    },
+    {
+      "path": "team_lab/tests/tc010-leaver-sc1012.csv",
+      "sha256": "cb85f48b06fa998db3af965cacf74d5f3d49486841d486b0947ed68e319ecde8",
+      "bytes": 165
+    },
+    {
+      "path": "team_lab/tests/test_access_review_db.py",
+      "sha256": "4b4910e111a67aec81387fde9f1b63b8daf382457412ca9ebd2c13b44a626b69",
+      "bytes": 5432
+    },
+    {
+      "path": "team_lab/tests/workforce-duplicate-employeeid.csv",
+      "sha256": "ba2b287990b07d78622c37a4c21de5e4a11805ad0e41142fe36df1b7f9e03327",
+      "bytes": 228
+    },
+    {
+      "path": "team_lab/tests/workforce-duplicate-upn.csv",
+      "sha256": "2c0c0dc3b650fae0619e0010ada876fc2ebc9ec20cab2cc232090d91296ae370",
+      "bytes": 244
+    },
+    {
+      "path": "team_lab/tests/workforce-invalid-role.csv",
+      "sha256": "b524c4b39d9307aca2914e4add23e6c606edc5833598d5abb32509493ba9b0d1",
+      "bytes": 166
+    },
+    {
+      "path": "team_lab/tests/workforce-missing-enddate.csv",
+      "sha256": "d9e5a0ed082f23a37e16f383b11b3e6cf900c631e8ee9d0bd0e6e772a7bb40e7",
+      "bytes": 167
+    },
+    {
+      "path": "verify_release.py",
+      "sha256": "70071595bc4268f49a66135959f696b981e62f9fb21519179285f27fc7a00cec",
+      "bytes": 585
+    }
+  ],
+  "scope": "GitHub-clean source package"
+}

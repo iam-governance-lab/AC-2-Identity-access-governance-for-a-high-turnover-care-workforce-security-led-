@@ -1,0 +1,22 @@
+{
+  "agencies": [
+    {
+      "agencyId": "AG001",
+      "agencyName": "Sydney Care Staffing",
+      "domain": "sydneycare.example",
+      "status": "APPROVED"
+    },
+    {
+      "agencyId": "AG002",
+      "agencyName": "Harbour Health Agency",
+      "domain": "harbourhealth.example",
+      "status": "APPROVED"
+    },
+    {
+      "agencyId": "AG003",
+      "agencyName": "Unknown Care Staffing",
+      "domain": "unknowncare.example",
+      "status": "BLOCKED"
+    }
+  ]
+}

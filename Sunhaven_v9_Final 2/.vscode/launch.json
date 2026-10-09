@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Sunhaven 14 - local demo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/portal/run.py",
+      "cwd": "${workspaceFolder}/portal",
+      "console": "integratedTerminal",
+      "env": {
+        "SUNHAVEN_DEMO_PROFILE": "expanded",
+        "SUNHAVEN_AUTH_MODE": "local",
+        "SUNHAVEN_GRAPH_MODE": "mock"
+      }
+    }
+  ]
+}

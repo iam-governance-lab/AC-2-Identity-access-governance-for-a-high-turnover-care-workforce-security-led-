@@ -1,0 +1,17 @@
+{
+  "prompt_burst": {
+    "count": 5,
+    "window_minutes": 2,
+    "severity": "MEDIUM"
+  },
+  "repeated_denial": {
+    "count": 3,
+    "window_minutes": 5,
+    "severity": "MEDIUM"
+  },
+  "denial_to_success": {
+    "denial_count": 3,
+    "window_minutes": 10,
+    "severity": "HIGH"
+  }
+}

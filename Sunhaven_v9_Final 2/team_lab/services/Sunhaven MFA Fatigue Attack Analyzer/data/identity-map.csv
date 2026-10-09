@@ -1,0 +1,4 @@
+employee_id,user_object_id,user_principal_name,display_name,job_role,facility,status
+SC1008,42460e61-afc4-4bf5-bad5-c0f4b5cb0c15,isabella.green@rifat011002gmail.onmicrosoft.com,Isabella Green (TEST),Nurse,Sydney,Leaving
+SC-TST-001,24078780-828d-4675-9864-be92782e05cd,test.careworker01@rifat011002gmail.onmicrosoft.com,Test CareWorker 01,CareWorker,Sydney Care Facility,Active
+SC-TST-002,d875d2a3-b835-4119-9dca-e64793a7318c,test.nurse01@rifat011002gmail.onmicrosoft.com,Test Nurse 01,Nurse,Sydney Care Facility,Active
