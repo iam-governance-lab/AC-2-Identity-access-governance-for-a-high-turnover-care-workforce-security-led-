@@ -104,6 +104,7 @@ The leaver sequence fails closed and follows a deliberate order:
 
 ```text
 sunhaven-workforce-iam/
+├── Version_9_UI_Interfase/ UI interfase code and templates
 ├── app/            Flask application, templates, SQLite layer and local block utility
 ├── automation/     Input validation, planning, JML and access-review PowerShell scripts
 ├── config/         Application-role, group and route-role mappings
