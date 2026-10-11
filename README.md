@@ -2,7 +2,7 @@
 
 Title : Policy Driven Workforce Identity and Access Governance
 
-
+All data take from mimic and modify by AI in some area. (mimic 2026)
 
 Sunhaven Care Workforce IAM is a security-focused student laboratory that demonstrates identity governance for a fictional care organisation. It combines Microsoft Entra ID, Microsoft Graph, PowerShell automation and a Flask application to implement and test workforce Joiner–Mover–Leaver (JML) processes, role-based authorization, immediate leaver denial, auditable change control and access review.
 
@@ -307,4 +307,8 @@ These results describe one controlled laboratory run and are not production serv
 ## Ethical and privacy statement
 
 This repository demonstrates security engineering using invented workforce and resident records. It is intentionally designed to avoid real personal, clinical or authentication data. Any extension of the project must preserve data minimization, least privilege, explicit authorization, auditable change control and secure evidence handling.
+
+## Reference
+MIT Laboratory for Computational Physiology (n.d.) Medical Information Mart for Intensive Care. Available at: https://mimic.mit.edu/ (Accessed: 12 October 2026).
+
 
